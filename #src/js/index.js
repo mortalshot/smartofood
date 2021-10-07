@@ -1,0 +1,5 @@
+@@include('components/ibg.js')
+@@include('components/scroll.js')
+@@include('components/document-click.js')
+@@include('components/slider.js')
+@@include('components/media-query.js')

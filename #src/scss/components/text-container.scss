@@ -1,0 +1,43 @@
+.text-container {
+    background-color: transparent;
+    padding: 0;
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 100, 40, 1);
+    }
+
+    .text {
+        & > h1 {
+            font-family: $fontMain;
+            font-weight: 700;
+            @include adaptiv-font(32, 38, 20, 1);
+            color: $DGBlue2;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 48, 24, 1);
+            }
+        }
+    }
+
+    p {
+        margin: 16px 0;
+    }
+
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    .btn {
+        display: none;
+        transition: $transition ease all 0s;
+    }
+
+    &.hidden {
+        .text+.btn {
+            display: inline-flex;
+        }
+    }
+}

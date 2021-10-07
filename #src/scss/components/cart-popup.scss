@@ -1,0 +1,176 @@
+.cart-popup {
+    border-radius: 10px;
+    background-color: $White;
+    box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 515px;
+
+    .cp_products {
+    }
+
+    .cpp_item {
+        border-color: $LGray;
+        padding: 24px 0;
+
+        &:first-child {
+            padding-top: 0;
+
+            .delete-cross {
+                top: 0;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        .image {
+            width: 110px;
+            height: 77px;
+            flex: 0 0 110px;
+            border-radius: 4px;
+        }
+
+        .delete-cross {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            right: 0;
+            top: 24px;
+            bottom: 24px;
+            width: auto;
+            height: auto;
+            font-size: 16px;
+            color: $Red;
+            padding: 8px;
+            border: 1px solid $LGray;
+            border-radius: 12px;
+            transition: $transition ease border-color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: $Red;
+                }
+            }
+        }
+
+        .cpp_info {
+            margin-top: 0;
+            margin-left: 24px;
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .name {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: $DGBlue2;
+                padding: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+
+            .dop {
+                font-size: 12px;
+                line-height: 14px;
+                color: $DGBlue;
+                margin: 0;
+            }
+
+            .sum {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                color: $DGBlue2;
+            }
+        }
+
+        .cpp_action {
+            &:not(:first-child) {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    .cpp_total {
+        margin-top: 32px;
+        align-items: center;
+
+        .cpp_total-wrapper {
+            &:not(:last-child) {
+                padding-right: 20px;
+            }
+
+            & > div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        .cppt_num {
+            font-size: 14px;
+            line-height: 17px;
+            color: $DGBlue;
+        }
+
+        .sum {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 27px;
+            color: $DGBlue2;
+        }
+
+        .btn {
+            margin: 0;
+            flex: initial;
+            height: auto;
+            padding: 18px 49px;
+        }
+    }
+}
+
+.count-selector {
+    background-color: #f0f4f6;
+    border-radius: 14px;
+    height: 30px;
+    align-items: center;
+    padding: 4px;
+
+    .minus,
+    .plus {
+        width: 22px;
+        height: 22px;
+        border-radius: 8px;
+        background: $accentColor;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #f8f8f8;
+
+        i.icon-minus {
+            font-size: 13px;
+        }
+
+        i.icon-plus {
+            font-size: 9px;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+        }
+    }
+
+    .count {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $DGBlue2;
+    }
+}

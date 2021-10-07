@@ -1,0 +1,178 @@
+.home-template {
+    body {
+        font-family: $fontMain;
+        background: $White;
+    }
+
+    a {
+        &:active {
+            color: $accentColor;
+        }
+        &:visited {
+            color: inherit;
+        }
+    }
+
+    .btn {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            border-radius: 100%;
+            transition: $transition ease all 0s;
+            opacity: 0;
+        }
+
+        &:hover {
+            box-shadow: none;
+
+            &::before {
+                opacity: 1;
+                width: 200%;
+                height: 200%;
+            }
+        }
+    }
+
+    .btn-border:hover:not(.disabled) {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+
+    .btn-color {
+        background-color: $accentColor;
+    }
+
+    .block-title {
+        font-family: $fontMain;
+        font-weight: 700;
+        @include adaptiv-font(32, 38, 20, 1);
+        color: $DGBlue2;
+    }
+
+    .content-wrapper {
+        max-width: calc($size-container + $containerPadding * 2) + px;
+        @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
+        @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
+    }
+
+    .swiper {
+        padding-bottom: 32px;
+
+        &__buttons {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @include adaptiv-value("padding-left", 33, 10, 1);
+            @include adaptiv-value("padding-right", 33, 10, 1);
+            pointer-events: none;
+        }
+
+        &__button {
+            @include adaptiv-value("width", 46, 25, 1);
+            @include adaptiv-value("height", 46, 25, 1);
+            background-color: $White;
+            border-radius: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            font-size: 22px;
+            cursor: pointer;
+            pointer-events: all;
+            box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+            margin-bottom: 32px;
+            transition: $transition ease transform, $transition opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: translateY(3px);
+                }
+            }
+
+            &.swiper-button-disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            &.swiper-button-lock {
+                display: none;
+            }
+        }
+
+        &__button-prev {
+            transform: rotate(180deg);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: translateY(3px) rotate(180deg);
+                }
+            }
+
+            &.swiper-button-disabled {
+                @media (any-hover: hover) {
+                    &:hover {
+                        transform: translateY(0) rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        &__button-next {
+        }
+
+        .swiper-pagination {
+            top: initial;
+            bottom: 0;
+            left: initial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-bullet {
+                opacity: 1;
+                background: #e9ebed;
+                transition: $transition ease all 0s;
+
+                &-active {
+                    border-radius: 6px;
+                    width: 26px;
+                    background: $accentColor;
+                }
+            }
+        }
+
+        &._without-controlls {
+            padding-bottom: 0;
+        }
+    }
+}

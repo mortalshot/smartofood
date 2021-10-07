@@ -1,0 +1,37 @@
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        // Если меньше контейнера
+        #{$property}: $startSize + px;
+        @media (max-width: #{$size-container + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $type==2 {
+        // Если больше контейнера
+        #{$property}: $minSize + px;
+        @media (min-width: #{$size-container + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else {
+        // Всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+    }
+}
+
+//Адаптивный шрифт
+@mixin adaptiv-font($pcSize, $lineHeight, $mobSize, $maxSize) {
+    $addSize: $pcSize - $mobSize;
+    @if $maxSize==1 {
+        font-size: $pcSize + px;
+        line-height: $lineHeight + px;
+
+        @media (max-width: #{$size-container + px}) {
+            font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            line-height: math.div($lineHeight, $pcSize) * 100%;
+        }
+    } @else {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        line-height: math.div($lineHeight, $pcSize) * 100%;
+    }
+}

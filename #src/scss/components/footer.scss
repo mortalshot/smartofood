@@ -1,6 +1,7 @@
 .footer {
     padding: 0;
     background-color: transparent;
+    margin-top: auto;
 
     &_container {
         display: block;
@@ -326,7 +327,7 @@
 
     &_bottom {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
 
         @media screen and (max-width: 767px) {
             flex-wrap: wrap;
@@ -429,6 +430,7 @@
     margin: -12px;
 
     &_item {
+        display: inline-flex;
         padding: 12px;
     }
 

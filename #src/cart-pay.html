@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template">
+
+<head>
+    @@include('html-components/_head.html', {
+    "title": "Smartofood"
+    })
+</head>
+
+<body>
+    <div class="site__wrap">
+        @@include('html-components/popup.html', { })
+
+        <div class="cart-header">
+            <div class="cart-wrapper">
+                <div class="header_container noselect">
+                    <div class="page-back">
+                        <a href="/" class="page-back__link">
+                            <i class="icon-arrow-left"></i>
+                            <span>Вернуться назад</span>
+                        </a>
+                    </div>
+
+                    <div class="header_logo">
+                        <a href="/" class="header_logo-wrapper">
+                            <img src="img/sf-logo@3x.png" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="cart-nav">
+                        <div class="cart-steps__wrapper">
+                            <div class="cart-steps">
+                                <div class="cs_step finished" data-link="">
+                                    <div class="css_number">1</div>
+                                    <div class="css_name">Корзина</div>
+                                </div>
+                                <div class="cs_step finished" data-link="">
+                                    <div class="css_number">2</div>
+                                    <div class="css_name">Оформление заказа</div>
+                                </div>
+                                <div class="cs_step now" data-link="">
+                                    <div class="css_number">3</div>
+                                    <div class="css_name">Подтверждение</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart body">
+            <div class="content-wrapper">
+                <h1 class="cart__title block-title">Подтверждение заказа</h1>
+
+                <div class="cart_container main">
+                    <div class="cart_blocks pay_page main__content">
+                        <div class="main__content-block">
+                            <div class="cb_plate">
+                                <div class="cb_title">Информация о заказе</div>
+
+                                <div class="pay-info">
+                                    <div class="form__row">
+                                        <div class="form__item col-12 col-md-6">
+                                            <div class="ali_addr">Имя: <span>Демо Аккаунт</span></div>
+                                        </div>
+                                        <div class="form__item col-12 col-md-6">
+                                            <div class="ali_addr">Телефон: <span>+7 777 777-77-77</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__row">
+                                        <div class="form__item col-12">
+                                            <div class="ali_addr">Адрес доставки: <span>Проспект 75-летия Победы</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__row">
+                                        <div class="form__item col-6 col-md-3">
+                                            <div class="ali_addr">Дом: <span>23б</span></div>
+                                        </div>
+                                        <div class="form__item col-6 col-md-3">
+                                            <div class="ali_addr">Квартира: <span>48</span></div>
+                                        </div>
+                                        <div class="form__item col-6 col-md-3">
+                                            <div class="ali_addr">Подъезд: <span>2</span></div>
+                                        </div>
+                                        <div class="form__item col-6 col-md-3">
+                                            <div class="ali_addr">Этаж: <span>18</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cb_plate">
+                                <div class="cb_title">Как вам будет удобнее оплатить заказ?</div>
+
+                                <div class="pay-types">
+                                    <div class="pt_selectors">
+                                        <div class="pt_selector selected">
+                                            <div class="pts_line">
+                                                <input type="radio" name="payment" class="custom-radio" data-type="card" checked>
+                                                <label>Картой курьеру</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="pt_selector">
+                                            <div class="pts_line">
+                                                <input type="radio" name="payment" data-type="cash" class="custom-radio" checked>
+                                                <label>Наличными курьеру</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pts_line cashback">
+                                        <div class="cashback__label">С какой суммы нам приготовить сдачу</div>
+                                        <input class="text-input" type="text" placeholder="5000">
+                                        <div class="cash-change">Ваша сдача:<span>740&nbsp;₽</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cb_plate">
+                                <div class="cb_title">На скольких человек положить приборы</div>
+
+                                <div class="sp_persons">
+                                    <div class="count-selector noselect" data-max="10">
+                                        <div class="count">1</div>
+
+                                        <div class="count-selector__controls">
+                                            <div class="plus"><i class="icon-polygon"></i></div>
+                                            <div class="minus"><i class="icon-polygon"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart_sidebar main__sidebar main__sidebar--sticky">
+                        <div class="main__sidebar-wrapper">
+                            <div class="main__sidebar-block">
+                                <div class="sidebar_plate">
+                                    <div class="cart-resume sp_block">
+                                        <div class="cart-resume__footer">
+                                            <div class="cart-resume__item sp_price pay">
+                                                <div class="spp_name">Итого</div>
+                                                <div class="spp_sum big">2&nbsp;578&nbsp;₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sp_block">
+                                        <div class="btn btn-color sp_submit noselect"> Подтвердить заказ </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html-components/footer-small.html', {})
+    </div>
+
+    @@include('html-components/_js.html', {})
+</body>
+
+</html>

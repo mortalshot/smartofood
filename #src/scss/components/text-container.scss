@@ -7,6 +7,10 @@
     }
 
     .text {
+        padding: 0;
+        max-width: 928px;
+        margin: 0;
+
         & > h1 {
             font-family: $fontMain;
             font-weight: 700;

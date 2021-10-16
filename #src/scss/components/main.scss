@@ -1,0 +1,79 @@
+.home-template {
+    .main {
+        display: flex;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 100, 50, 1);
+        }
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+
+        &__content {
+            flex: 1;
+        }
+
+        &__content-block {
+            background: $White;
+            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            @include adaptiv-value("padding-top", 40, 30, 1);
+            @include adaptiv-value("padding-bottom", 40, 30, 1);
+            @include adaptiv-value("padding-left", 40, 15, 1);
+            @include adaptiv-value("padding-right", 40, 15, 1);
+
+            &:not(:last-child) {
+                margin-bottom: 28px;
+            }
+        }
+
+        &__sidebar {
+            flex: 0 0 370px;
+            @include adaptiv-value("margin-left", 40, -20, 1);
+
+            @media screen and (max-width: 991px) {
+                margin-left: 0;
+                @include adaptiv-value("margin-top", 48, 40, 0);
+            }
+
+            &--sticky {
+                .main__sidebar-wrapper {
+                    position: sticky;
+                    top: 10px;
+                }
+            }
+        }
+
+        &__sidebar-block {
+            background: $White;
+            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            @include adaptiv-value("padding-top", 30, 24, 1);
+            @include adaptiv-value("padding-bottom", 30, 24, 1);
+            @include adaptiv-value("padding-left", 30, 15, 1);
+            @include adaptiv-value("padding-right", 30, 15, 1);
+
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .sidebar_plate {
+            padding: 0;
+            background: transparent;
+        }
+    }
+
+    &--horizontal {
+        .main {
+            &__sidebar--sticky {
+                .main__sidebar-wrapper {
+                    top: 105px;
+                }
+            }
+        }
+    }
+}

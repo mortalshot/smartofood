@@ -36,7 +36,8 @@
 </head>
 
 <body>
-	<div id="cart-popup" class="cart-popup" data-image="cover" style="top: 70px; right: 30.3995px;">
+	<div class="site__wrap">
+		<div id="cart-popup" class="cart-popup" data-image="cover" style="top: 70px; right: 30.3995px;">
     <div class="cp_products scroll-vert" style="height: 330px;">
         <div class="cpp_item" data-hash="36a0c6ab7fde0cde292d9656424d0a35" data-amount="1">
             <div class="delete-cross icon-trash"></div><img src="img/categories/category-1.jpg" class="image" loading="lazy">
@@ -166,15 +167,229 @@
         </div>
     </div>
 </div>
+
 <div id="mods-window" class="window mods">
     <div class="window_panel">
-        <div class="window_title">Добавить ингредиенты
-            <div class="close-cross"></div>
+        <div class="window_title">
+            <span>Что добавить в пиццу</span>
+
+            <div class="close-cross">
+                <i class="icon-close"></i>
+                <span>Закрыть</span>
+            </div>
         </div>
         <div class="window_body">
+            <div class="mods_window">
+                <div class="mw_mods hidescroll">
+                    <div class="ingredients">
+                        <div class="ingredients__block">
+                            <div class="ingredients__title">Мясо</div>
+
+                            <div class="ingredients__slider swiper swiper--arrow-top">
+                                <div class="swiper__buttons">
+                                    <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                    <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                </div>
+
+                                <div class="swiper-wrapper">
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пармезан</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пепперони</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Халапеньо</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Базилик</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пармезан</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пепперони</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Халапеньо</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Базилик</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ingredients__block">
+                            <div class="ingredients__title">Сыр</div>
+
+                            <div class="ingredients__slider swiper swiper--arrow-top">
+                                <div class="swiper__buttons">
+                                    <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                    <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                </div>
+
+                                <div class="swiper-wrapper">
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пармезан</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Пепперони</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Халапеньо</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ingredients__item swiper-slide">
+                                        <div class="ingredients__item-wrapper">
+                                            <div class="ingredients__item-image">
+                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                            </div>
+                                            <div class="ingredients__item-title">Базилик</div>
+                                            <div class="ingredients__item-footer">
+                                                <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                    <i class="icon-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="window_footer">
+            <div class="mods_sum">
+                <div class="mods_sum-added"><span>+&nbsp;293&nbsp;₽</span></div>
+                <div class="mwt_sum">Итоговая сумма&nbsp;<span>3&nbsp;190&nbsp;₽</span></div>
+            </div>
+            <div class="btn btn-sm btn-color">Добавить</div>
         </div>
     </div>
 </div>
+
 <div id="cart-notification" class="cart-notification">
     <div class="title"></div>
     <div class="text"></div>
@@ -184,13 +399,13 @@
     <div class="navigation__wrapper nav_panel hidescroll">
         <div class="navigation__heading">
             <div class="header_logo">
-                <a href="" class="header_logo-wrapper">
+                <a href="/" class="header_logo-wrapper">
                     <img src="img/sf-logo@3x.png" loading="lazy">
                 </a>
             </div>
 
             <div class="close-block noselect">
-                <div class="close-cross"></div>
+                <div class="close-cross"><i class="icon-close"></i></div>
             </div>
         </div>
 
@@ -231,55 +446,54 @@
     </div>
 </div>
 
-	<div class="header">
-		<div class="content-wrapper">
-			<div class="header_container noselect">
-				<div class="header_left">
-                    <div class="header_logo">
-                        <a href="" class="header_logo-wrapper">
-                            <img src="img/sf-logo@3x.png" loading="lazy">
-                        </a>
-                    </div>
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="header_container noselect">
+					<div class="header_left">
+						<div class="header_logo">
+							<a href=/" class="header_logo-wrapper">
+								<img src="img/sf-logo@3x.png" loading="lazy">
+							</a>
+						</div>
 
-					<div class="header_city c-pointer" data-cities="2">
-						<i class="icon-location"></i>
-						<span class="header_city-span">Тюмень</span>
-						<i class="icon-chevron-left"></i>
+						<div class="header_city c-pointer" data-cities="2">
+							<i class="icon-location"></i>
+							<span class="header_city-span">Тюмень</span>
+							<i class="icon-chevron-left"></i>
+						</div>
+
+						<ul class="header_menu">
+							<li class=""> <a href="#"> О нас </a> </li>
+							<li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+							<li class=""> <a href="offers.html"> Акции </a> </li>
+						</ul>
 					</div>
 
-					<ul class="header_menu">
-						<li class=""> <a href="#"> О нас </a> </li>
-						<li class=""> <a href="#"> Доставка и оплата </a> </li>
-						<li class=""> <a href="#"> Акции </a> </li>
-					</ul>
-				</div>
+					<div class="header_right">
+						<div class="header_contacts">
+							<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
 
-				<div class="header_right">
-					<div class="header_contacts">
-						<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
-
-						<div class="header_phone offservice">
-							<a href="tel:73452696262">+7 (3452) 69-62-62</a>
+							<div class="header_phone offservice">
+								<a href="tel:73452696262">+7 (3452) 69-62-62</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="header_dilator"></div>
+		<div class="header_dilator"></div>
 
-	<div class="body">
-		<div class="content-wrapper">
-			<div class="body_container">
+		<div class="body">
+			<div class="content-wrapper">
+				<div class="body_container">
+					<div class="body_nav">
+						<div class="content-wrapper">
+							<div class="header_hamburger">
+								<div class="header_hamburger-icon"><span></span></div>
+								<div class="header_hamburger-label">Меню</div>
+							</div>
 
-				<div class="body_nav">
-					<div class="content-wrapper">
-						<div class="header_hamburger">
-							<div class="header_hamburger-icon"><span></span></div>
-							<div class="header_hamburger-label">Меню</div>
-						</div>
-
-						<div class="nav_menu" style="height: auto;">
+							<div class="nav_menu" style="height: auto;">
     <div class="nav_menu_item-wrapper _active">
         <a href="#" class="nav_menu_item"> Суши и роллы </a>
     </div>
@@ -303,24 +517,25 @@
     </div>
 </div>
 
-						<div class="body_nav-controls">
-							<div class="header_user">
-								<i class="icon-user"></i>
-							</div>
-							<div class="cart-btn" data-link="/cart">
-								<i class="icon-bag"></i>
-								<div class="cart-btn__body">
-									<div class="sum">140&nbsp;980&nbsp;₽</div>
-									<div class="count">(10)</div>
-								</div>
+							<div class="body_nav-controls">
+								<a href="profile.html" class="header_user">
+									<i class="icon-user"></i>
+								</a>
+								<a href="cart.html" class="cart-btn" data-link="/cart">
+									<i class="icon-bag"></i>
+									<div class="cart-btn__body">
+										<div class="sum">140&nbsp;980&nbsp;₽</div>
+										<div class="count">(10)</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="body_nav-dilator"></div>
+					<div class="body_nav-dilator"></div>
 
-				<div class="body_content">
-					<div class="home-slider home-slider--resize swiper">
+					<div class="body_content">
+						<!-- add a class "home-slider--fixed" to slider fixed height  -->
+<div class="home-slider swiper "> 
     <div class="swiper-wrapper">
         <div class="home-slider__item swiper-slide">
             <div class="home-slider__item-wrapper">
@@ -340,6 +555,12 @@
                 <div class="swiper-lazy-preloader"></div>
             </a>
         </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-4.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
     </div>
     <div class="swiper__buttons">
         <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
@@ -348,60 +569,60 @@
     <div class="swiper-pagination"></div>
 </div>
 
-					<div class="categories">
+						<div class="categories">
     <div class="categories__list">
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-1.jpg" alt="Суши и роллы" loading="lazy">
                 <div class="categories__item-label">Суши и роллы</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-2.jpg" alt="Пицца" loading="lazy">
                 <div class="categories__item-label">Пицца</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-3.jpg" alt="WOK и лапша" loading="lazy">
                 <div class="categories__item-label">WOK и лапша</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-4.jpg" alt="Бургеры" loading="lazy">
                 <div class="categories__item-label">Бургеры</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-5.jpg" alt="Завтраки" loading="lazy">
                 <div class="categories__item-label">Завтраки</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-6.jpg" alt="Салаты" loading="lazy">
                 <div class="categories__item-label">Салаты</div>
             </a>
         </div>
         <div class="categories__item">
-            <a href="" class="categories__item-wrapper ibg">
+            <a href="categories.html" class="categories__item-wrapper ibg">
                 <img src="img/categories/category-7.jpg" alt="Напитки" loading="lazy">
                 <div class="categories__item-label">Напитки</div>
             </a>
         </div>
     </div>
 </div>
-					
-					<section class="products-section">
+
+						<section class="products-section">
     <div class="block-title">Популярные продукты</div>
 
     <div class="products">
         <div class="products_item" data-id="59bccf89-2410-4f70-b976-27e2e1d6efba" data-name="Минск" data-price="320" data-search="59bccf89-2410-4f70-b976-27e2e1d6efba" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/minsk"><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Минск</div>
@@ -417,7 +638,7 @@
         </div>
         <div class="products_item" data-id="23864e88-ad91-4bd5-8818-8f618a616f90" data-name="Сингапур" data-price="400" data-search="23864e88-ad91-4bd5-8818-8f618a616f90" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/singapur"><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Сингапур</div>
@@ -433,7 +654,7 @@
         </div>
         <div class="products_item" data-id="ca33049e-b939-44cb-9510-120e4ea386df" data-name="Калифорния" data-price="320" data-search="ca33049e-b939-44cb-9510-120e4ea386df" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/kaliforniya"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Калифорния</div>
@@ -449,7 +670,7 @@
         </div>
         <div class="products_item" data-id="d988b123-5f9d-412c-8670-d2141f94db44" data-name="Москва" data-price="520" data-search="d988b123-5f9d-412c-8670-d2141f94db44" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/moskva"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Москва</div>
@@ -465,7 +686,7 @@
         </div>
         <div class="products_item" data-id="b63fa425-b178-4bc4-9b59-1ef4ef8045aa" data-name="Пицца Маргарита" data-price="400" data-search="b63fa425-b178-4bc4-9b59-1ef4ef8045aa" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href=""><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Пицца Маргарита</div>
@@ -481,7 +702,7 @@
         </div>
         <div class="products_item" data-id="0f411c97-836b-49cf-bf4b-4c171bb67be5" data-name="Пицца Пепперони" data-price="550" data-search="0f411c97-836b-49cf-bf4b-4c171bb67be5" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href=""><img src="img/products/product-6.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-6.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Пицца Пепперони</div>
@@ -497,7 +718,7 @@
         </div>
         <div class="products_item" data-id="67d5b3a9-bdf8-4c43-8701-4eb42f78b0af" data-name="Пицца Техас" data-price="580" data-search="67d5b3a9-bdf8-4c43-8701-4eb42f78b0af" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href=""><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Пицца Техас</div>
@@ -513,7 +734,7 @@
         </div>
         <div class="products_item" data-id="8707fa9c-10ac-4bb6-8ab5-e839832c90f9" data-name="Пицца Чикен Песто" data-price="570" data-search="8707fa9c-10ac-4bb6-8ab5-e839832c90f9" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href=""><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Пицца Чикен Песто</div>
@@ -529,7 +750,7 @@
         </div>
         <div class="products_item" data-id="dfba7dd6-ffab-4860-9ce7-69ac2a44ef5b" data-name="Вок с говядиной" data-price="300" data-search="dfba7dd6-ffab-4860-9ce7-69ac2a44ef5b" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/vok-s-govyadinoj"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Вок с говядиной</div>
@@ -545,7 +766,7 @@
         </div>
         <div class="products_item" data-id="cf62c42a-ce52-4951-8f04-5612e1263024" data-name="Вок с креветками" data-price="350" data-search="cf62c42a-ce52-4951-8f04-5612e1263024" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/vok-s-krevetkami"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Вок с креветками</div>
@@ -561,7 +782,7 @@
         </div>
         <div class="products_item" data-id="5015f003-fc3c-4da4-a6dd-9c8417040042" data-name="Вок с курицей" data-price="280" data-search="5015f003-fc3c-4da4-a6dd-9c8417040042" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/vok-s-kuricej"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Вок с курицей</div>
@@ -577,7 +798,7 @@
         </div>
         <div class="products_item" data-id="e93dfcce-57d1-406f-a056-60d76876005e" data-name="Вок с морепродуктами" data-price="350" data-search="e93dfcce-57d1-406f-a056-60d76876005e" data-disabled="0" data-btn="В корзину">
             <div class="products_item-wrapper">
-                <a class="products_item-image" href="/vok-s-moreproduktami"><img src="img/products/product-6.jpg" alt="" class="image" loading="lazy"></a>
+                <a class="products_item-image" href="product.html"><img src="img/products/product-6.jpg" alt="" class="image" loading="lazy"></a>
                 <div class="products_item-body">
                     <div class="products_item-content">
                         <div class="products_item-name name">Вок с морепродуктами</div>
@@ -593,9 +814,9 @@
         </div>
     </div>
 </section>
-					
-					<div class="text-container">
-    <div class="text">
+
+						<div class="text-container">
+    <div class="text _content">
         <h1>Доставка еды</h1>
         <p>Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития. </p>
 
@@ -607,12 +828,12 @@
         <div class="btn_icon downarr"></div>
     </div>
 </div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="footer">
+		<div class="footer">
     <div class="content-wrapper">
         <div class="footer_container">
             <div class="footer_top footer_row">
@@ -642,8 +863,8 @@
                             <div class="footer_menu-label">Смартфуд</div>
                             <ul class="footer_menu-list">
                                 <li class="footer_menu-item"> <a href=""> О нас </a> </li>
-                                <li class="footer_menu-item"> <a href=""> Доставка и оплата </a> </li>
-                                <li class="footer_menu-item"> <a href=""> Акции </a> </li>
+                                <li class="footer_menu-item"> <a href="delivery.html"> Доставка и оплата </a> </li>
+                                <li class="footer_menu-item"> <a href="offers.html"> Акции </a> </li>
                             </ul>
                         </nav>
                     </div>
@@ -704,6 +925,7 @@
         </div>
     </div>
 </div>
+	</div>
 
 	<!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

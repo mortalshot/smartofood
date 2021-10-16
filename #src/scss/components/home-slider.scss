@@ -1,47 +1,43 @@
-.home-slider {
-    &:not(:last-child) {
-        margin-bottom: 40px;
-    }
+.home-template {
+    .home-slider {
+        &:not(:last-child) {
+            @include indent-value("margin-bottom", "orange", 1);
+        }
 
-    .swiper {
-        &__buttons {
-            @media screen and (max-width: 767px) {
-                display: none;
+        .swiper {
+            &__buttons {
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
             }
         }
-    }
 
-    &__item {
-    }
-
-    &__item-wrapper {
-        display: block;
-        position: relative;
-
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
+        &__item {
         }
-    }
 
-    &--resize {
-        .home-slider {
-            &__item-wrapper {
-                padding-bottom: math.div(422px, 1280px) * 100%;
+        &__item-wrapper {
+            display: block;
+            position: relative;
+            padding-bottom: math.div(422px, 1280px) * 100%;
 
-                @media screen and (max-width: 575px) {
-                    padding-bottom: math.div(220px, 290px) * 100%;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 24px;
+            }
+        }
+
+        &--fixed {
+            .home-slider {
+                &__item {
                 }
 
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 24px;
+                &__item-wrapper {
+                    @include adaptiv-value("padding-bottom", 422, 220, 1);
                 }
             }
         }

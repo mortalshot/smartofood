@@ -36,6 +36,19 @@
 
         .close-block {
             order: 10;
+            font-size: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            .close-cross {
+                width: auto;
+                height: auto;
+                background: transparent;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         &__body {

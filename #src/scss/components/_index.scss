@@ -1,8 +1,12 @@
 @import "ibg";
 @import "animation";
+@import "block-hidden";
+@import "input";
+@import "table";
 @import "nav_menu";
 @import "navigation";
 @import "modals";
+@import "main";
 @import "header";
 @import "body-nav";
 @import "home-slider";
@@ -10,4 +14,7 @@
 @import "products-section";
 @import "text-container";
 @import "footer";
+@import "count-selector";
 @import "cart-popup";
+@import "breadcrumbs";
+@import "switch-selector";

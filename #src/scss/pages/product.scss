@@ -1,0 +1,300 @@
+.home-template {
+    .product {
+        display: block;
+        padding: 0;
+        @include adaptiv-value("margin-bottom", 100, 50, 1);
+
+        .breadcrumbs {
+            &:not(:last-child) {
+                @include adaptiv-value("padding-top", 32, 24, 1);
+                @include adaptiv-value("padding-bottom", 40, 32, 1);
+            }
+        }
+
+        &_row {
+            display: flex;
+            align-items: flex-start;
+
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+        }
+
+        &_info {
+            order: 2;
+            padding: 0;
+        }
+
+        &_panel {
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+        }
+
+        &_title {
+            font-weight: 700;
+            @include adaptiv-font(32, 38, 18, 1);
+
+            &:not(:last-child) {
+                margin: 0px 0px 24px 0px;
+            }
+        }
+
+        &_descr {
+            @include adaptiv-font(16, 24, 14, 1);
+            color: $fontColor;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 32, 40, 1);
+            }
+        }
+
+        .switch-selector {
+            margin-top: 0;
+            display: inline-flex;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 32, 40, 1);
+            }
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }
+
+            .ss_item {
+                @include adaptiv-value("padding-left", 56, 43, 1);
+                @include adaptiv-value("padding-right", 56, 43, 1);
+            }
+        }
+
+        &_nutrition {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: -4px;
+
+            &:not(:last-child) {
+                margin-bottom: 36px;
+            }
+        }
+
+        &_nutrition-item {
+            padding: 4px;
+            display: inline-flex;
+
+            .nut {
+                font-weight: 600;
+                @include adaptiv-font(12, 17, 10, 1);
+                color: $fontColor;
+                text-align: center;
+                padding: 8px 16px;
+                margin: 0;
+                background-color: $LGray2;
+                flex: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+            }
+        }
+
+        &_ingredients {
+            margin: 0;
+            display: block;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 44, 40, 1);
+            }
+        }
+
+        &_ingredients-items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -4px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .ppm_mod {
+                flex: 0 1 25%;
+                padding: 4px;
+                margin: 0;
+                background-color: transparent;
+
+                &-wrapper {
+                    width: 100%;
+                    background-color: rgba($color: $accentColor, $alpha: 0.1);
+                    color: $accentColor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-align: center;
+                    padding: 8px 8px 8px 16px;
+                    border-radius: 40px;
+                    height: 100%;
+                    white-space: nowrap;
+
+                    span {
+                        &:not(:last-child) {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    i {
+                        justify-content: center;
+                        width: 16px;
+                        height: 16px;
+                        font-size: 16px;
+                        background: $accentColor;
+                        border-radius: 100%;
+                        color: $White;
+                        cursor: pointer;
+                        transition: $transition ease opacity 0s;
+
+                        &::before {
+                        }
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_ingredients-btn {
+            border-color: $accentColor;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $fontColor;
+            margin: 0;
+            padding: 15px 40px 15px 26px;
+            height: auto;
+            transition: $transition ease all 0s;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+
+            i {
+                background-color: $accentColor;
+                border-radius: 100%;
+                width: 17px;
+                height: 17px;
+                justify-content: center;
+                font-size: 10px;
+                color: $White;
+
+                &:not(:last-child) {
+                    margin-right: 18px;
+                }
+            }
+        }
+
+        &_footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            background: $White;
+            border-radius: 10px;
+            padding: 16px;
+            @include adaptiv-value("padding-left", 32, 16, 1);
+            @include adaptiv-value("padding-right", 32, 16, 1);
+            width: 100%;
+
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                display: block;
+            }
+            @media screen and (max-width: 575px) {
+                display: block;
+            }
+        }
+
+        &_total {
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                &:not(:last-child) {
+                    margin: 0px 0px 24px 0px;
+                }
+            }
+            @media screen and (max-width: 575px) {
+                &:not(:last-child) {
+                    margin: 0px 0px 24px 0px;
+                }
+            }
+
+            .ppt_sum {
+                font-weight: 700;
+                @include adaptiv-font(28, 34, 22, 1);
+            }
+
+            .ppt_weight {
+                font-size: 14px;
+                line-height: 17px;
+                color: $DGBlue;
+                margin: 0;
+
+                &:not(:first-child) {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        &_btn {
+            @include adaptiv-font(16, 22, 14, 1);
+            height: auto;
+            padding: 18px 40px 18px 24px;
+            @include adaptiv-value("padding-left", 24, 20, 1);
+            @include adaptiv-value("padding-right", 40, 20, 1);
+            border-radius: 18px;
+
+            @media screen and (max-width: 575px) {
+                width: 100%;
+            }
+
+            i {
+                @include adaptiv-font(24, 24, 20, 1);
+
+                &:not(:last-child) {
+                    margin-right: 16px;
+                    padding-right: 16px;
+                    border-right: 1px dashed $White;
+                }
+            }
+        }
+
+        &_image {
+            flex: 0 0 49%;
+            order: 1;
+            border-radius: 20px;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 100, -100, 1);
+
+                @media screen and (max-width: 992px) {
+                    margin-right: 20px;
+                }
+                @media screen and (max-width: 767px) {
+                    margin: 0px 0px 30px 0px;
+                }
+            }
+
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}

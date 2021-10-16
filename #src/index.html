@@ -8,88 +8,91 @@
 </head>
 
 <body>
-	@@include('html-components/popup.html', { })
+	<div class="site__wrap">
+		@@include('html-components/popup.html', { })
 
-	<div class="header">
-		<div class="content-wrapper">
-			<div class="header_container noselect">
-				<div class="header_left">
-                    <div class="header_logo">
-                        <a href="" class="header_logo-wrapper">
-                            <img src="img/sf-logo@3x.png" loading="lazy">
-                        </a>
-                    </div>
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="header_container noselect">
+					<div class="header_left">
+						<div class="header_logo">
+							<a href=/" class="header_logo-wrapper">
+								<img src="img/sf-logo@3x.png" loading="lazy">
+							</a>
+						</div>
 
-					<div class="header_city c-pointer" data-cities="2">
-						<i class="icon-location"></i>
-						<span class="header_city-span">Тюмень</span>
-						<i class="icon-chevron-left"></i>
+						<div class="header_city c-pointer" data-cities="2">
+							<i class="icon-location"></i>
+							<span class="header_city-span">Тюмень</span>
+							<i class="icon-chevron-left"></i>
+						</div>
+
+						<ul class="header_menu">
+							<li class=""> <a href="#"> О нас </a> </li>
+							<li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+							<li class=""> <a href="offers.html"> Акции </a> </li>
+						</ul>
 					</div>
 
-					<ul class="header_menu">
-						<li class=""> <a href="#"> О нас </a> </li>
-						<li class=""> <a href="#"> Доставка и оплата </a> </li>
-						<li class=""> <a href="#"> Акции </a> </li>
-					</ul>
-				</div>
+					<div class="header_right">
+						<div class="header_contacts">
+							<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
 
-				<div class="header_right">
-					<div class="header_contacts">
-						<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
-
-						<div class="header_phone offservice">
-							<a href="tel:73452696262">+7 (3452) 69-62-62</a>
+							<div class="header_phone offservice">
+								<a href="tel:73452696262">+7 (3452) 69-62-62</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="header_dilator"></div>
+		<div class="header_dilator"></div>
 
-	<div class="body">
-		<div class="content-wrapper">
-			<div class="body_container">
-
-				<div class="body_nav">
-					<div class="content-wrapper">
-						<div class="header_hamburger">
-							<div class="header_hamburger-icon"><span></span></div>
-							<div class="header_hamburger-label">Меню</div>
-						</div>
-
-						@@include('html-components/body-nav-menu.html', { })
-
-						<div class="body_nav-controls">
-							<div class="header_user">
-								<i class="icon-user"></i>
+		<div class="body">
+			<div class="content-wrapper">
+				<div class="body_container">
+					<div class="body_nav">
+						<div class="content-wrapper">
+							<div class="header_hamburger">
+								<div class="header_hamburger-icon"><span></span></div>
+								<div class="header_hamburger-label">Меню</div>
 							</div>
-							<div class="cart-btn" data-link="/cart">
-								<i class="icon-bag"></i>
-								<div class="cart-btn__body">
-									<div class="sum">140&nbsp;980&nbsp;₽</div>
-									<div class="count">(10)</div>
-								</div>
+
+							@@include('html-components/body-nav-menu.html', { })
+
+							<div class="body_nav-controls">
+								<a href="profile.html" class="header_user">
+									<i class="icon-user"></i>
+								</a>
+								<a href="cart.html" class="cart-btn" data-link="/cart">
+									<i class="icon-bag"></i>
+									<div class="cart-btn__body">
+										<div class="sum">140&nbsp;980&nbsp;₽</div>
+										<div class="count">(10)</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="body_nav-dilator"></div>
+					<div class="body_nav-dilator"></div>
 
-				<div class="body_content">
-					@@include('html-components/home-slider.html', { })
+					<div class="body_content">
+						@@include('html-components/home-slider.html', {
+						"class": ""
+						})
 
-					@@include('html-components/categories.html', { })
-					
-					@@include('html-components/products-section.html', { })
-					
-					@@include('html-components/text-container.html', { })
+						@@include('html-components/categories.html', { })
+
+						@@include('html-components/products-section.html', { })
+
+						@@include('html-components/text-container.html', { })
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	@@include('html-components/footer.html', {})
+		@@include('html-components/footer.html', {})
+	</div>
 
 	@@include('html-components/_js.html', {})
 </body>

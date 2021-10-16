@@ -27,6 +27,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clock:before {
+  content: "\e917";
+}
+.icon-remove:before {
+  content: "\e916";
+}
 .icon-minus:before {
   content: "\e915";
 }

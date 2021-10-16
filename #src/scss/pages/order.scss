@@ -1,0 +1,340 @@
+.order {
+    &__wrapper {
+        position: relative;
+        @include adaptiv-value("margin-top", 24, 16, 1);
+    }
+
+    &__back {
+        color: $accentColor;
+
+        @media screen and (min-width: 1200px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @media screen and (max-width: 1200px) {
+            max-width: 953px;
+            margin: 0 auto 24px;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+
+            i {
+                font-size: 16px;
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            span {
+                text-decoration: underline transparent from-font;
+                text-underline-offset: 3px;
+                transition: $transition ease text-decoration 0s;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    i {
+                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+
+                    span {
+                        text-decoration: underline $accentColor from-font;
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        max-width: 953px;
+        margin: 0 auto;
+        background: $White;
+        box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        @include adaptiv-value("padding-top", 40, 24, 1);
+        @include adaptiv-value("padding-bottom", 40, 24, 1);
+        @include adaptiv-value("padding-left", 40, 16, 1);
+        @include adaptiv-value("padding-right", 40, 16, 1);
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            &:not(:last-child) {
+                @include adaptiv-value("padding-bottom", 40, 16, 1);
+                border-bottom: 1px solid $LGray;
+            }
+        }
+
+        @media screen and (max-width: 575px) {
+            flex-wrap: wrap;
+            margin: -8px 0;
+        }
+    }
+
+    &__heading-left,
+    &__heading-right {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 575px) {
+            flex: 0 0 100%;
+            padding: 8px 0;
+        }
+    }
+
+    &__heading-left {
+        & > div {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 40, 24, 1);
+            }
+        }
+
+        @media screen and (max-width: 575px) {
+            justify-content: space-between;
+        }
+    }
+
+    &__number {
+        font-weight: 600;
+        @include adaptiv-font(20, 24, 16, 1);
+    }
+
+    &__status {
+        font-weight: 600;
+        @include adaptiv-font(14, 20, 12, 1);
+        @include adaptiv-value("padding-top", 6, 4, 1);
+        @include adaptiv-value("padding-bottom", 6, 4, 1);
+        @include adaptiv-value("padding-left", 16, 8, 1);
+        @include adaptiv-value("padding-right", 16, 8, 1);
+        border-radius: 8px;
+    }
+
+    &__status--accept {
+        background: rgba(20, 139, 73, 0.1);
+        color: $Green;
+    }
+
+    &__heading-right {
+        & > div {
+            display: flex;
+            align-items: center;
+            @include adaptiv-font(14, 17, 12, 1);
+            color: $DGBlue;
+
+            i {
+                @include adaptiv-font(20, 20, 16, 1);
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+
+    &__body {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 40, 32, 1);
+        }
+    }
+
+    &__personal {
+        @include adaptiv-value("padding-top", 40, 24, 1);
+        @include adaptiv-value("padding-bottom", 40, 24, 1);
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 632px;
+        }
+
+        .form__row {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 32, 16, 1);
+            }
+        }
+    }
+
+    &__personal-label {
+        @include adaptiv-font(14, 20, 12, 1);
+        color: $DGBlue;
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__personal-value {
+        font-weight: 500;
+        @include adaptiv-font(16, 22, 14, 1);
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item-wrapper {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value("padding", 16, 8, 1);
+        @include adaptiv-value("padding-right", 32, 8, 1);
+        border-radius: 10px;
+        border: 1px solid $GBlue;
+        transition: $transition ease border-color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $accentColor;
+            }
+        }
+
+        & > div {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 24, 8, 1);
+            }
+        }
+    }
+
+    &__item-image {
+        flex: 0 0 110px;
+        @include adaptiv-value("flex-basis", 110, 70, 1);
+        @include adaptiv-value("height", 77, 49, 1);
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    }
+
+    &__item-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        & > div {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 24, 8, 1);
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            flex-wrap: wrap;
+
+            & > div {
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+
+    &__item-body {
+        flex: 1;
+
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__item-name {
+        font-weight: 600;
+        @include adaptiv-font(16, 20, 12, 1);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        @media screen and (max-width: 450px) {
+            &:not(:last-child) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__item-descr {
+        font-weight: 500;
+        @include adaptiv-font(14, 17, 12, 1);
+        color: $DGBlue;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+
+    &__item-count,
+    &__item-price {
+        text-align: right;
+        white-space: nowrap;
+
+        @media screen and (max-width: 450px) {
+            color: $DGBlue;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    &__item-count {
+        flex: 0 0 5%;
+        font-weight: 500;
+        @include adaptiv-font(14, 17, 12, 1);
+    }
+
+    &__item-price {
+        flex: 0 0 15%;
+        font-weight: 700;
+        @include adaptiv-font(16, 20, 12, 1);
+
+        @media screen and (max-width: 450px) {
+            font-weight: 500;
+        }
+    }
+
+    &__btn {
+        .btn {
+            @include adaptiv-font(16, 22, 14, 1);
+            height: auto;
+            padding: 18px 58px;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+        }
+    }
+}

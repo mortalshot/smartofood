@@ -2,6 +2,19 @@
     body {
         font-family: $fontMain;
         background: $White;
+        color: $fontColor;
+    }
+
+    .site__wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .m {
+        &b-0 {
+            margin-bottom: 0 !important;
+        }
     }
 
     a {
@@ -14,6 +27,8 @@
     }
 
     .btn {
+        -webkit-appearance: none;
+        cursor: pointer;
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
@@ -51,13 +66,101 @@
         }
     }
 
-    .btn-border:hover:not(.disabled) {
-        color: $accentColor;
+    .btn-border {
+        font-weight: 600;
+        color: $fontColor;
         border-color: $accentColor;
-    }
+        transition: $transition ease all 0s;
 
+        &:hover:not(.disabled) {
+            color: $accentColor;
+            border-color: $accentColor;
+        }
+    }
     .btn-color {
         background-color: $accentColor;
+    }
+
+    .text {
+        max-width: 832px;
+        margin: 0 auto;
+    }
+
+    ._content {
+        @include adaptiv-font(16, 24, 14, 1);
+
+        :first-child {
+            margin-top: 0;
+        }
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-family: $fontMain;
+            font-weight: 700;
+            @include adaptiv-font(18, 24, 16, 1);
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        h3 {
+            font-family: $fontMain;
+            font-weight: 700;
+            @include adaptiv-font(16, 24, 14, 1);
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        p {
+            @include adaptiv-font(16, 24, 14, 1);
+            margin: 16px 0;
+        }
+
+        ul {
+            margin: 24px 0;
+            list-style: none;
+
+            li {
+                padding-left: 32px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 18px;
+                    background-color: $fontColor;
+                    position: absolute;
+                    left: 3px;
+                    top: 13px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        a {
+            color: $fontColor;
+            text-decoration: underline transparent from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline $fontColor from-font;
+                }
+            }
+            @media (any-hover: none) {
+                text-decoration: underline $fontColor from-font;
+            }
+        }
     }
 
     .block-title {
@@ -65,12 +168,56 @@
         font-weight: 700;
         @include adaptiv-font(32, 38, 20, 1);
         color: $DGBlue2;
+        text-align: left;
     }
 
-    .content-wrapper {
+    .content-wrapper,
+    .cart-wrapper {
         max-width: calc($size-container + $containerPadding * 2) + px;
         @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
         @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
+    }
+
+    .ui {
+        &-button {
+            &:active,
+            &:focus,
+            &:hover {
+                border-radius: 10px;
+                background: $LGBlue;
+                border-color: $LGBlue2;
+                font-family: $fontMain;
+                color: $fontColor;
+            }
+        }
+
+        &-selectmenu-button {
+            margin: 0;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 10px;
+            background: $LGBlue;
+            border-color: $LGBlue2;
+            font-family: $fontMain;
+            color: $fontColor;
+            width: 100%;
+            transition: $transition ease border-color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: $accentColor;
+                }
+            }
+
+            &::after {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 16px;
+                background: url(../img/icons/chevron-select.svg) no-repeat center/contain;
+                background-position: 0 !important;
+            }
+        }
     }
 
     .swiper {
@@ -162,6 +309,10 @@
                 opacity: 1;
                 background: #e9ebed;
                 transition: $transition ease all 0s;
+                @include adaptiv-value("margin-left", 15, 8, 1);
+                @include adaptiv-value("margin-right", 15, 8, 1);
+                margin-left: 15px;
+                margin-right: 15px;
 
                 &-active {
                     border-radius: 6px;
@@ -173,6 +324,108 @@
 
         &._without-controlls {
             padding-bottom: 0;
+        }
+
+        &--arrow-top {
+            padding-bottom: 12px;
+            @include adaptiv-value("margin-top", -52, -42, 1);
+            @include adaptiv-value("padding-top", 52, 42, 1);
+
+            .swiper {
+                &__buttons {
+                    width: auto;
+                    padding: 0;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(0);
+                    padding-right: 7px;
+                    padding-left: 7px;
+                }
+
+                &__button {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0;
+                    font-size: 14px;
+                    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.09);
+
+                    &:not(:last-child) {
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            &._lock {
+                margin-top: 0;
+                padding: 0 0 12px;
+
+                .ingredients__item {
+                    flex: 0 0 20%;
+                }
+            }
+        }
+    }
+
+    .page-back {
+        display: inline-flex;
+
+        &__link {
+            display: inline-flex;
+            align-items: center;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $fontColor;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    i {
+                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+
+                    span {
+                        text-decoration: underline $fontColor from-font;
+                    }
+                }
+            }
+
+            i {
+                @include adaptiv-font(21, 21, 16, 1);
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            span {
+                text-decoration: underline transparent from-font;
+                text-underline-offset: 3px;
+                transition: $transition ease text-decoration 0s;
+            }
+        }
+    }
+
+    .body {
+        margin-top: 0px;
+        padding: 0;
+        @include adaptiv-value("margin-bottom", 100, 40, 1);
+
+        &_container {
+            min-width: 0px;
+
+            @media screen and (max-width: 991px) {
+                display: block;
+            }
+        }
+
+        &_content {
+            min-width: 0px;
+        }
+    }
+
+    &--horizontal {
+        .body {
+            &_container {
+                display: block;
+            }
         }
     }
 }

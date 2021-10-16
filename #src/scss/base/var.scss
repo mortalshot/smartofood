@@ -15,7 +15,7 @@ $fontWeight: 400;
 $fontSize: 16;
 $fontSizeMobile: 14;
 $lineHeight: 22;
-$fontColor: #7e8a95;
+$fontColor: #4a465c;
 // === Color ===
 
 $Black: #000;
@@ -26,13 +26,42 @@ $DGBlue: #7e8a95;
 $DGBlue2: #4a465c;
 $DGBlue3: #94a2ae;
 $SBlue: #6156e7;
+$LGBlue: #f0f4f6;
+$LGBlue2: #e2e8eb;
 $VOrange: #fd6601;
 $LGray: #e1e1e1;
 $LGray2: #f4f4f4;
 $Green: #148b49;
+$LGreen: #65dc52;
 $LCyan: #ebeff0;
 $Red: #ea1d27;
+$VRed: #fd3d01;
+
+$accentColor: #6155e7;
 
 $transition: 0.3s;
 
-$accentColor: #6155e7;
+// levels
+$level1Max: 100;
+$level1Min: 8;
+
+$level2Max: 80;
+$level2Min: 80;
+
+$level3Max: 64;
+$level3Min: 64;
+
+$level4Max: 40;
+$level4Min: 8;
+
+$level5Max: 32;
+$level5Min: 32;
+
+$level6Max: 24;
+$level6Min: 24;
+
+$level7Max: 16;
+$level7Min: 16;
+
+$level8Max: 8;
+$level8Min: 8;

@@ -102,6 +102,10 @@
         .body_nav-controls {
             display: flex;
             align-items: center;
+
+            @media screen and (max-width: 767px) {
+                order: 2;
+            }
         }
     }
 }

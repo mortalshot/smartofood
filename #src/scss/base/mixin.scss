@@ -35,3 +35,192 @@
         line-height: math.div($lineHeight, $pcSize) * 100%;
     }
 }
+
+@mixin indent-value($property, $color, $type) {
+    @if $color == "cyan" {
+        $startSize: $level1Max;
+        $minSize: $level1Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "purple" {
+        $startSize: $level2Max;
+        $minSize: $level2Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "blue" {
+        $startSize: $level3Max;
+        $minSize: $level3Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "orange" {
+        $startSize: $level4Max;
+        $minSize: $level4Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "yellow" {
+        $startSize: $level5Max;
+        $minSize: $level5Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "green" {
+        $startSize: $level6Max;
+        $minSize: $level6Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else if $color == "pink" {
+        $startSize: $level7Max;
+        $minSize: $level7Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    } @else {
+        $startSize: $level8Max;
+        $minSize: $level8Min;
+        $addSize: $startSize - $minSize;
+
+        @if $type==1 {
+            // Если меньше контейнера
+            #{$property}: $startSize + px;
+            @media (max-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else if $type==2 {
+            // Если больше контейнера
+            #{$property}: $minSize + px;
+            @media (min-width: #{$size-container + px}) {
+                #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+            }
+        } @else {
+            // Всегда
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+        }
+    }
+
+    // @if $type==1 {
+    //     // Если меньше контейнера
+    //     #{$property}: $startSize + px;
+    //     @media (max-width: #{$size-container + px}) {
+    //         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+    //     }
+    // } @else if $type==2 {
+    //     // Если больше контейнера
+    //     #{$property}: $minSize + px;
+    //     @media (min-width: #{$size-container + px}) {
+    //         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+    //     }
+    // } @else {
+    //     // Всегда
+    //     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
+    // }
+}

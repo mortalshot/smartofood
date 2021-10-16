@@ -2,7 +2,7 @@ let windowScrollTop = window.pageYOffset;
 const homeTemplateHorisontal = document.querySelector('.home-template');
 const header = document.querySelector('.header');
 
-if (homeTemplateHorisontal) {
+if (homeTemplateHorisontal && header) {
     const bodyNav = document.querySelector('.body_nav');
 
     if (windowScrollTop > 0) {

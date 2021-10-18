@@ -40,296 +40,397 @@
     </div>
 </div>
 
-<div id="city-dropdown" class="dropdown noselect" style="top: 55px; left: 883.975px; bottom: auto; width: 86.2125px; opacity: 0;">
-    <div class="dropdown_item" data-link="/profile/city?id=2">Сыктывкар</div>
-    <div class="dropdown_item selected" data-link="/profile/city?id=1">Тюмень</div>
+<div id="city-dropdown" class="dropdown noselect" style="top: 50px; left: 150px; bottom: auto; width: 240px; opacity: 1;">
+    <div class="dropdown_title">Выберите ваш город</div>
+    <div class="dropdown_list-wrapper">
+        <div class="shadow shadow--top"></div>
+        <div class="shadow shadow--bottom"></div>
+
+        <div class="dropdown_list">
+            <div class="dropdown_item selected" data-link="/profile/city?id=1">Тюмень</div>
+            <div class="dropdown_item" data-link="/profile/city?id=2">Сыктывкар</div>
+            <div class="dropdown_item" data-link="/profile/city?id=2">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="/profile/city?id=2">Краснодар</div>
+        </div>
+    </div>
 </div>
+
 <div id="auth-window" class="window">
-    <div class="window_panel">
-        <div class="window_title"><span>Вход на сайт</span>
-            <div class="close-cross"></div>
-        </div>
-        <div class="window_body">
-            <div class="signin">
-                <div class="message">
-                    ПИН-код для входа на&nbsp;сайт будет отправлен по&nbsp;СМС </div>
-                <div class="signin_action">
-                    <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
-                    <div class="btn btn-color noselect disabled">Получить код</div>
-                </div>
-                <div class="agreement">Нажимая кнопку «Получить код», вы&nbsp;принимаете условия пользовательского соглашения</div>
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="close-cross">
+                <i class="icon-close"></i>
+                <span>Закрыть</span>
             </div>
-            <div class="pincode d-none">
-                <div class="message">
-                    Введите код из&nbsp;СМС </div>
-                <div class="code-panel">
-                    <input class="code-input" type="text" autocomplete="one-time-code" maxlength="4">
-                    <div class="digit"></div>
-                    <div class="digit"></div>
-                    <div class="digit"></div>
-                    <div class="digit"></div>
+
+            <div class="window_body">
+                <div class="signin d-none">
+                    <div class="window_title"> <span>Вход на сайт</span> </div>
+                    <div class="message"> ПИН-код для входа на&nbsp;сайт будет отправлен по&nbsp;СМС </div>
+
+                    <div class="signin_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Получить код</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Получить код», вы&nbsp;принимаете условия пользовательского соглашения</div>
                 </div>
-                <div class="code-fail"></div>
-                <div class="resend noselect disabled">
-                    <div class="button">Отправить повторно</div>
-                    <div class="count"></div>
+
+                <div class="pincode">
+                    <div class="window_title"> <span>Войти</span> </div>
+                    <div class="message"> Введите ПИН-код из СМС </div>
+
+                    <div class="code-panel">
+                        <input class="code-input" type="text" autocomplete="one-time-code" maxlength="4">
+                        <div class="digit">5</div>
+                        <div class="digit">4</div>
+                        <div class="digit">3</div>
+                        <div class="digit">2</div>
+                    </div>
+
+                    <div class="code-fail"></div>
+
+                    <div class="resend noselect disabled">
+                        <div class="button">Отправить повторно</div> &nbsp;
+                        <div class="count">через: 40 сек</div>
+                    </div>
+                    <div class="wrong-number noselect">Ввести другой номер телефона</div>
                 </div>
-                <div class="wrong-number noselect">Ввели неверный номер?</div>
             </div>
         </div>
     </div>
 </div>
+
 <div id="city-window" class="window city">
-    <div class="window_panel">
-        <div class="window_title">Выберите город
-            <div class="close-cross"></div>
-        </div>
-        <div class="window_body">
-            <input type="text" class="text-input cw_search" placeholder="Поиск">
-            <div class="cw_result scroll-vert noselect" data-cities="[{&quot;id&quot;:2,&quot;folder&quot;:&quot;Siktivkar&quot;,&quot;name&quot;:&quot;Сыктывкар&quot;,&quot;selected&quot;:false},{&quot;id&quot;:1,&quot;folder&quot;:&quot;&quot;,&quot;name&quot;:&quot;Тюмень&quot;,&quot;selected&quot;:true}]">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите город</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <input type="text" class="text-input cw_search" placeholder="Поиск">
+                <div class="cw_result scroll-vert noselect" data-cities="[{&quot;id&quot;:2,&quot;folder&quot;:&quot;Siktivkar&quot;,&quot;name&quot;:&quot;Сыктывкар&quot;,&quot;selected&quot;:false},{&quot;id&quot;:1,&quot;folder&quot;:&quot;&quot;,&quot;name&quot;:&quot;Тюмень&quot;,&quot;selected&quot;:true}]">
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div id="shops-window" class="window shops">
-    <div class="window_panel">
-        <div class="window_title">Выберите заведение
-            <div class="close-cross"></div>
-        </div>
-        <div class="window_body">
-            <div class="shops_window">
-                <div class="sw_shops hidescroll"></div>
-                <div class="sw_shops_grad"></div>
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите заведение</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="shops_window">
+                    <div class="sw_shops hidescroll">
+                        <div class="sws_block">
+                            <div class="sws_title">
+                                <div class="text">Тюмень</div>
+                            </div>
+                            <div class="sws_list">
+                                <div class="sws_shop selected" data-id="1">
+                                    <div class="swss_name">Кофейня Garden Калинка</div>
+                                    <div class="swss_addr">Республики, 65</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="2">
+                                    <div class="swss_name">Кофейня Garden Океан</div>
+                                    <div class="swss_addr">Республики, 42</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="3">
+                                    <div class="swss_name">Кофейня Garden Советская</div>
+                                    <div class="swss_addr">Советская, 51 к 3</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 21:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="4">
+                                    <div class="swss_name">Кофейня Garden Паруса</div>
+                                    <div class="swss_addr">Малыгина, 90</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="5">
+                                    <div class="swss_name">Кофейня Garden Новин</div>
+                                    <div class="swss_addr">50 лет Октября, 57в</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="6">
+                                    <div class="swss_name">Кофейня Garden Эрвье</div>
+                                    <div class="swss_addr">Ю.-Р.Г.Эрвье, 30 к 4</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div id="callback-window" class="window">
-    <div class="window_panel">
-        <div class="window_title">Обратный звонок
-            <div class="close-cross"></div>
-        </div>
-        <div class="window_body">
-            <div class="callback">
-                <div class="callback_info">
-                    <a href="tel:73452696262" class="phone-text">+7 (3452) 69-62-62</a>
-                    <div class="or"><span>или</span></div>
-                    <div class="t">Закажите звонок</div>
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Обратный звонок</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
                 </div>
-                <div class="callback_action">
-                    <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
-                    <div class="btn btn-color noselect disabled">Заказать звонок</div>
-                </div>
-                <div class="agreement">Нажимая кнопку «Заказать звонок», вы&nbsp;принимаете условия пользовательского соглашения</div>
             </div>
-            <div class="callback-success d-none">
-                Скоро мы вам позвоним
+
+            <div class="window_body">
+                <div class="callback">
+                    <div class="callback_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Заказать звонок</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Заказать звонок», вы принимаете условия пользовательского соглашения.</div>
+                </div>
+
+                <div class="callback-success d-none">
+                    Скоро мы вам позвоним
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <div id="mods-window" class="window mods">
-    <div class="window_panel">
-        <div class="window_title">
-            <span>Что добавить в пиццу</span>
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Что добавить в пиццу</span>
 
-            <div class="close-cross">
-                <i class="icon-close"></i>
-                <span>Закрыть</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
             </div>
-        </div>
-        <div class="window_body">
-            <div class="mods_window">
-                <div class="mw_mods hidescroll">
-                    <div class="ingredients">
-                        <div class="ingredients__block">
-                            <div class="ingredients__title">Мясо</div>
+            <div class="window_body">
+                <div class="mods_window">
+                    <div class="mw_mods hidescroll">
+                        <div class="ingredients">
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Мясо</div>
 
-                            <div class="ingredients__slider swiper swiper--arrow-top">
-                                <div class="swiper__buttons">
-                                    <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
-                                    <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
-                                </div>
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
 
-                                <div class="swiper-wrapper">
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пармезан</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">65&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пепперони</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">120&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Халапеньо</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Базилик</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пармезан</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">65&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пепперони</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">120&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Халапеньо</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Базилик</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="ingredients__block">
-                            <div class="ingredients__title">Сыр</div>
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Сыр</div>
 
-                            <div class="ingredients__slider swiper swiper--arrow-top">
-                                <div class="swiper__buttons">
-                                    <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
-                                    <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
-                                </div>
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
 
-                                <div class="swiper-wrapper">
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пармезан</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">65&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Пепперони</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">120&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Халапеньо</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="ingredients__item swiper-slide">
-                                        <div class="ingredients__item-wrapper">
-                                            <div class="ingredients__item-image">
-                                                <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
-                                            </div>
-                                            <div class="ingredients__item-title">Базилик</div>
-                                            <div class="ingredients__item-footer">
-                                                <div class="ingredients__item-price">39&nbsp;₽</div>
-                                                <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
-                                                    <i class="icon-plus"></i>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -340,13 +441,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="window_footer">
-            <div class="mods_sum">
-                <div class="mods_sum-added"><span>+&nbsp;293&nbsp;₽</span></div>
-                <div class="mwt_sum">Итоговая сумма&nbsp;<span>3&nbsp;190&nbsp;₽</span></div>
+            <div class="window_footer">
+                <div class="mods_sum">
+                    <div class="mods_sum-added"><span>+&nbsp;293&nbsp;₽</span></div>
+                    <div class="mwt_sum">Итоговая сумма&nbsp;<span>3&nbsp;190&nbsp;₽</span></div>
+                </div>
+                <div class="btn btn-sm btn-color">Добавить</div>
             </div>
-            <div class="btn btn-sm btn-color">Добавить</div>
         </div>
     </div>
 </div>

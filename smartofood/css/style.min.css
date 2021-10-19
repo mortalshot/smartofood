@@ -2994,6 +2994,11 @@
     padding-right: calc(15px + 30 * ((100vw - 320px) / (1049)));
   }
 }
+@media screen and (max-width: 768px) {
+  .home-template .body_nav {
+    display: block;
+  }
+}
 @media screen and (max-width: 767px) {
   .home-template .body_nav {
     display: none;

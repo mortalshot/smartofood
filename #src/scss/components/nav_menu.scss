@@ -1,9 +1,6 @@
 .home-template {
     .nav {
         &_menu {
-            // height: auto;
-            // min-height: 286px;
-
             @media screen and (min-width: 992px) {
                 width: 190px;
                 padding: 10px;
@@ -67,8 +64,9 @@
             margin: 0;
             padding: 5px 0;
             font-weight: 600;
-            color: $DGBlue2;
+            color: var(--fontColor);
             @include adaptiv-font(14, 20, 10, 1);
+            transition: $transition ease color 0s;
 
             @media (any-hover: hover) {
                 &:hover {
@@ -145,6 +143,13 @@
                     padding-right: 0;
                 }
             }
+        }
+    }
+
+    &.template2 {
+        .nav_menu_item {
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }

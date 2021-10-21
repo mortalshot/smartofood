@@ -1256,9 +1256,10 @@ html.template2 {
   margin: 0;
   padding: 5px 0;
   font-weight: 600;
-  color: #4a465c;
+  color: var(--fontColor);
   font-size: 14px;
   line-height: 20px;
+  transition: 0.3s ease color 0s;
 }
 @media (max-width: 1280px) {
   .home-template .nav_menu_item {
@@ -1362,6 +1363,10 @@ html.template2 {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.home-template.template2 .nav_menu_item {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .home-template .navigation {
@@ -2765,8 +2770,10 @@ html.template2 {
   background: transparent;
   font-size: 24px;
   line-height: 24px;
+  color: var(--fontColor);
   border: 0;
   padding: 0;
+  opacity: 1;
   transition: 0.3s ease color, 0.3s background-color 0s;
 }
 @media (max-width: 1280px) {
@@ -3335,10 +3342,6 @@ html.template2 {
   .home-template.template2.home-template--horizontal .body_nav-wrapper {
     padding-right: calc(20px + 20 * ((100vw - 320px) / (1049)));
   }
-}
-.home-template.template2.home-template--horizontal .nav_menu_item {
-  font-size: 14px;
-  line-height: 20px;
 }
 
 .home-template .home-slider:not(:last-child) {

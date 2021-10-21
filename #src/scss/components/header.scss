@@ -409,9 +409,10 @@
         display: inline-flex;
         background: transparent;
         @include adaptiv-font(24, 24, 18, 1);
+        color: var(--fontColor);
         border: 0;
         padding: 0;
-
+        opacity: 1;
         transition: $transition ease color, $transition background-color 0s;
 
         @media (any-hover: hover) {

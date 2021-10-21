@@ -145,7 +145,7 @@
             @media (any-hover: hover) {
                 &:hover {
                     .footer_contact-text {
-                        text-decoration: underline $Black2 from-font;
+                        text-decoration: underline var(--fontColor) from-font;
                     }
 
                     .footer_contact-image {
@@ -158,7 +158,6 @@
         &_contact-image {
             position: relative;
             flex: 0 0 24px;
-            padding-bottom: 24px;
             margin-right: 8px;
             font-size: 24px;
             color: rgba($color: #151515, $alpha: 0.3);

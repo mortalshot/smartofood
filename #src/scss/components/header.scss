@@ -458,7 +458,32 @@
         }
 
         i {
+            position: relative;
             transition: $transition ease color 0s;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                background: var(--accentColor);
+                border: 4px solid #31313a;
+                transition: $transition ease opacity 0s;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translate(20%, -20%);
+                opacity: 0;
+            }
+        }
+
+        &--full {
+            i {
+                &::after {
+                    opacity: 1;
+                }
+            }
         }
     }
 

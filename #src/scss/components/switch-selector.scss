@@ -1,49 +1,51 @@
-.switch-selector {
-    height: auto;
-
-    .ss_wrapper {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        bottom: auto;
+.home-template {
+    .switch-selector {
         height: auto;
-        border-radius: 30px;
-        background-color: $LGBlue;
-        padding: 4px;
-        width: 100%;
 
-        .ss_item {
-            font-weight: 700;
-            @include adaptiv-font(14, 20, 12, 1);
-            color: $fontColor;
-            padding: 12px 15px;
-            @include adaptiv-value("padding-top", 12, 10, 1);
-            @include adaptiv-value("padding-bottom", 12, 10, 1);
+        .ss_wrapper {
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
             height: auto;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             border-radius: 30px;
-            flex: 0 1 50%;
-            white-space: normal;
-            transition: $transition ease color 0s;
+            background-color: $LGBlue;
+            padding: 4px;
+            width: 100%;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $accentColor;
+            .ss_item {
+                font-weight: 700;
+                @include adaptiv-font(14, 20, 12, 1);
+                color: var(--fontColor);
+                padding: 12px 15px;
+                @include adaptiv-value("padding-top", 12, 10, 1);
+                @include adaptiv-value("padding-bottom", 12, 10, 1);
+                height: auto;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border-radius: 30px;
+                flex: 0 1 50%;
+                white-space: normal;
+                transition: $transition ease color 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: var(--accentColor);
+                    }
                 }
-            }
 
-            &:not(:last-child) {
-                margin-right: 5px;
-            }
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
 
-            &.selected {
-                box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
-                background-color: $White;
-                color: $fontColor;
+                &.selected {
+                    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+                    background-color: $White;
+                    color: var(--fontColor);
+                }
             }
         }
     }

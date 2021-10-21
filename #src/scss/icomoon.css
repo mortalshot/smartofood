@@ -42,6 +42,9 @@
 .icon-bag:before {
   content: "\e900";
 }
+.template2 .icon-bag:before {
+  content: "\e918";
+}
 .icon-calendar:before {
   content: "\e901";
 }
@@ -72,6 +75,9 @@
 .icon-location:before {
   content: "\e90a";
 }
+.template2 .icon-location:before {
+  content: "\e919";
+}
 .icon-phone:before {
   content: "\e90b";
 }
@@ -99,4 +105,3 @@
 .icon-arrow-left:before {
   content: "\e913";
 }
-

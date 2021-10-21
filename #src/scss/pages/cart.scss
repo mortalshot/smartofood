@@ -144,7 +144,7 @@
                     font-size: 12px;
                     line-height: 17px;
                     text-align: center;
-                    color: $fontColor;
+                    color: var(--fontColor);
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
@@ -163,7 +163,7 @@
 
                 .css_name {
                     @include adaptiv-font(12, 17, 10, 1);
-                    color: $fontColor;
+                    color: var(--fontColor);
                     white-space: normal;
 
                     @media screen and (max-width: 430px) {
@@ -174,7 +174,7 @@
                 &.now {
                     .css_number {
                         filter: none;
-                        border-color: $accentColor;
+                        border-color: var(--accentColor);
                     }
 
                     .css_name {
@@ -184,12 +184,12 @@
                 &.finished {
                     &::before,
                     &::after {
-                        background-color: $accentColor;
+                        background-color: var(--accentColor);
                     }
 
                     .css_number {
-                        border-color: $accentColor;
-                        background-color: $accentColor;
+                        border-color: var(--accentColor);
+                        background-color: var(--accentColor);
                         color: $White;
                         font-size: 0;
                         line-height: 1;
@@ -212,12 +212,12 @@
                     }
 
                     .css_name {
-                        color: $accentColor;
+                        color: var(--accentColor);
                     }
 
                     & + .cs_step {
                         &::before {
-                            background-color: $accentColor;
+                            background-color: var(--accentColor);
                         }
                     }
                 }
@@ -540,7 +540,7 @@
 
                 div:last-child {
                     font-weight: 600;
-                    color: $fontColor;
+                    color: var(--fontColor);
                 }
 
                 &:not(:last-child) {
@@ -569,7 +569,7 @@
             border-color: #e2e8eb;
             height: 58px;
             @include adaptiv-font(16, 22, 14, 1);
-            color: $fontColor;
+            color: var(--fontColor);
             transition: $transition ease border-color 0s;
 
             &::placeholder {
@@ -590,7 +590,7 @@
             right: 4px;
             transform: translateY(-50%);
             border-radius: 8px;
-            background: $accentColor;
+            background: var(--accentColor);
             font-weight: 400;
             font-size: 14px;
             line-height: 20px;
@@ -688,7 +688,7 @@
 
             .cart-points__text {
                 @include adaptiv-font(14, 20, 12, 1);
-                color: $fontColor;
+                color: var(--fontColor);
 
                 span {
                     display: block;
@@ -711,7 +711,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-        color: $fontColor;
+        color: var(--fontColor);
 
         img {
             max-width: 24px;
@@ -863,7 +863,7 @@
 
                 @media (any-hover: hover) {
                     &:hover {
-                        color: $accentColor;
+                        color: var(--accentColor);
                     }
                 }
 
@@ -874,7 +874,7 @@
                 &.selected {
                     box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
                     background-color: $White;
-                    color: $fontColor;
+                    color: var(--fontColor);
                 }
             }
 
@@ -958,7 +958,7 @@
 
             &__reset {
                 background: transparent;
-                color: $accentColor;
+                color: var(--accentColor);
                 height: auto;
                 padding: 5px;
             }
@@ -1039,7 +1039,7 @@
                 @media (any-hover: hover) {
                     &:hover {
                         label {
-                            color: $accentColor;
+                            color: var(--accentColor);
                         }
                     }
                 }
@@ -1059,7 +1059,7 @@
                         & + label {
                             box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
                             background-color: $White;
-                            color: $fontColor;
+                            color: var(--fontColor);
                         }
                     }
                 }
@@ -1114,7 +1114,7 @@
             margin: 16px 0px 0px 0px;
             font-size: 16px;
             line-height: 22px;
-            color: $fontColor;
+            color: var(--fontColor);
 
             span {
                 font-weight: 600;
@@ -1137,7 +1137,7 @@
 
             @media (any-hover: hover) {
                 &:hover {
-                    border-color: $accentColor;
+                    border-color: var(--accentColor);
                 }
             }
 

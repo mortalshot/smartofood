@@ -1,33 +1,35 @@
-.table {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    table {
+.home-template {
+    .table {
         width: 100%;
-        border-collapse: collapse;
+        overflow-x: auto;
+        overflow-y: hidden;
 
-        th,
-        td {
-            &:not(:last-child) {
-                padding-right: 10px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                &:not(:last-child) {
+                    padding-right: 10px;
+                }
             }
-        }
 
-        th {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-            color: $DGBlue;
-            text-align: left;
-            padding-bottom: 16px;
-        }
+            th {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $DGBlue;
+                text-align: left;
+                padding-bottom: 16px;
+            }
 
-        td {
-            padding-top: 16px;
-            padding-bottom: 16px;
-            border-top: 1px solid $LGray;
-            @include adaptiv-font(16, 22, 14, 1);
+            td {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                border-top: 1px solid $LGray;
+                @include adaptiv-font(16, 22, 14, 1);
+            }
         }
     }
 }

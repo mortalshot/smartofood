@@ -16,7 +16,7 @@
             padding-right: 0;
             margin-right: 0;
             position: fixed;
-            top: $size-header-height;
+            top: var(--size-header-height);
             left: 0;
             right: 0;
             margin: 0;
@@ -47,21 +47,24 @@
     }
 
     &--horizontal {
+        .body_container {
+            min-height: auto;
+        }
+
         .body_nav {
             flex: initial;
             width: 100%;
-            padding-top: 20px;
-            padding-bottom: 20px;
+
             padding-left: 0;
             padding-right: 0;
             margin-right: 0;
             position: fixed;
-            top: $size-header-height;
+            top: var(--size-header-height);
             left: 0;
             right: 0;
             margin: 0;
             z-index: 103;
-            background-color: $White;
+            background-color: var(--bgColor);
             transition: $transition ease all 0s;
 
             @media screen and (max-width: 767px) {
@@ -75,20 +78,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-            }
-
-            &._scrolled {
-                padding-top: 5px;
-                padding-bottom: 5px;
-                top: calc(#{$size-header-height} - 10px);
-
-                @media screen and (max-width: 767px) {
-                    top: $size-header-height-mobile;
-                }
-
-                & + .body_nav-dilator {
-                    height: calc(72px - 30px);
-                }
             }
         }
 
@@ -108,6 +97,51 @@
 
             @media screen and (max-width: 767px) {
                 order: 2;
+            }
+        }
+    }
+
+    &.template1 {
+        &--horizontal {
+            .body_nav {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    &.template2 {
+        &.home-template--horizontal {
+            .body_nav {
+                @media screen and (max-width: 991px) {
+                    top: 50px;
+                }
+                @media screen and (max-width: 767px) {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    top: $size-header-height-mobile;
+                }
+            }
+
+            .body_nav-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @media screen and (min-width: 992px) {
+                    height: 76px;
+                    @include adaptiv-value("padding-left", 40, 20, 1);
+                    @include adaptiv-value("padding-right", 40, 20, 1);
+                    background: $DBlue;
+                    box-shadow: 0px 34px 34px -20px rgba(0, 0, 0, 0.15);
+                    border-radius: 10px;
+                }
+            }
+
+            .nav_menu_item {
+                font-size: 14px;
+                line-height: 20px;
             }
         }
     }

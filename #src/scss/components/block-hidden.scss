@@ -6,7 +6,7 @@
 
         i {
             font-size: 12px;
-            color: $accentColor;
+            color: var(--accentColor);
 
             &:not(:last-child) {
                 margin-right: 8px;
@@ -14,8 +14,8 @@
         }
 
         span {
-            color: $accentColor;
-            border-bottom: 1px dashed $accentColor;
+            color: var(--accentColor);
+            border-bottom: 1px dashed var(--accentColor);
             transition: $transition ease border-color 0s;
         }
 

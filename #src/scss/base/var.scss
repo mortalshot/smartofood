@@ -4,18 +4,15 @@ $containerPadding: 45;
 $containerPaddingMobile: 15;
 $layoutDesktop: 1369;
 $layoutMobile: 320;
-$size-header-height: 50px;
 $size-header-vertical-height: 72px;
 $size-header-height-mobile: 40px;
 
 // === Font ===
-$fontMain: "Golos Text";
 $fontSecond: "Rubik";
 $fontWeight: 400;
 $fontSize: 16;
 $fontSizeMobile: 14;
 $lineHeight: 22;
-$fontColor: #4a465c;
 // === Color ===
 
 $Black: #000;
@@ -25,6 +22,7 @@ $GBlue: #afb8c0;
 $DGBlue: #7e8a95;
 $DGBlue2: #4a465c;
 $DGBlue3: #94a2ae;
+$DBlue: #222229;
 $SBlue: #6156e7;
 $LGBlue: #f0f4f6;
 $LGBlue2: #e2e8eb;
@@ -40,6 +38,22 @@ $VRed: #fd3d01;
 $accentColor: #6155e7;
 
 $transition: 0.3s;
+
+html.template1 {
+    --fontColor: #4a465c;
+    --bgColor: #fff;
+    --accentColor: #6155e7;
+    --fontMain: "Golos Text";
+    --size-header-height: 50px;
+}
+
+html.template2 {
+    --fontColor: #fff;
+    --bgColor: #161616;
+    --accentColor: #47cb54;
+    --fontMain: "Gotham Pro";
+    --size-header-height: 104px;
+}
 
 // levels
 $level1Max: 100;

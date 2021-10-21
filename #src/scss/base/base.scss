@@ -1,8 +1,8 @@
 .home-template {
     body {
-        font-family: $fontMain;
-        background: $White;
-        color: $fontColor;
+        font-family: var(--fontMain);
+        color: var(--fontColor);
+        background: var(--bgColor);
     }
 
     .site__wrap {
@@ -19,7 +19,7 @@
 
     a {
         &:active {
-            color: $accentColor;
+            color: var(--accentColor);
         }
         &:visited {
             color: inherit;
@@ -68,17 +68,17 @@
 
     .btn-border {
         font-weight: 600;
-        color: $fontColor;
-        border-color: $accentColor;
+        color: var(--fontColor);
+        border-color: var(--accentColor);
         transition: $transition ease all 0s;
 
         &:hover:not(.disabled) {
-            color: $accentColor;
-            border-color: $accentColor;
+            color: var(--accentColor);
+            border-color: var(--accentColor);
         }
     }
     .btn-color {
-        background-color: $accentColor;
+        background-color: var(--accentColor);
     }
 
     .text {
@@ -97,7 +97,7 @@
         }
 
         h2 {
-            font-family: $fontMain;
+            font-family: var(--fontMain);
             font-weight: 700;
             @include adaptiv-font(18, 24, 16, 1);
 
@@ -107,7 +107,7 @@
         }
 
         h3 {
-            font-family: $fontMain;
+            font-family: var(--fontMain);
             font-weight: 700;
             @include adaptiv-font(16, 24, 14, 1);
 
@@ -134,7 +134,7 @@
                     display: block;
                     height: 1px;
                     width: 18px;
-                    background-color: $fontColor;
+                    background-color: var(--fontColor);
                     position: absolute;
                     left: 3px;
                     top: 13px;
@@ -147,27 +147,27 @@
         }
 
         a {
-            color: $fontColor;
+            color: var(--fontColor);
             text-decoration: underline transparent from-font;
             text-underline-offset: 3px;
             transition: $transition ease text-decoration 0s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    text-decoration: underline $fontColor from-font;
+                    text-decoration: underline var(--fontColor) from-font;
                 }
             }
             @media (any-hover: none) {
-                text-decoration: underline $fontColor from-font;
+                text-decoration: underline var(--fontColor) from-font;
             }
         }
     }
 
     .block-title {
-        font-family: $fontMain;
+        font-family: var(--fontMain);
         font-weight: 700;
         @include adaptiv-font(32, 38, 20, 1);
-        color: $DGBlue2;
+        color: var(--fontColor);
         text-align: left;
     }
 
@@ -186,8 +186,8 @@
                 border-radius: 10px;
                 background: $LGBlue;
                 border-color: $LGBlue2;
-                font-family: $fontMain;
-                color: $fontColor;
+                font-family: var(--fontMain);
+                color: var(--fontColor);
             }
         }
 
@@ -198,14 +198,14 @@
             border-radius: 10px;
             background: $LGBlue;
             border-color: $LGBlue2;
-            font-family: $fontMain;
-            color: $fontColor;
+            font-family: var(--fontMain);
+            color: var(--fontColor);
             width: 100%;
             transition: $transition ease border-color 0s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    border-color: $accentColor;
+                    border-color: var(--accentColor);
                 }
             }
 
@@ -240,14 +240,15 @@
         &__button {
             @include adaptiv-value("width", 46, 25, 1);
             @include adaptiv-value("height", 46, 25, 1);
-            background-color: $White;
             border-radius: 100%;
+            background: $White;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             position: relative;
             z-index: 2;
             font-size: 22px;
+            color: $Black2;
             cursor: pointer;
             pointer-events: all;
             box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
@@ -317,7 +318,7 @@
                 &-active {
                     border-radius: 6px;
                     width: 26px;
-                    background: $accentColor;
+                    background: var(--accentColor);
                 }
             }
         }
@@ -373,7 +374,7 @@
             display: inline-flex;
             align-items: center;
             @include adaptiv-font(14, 20, 12, 1);
-            color: $fontColor;
+            color: var(--fontColor);
 
             @media (any-hover: hover) {
                 &:hover {
@@ -382,7 +383,7 @@
                     }
 
                     span {
-                        text-decoration: underline $fontColor from-font;
+                        text-decoration: underline var(--fontColor) from-font;
                     }
                 }
             }
@@ -426,6 +427,50 @@
             &_container {
                 display: block;
             }
+        }
+    }
+
+    &.template1 {
+        .swiper {
+            &__button {
+            }
+        }
+    }
+
+    &.template2 {
+        .swiper {
+            &__button {
+                background: rgba(255, 255, 255, 0.8);
+            }
+
+            &__button-prev {
+                transform: rotate(180deg);
+
+                // &.swiper-button-disabled {
+                //     @media (any-hover: hover) {
+                //         &:hover {
+                //             transform: translateY(0) rotate(180deg);
+                //         }
+                //     }
+                // }
+            }
+
+            &__button-next {
+            }
+
+            .swiper-pagination {
+                &-bullet {
+                    opacity: 0.4;
+
+                    &-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .body {
+            @include adaptiv-value("margin-top", 32, 16, 1);
         }
     }
 }

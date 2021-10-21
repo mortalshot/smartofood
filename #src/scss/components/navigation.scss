@@ -6,12 +6,12 @@
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
-        background-color: $White;
+        background: var(--bgColor);
         opacity: 0;
         transition: $transition ease top, $transition opacity 0s;
 
         &__wrapper {
-            background: $White;
+            background: var(--bgColor);
             padding: 0;
             width: 100%;
         }
@@ -25,7 +25,7 @@
             right: 0;
             top: -100%;
             z-index: 11001;
-            background: $White;
+            background: var(--bgColor);
             padding: 24px;
             transition: $transition ease top 0s;
         }
@@ -55,7 +55,7 @@
             padding-top: 105px;
             padding-left: 40px;
             padding-right: 40px;
-            background: $White;
+            background: var(--bgColor);
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -63,7 +63,7 @@
 
         .nav_menu {
             display: block;
-            background: $White;
+            background: var(--bgColor);
             position: relative;
             height: initial;
             overflow: initial;
@@ -117,6 +117,18 @@
 
             .navigation__heading {
                 top: 0;
+            }
+        }
+    }
+
+    &.template2 {
+        .navigation {
+            .nav_menu {
+                border-bottom: 0;
+            }
+
+            .nav_menu_item {
+                color: $White;
             }
         }
     }

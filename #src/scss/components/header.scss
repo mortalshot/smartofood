@@ -1,11 +1,8 @@
 .home-template {
     .header {
-        background: $White;
+        background: var(--bgColor);
         padding: 0;
 
-        @media screen and (max-width: 991px) {
-            border-bottom: 1px solid $LCyan;
-        }
         @media screen and (max-width: 767px) {
             border-bottom: 0;
         }
@@ -15,7 +12,7 @@
             transition: $transition ease height 0s;
 
             @media screen and (max-width: 991px) {
-                height: $size-header-height;
+                height: var(--size-header-height);
             }
             @media screen and (max-width: 767px) {
                 height: auto;
@@ -115,26 +112,22 @@
             font-weight: 600;
             font-size: 12px;
             line-height: 14px;
-            color: $accentColor;
+            color: var(--accentColor);
             margin: 0;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    span {
-                        text-decoration: underline $accentColor from-font;
-                    }
-
-                    i.icon-location {
-                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-                    }
-                }
-            }
 
             @media screen and (max-width: 991px) {
                 order: 2;
             }
             @media screen and (max-width: 767px) {
                 order: 2;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    i.icon-location {
+                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+                }
             }
 
             .icon-location {
@@ -268,7 +261,6 @@
             padding-bottom: 6px;
             @include adaptiv-value("padding-left", 32, 0, 1);
             margin-left: 0;
-            border-left: 1px solid $LCyan;
 
             @media screen and (max-width: $layoutDesktop + "px") {
                 display: flex;
@@ -291,8 +283,8 @@
                 @media (any-hover: hover) {
                     &:hover:not(.selected) {
                         a {
-                            color: $accentColor;
-                            text-decoration: underline $accentColor from-font;
+                            color: var(--accentColor);
+                            text-decoration: underline var(--accentColor) from-font;
                         }
                     }
                 }
@@ -363,12 +355,27 @@
             }
 
             a {
+                display: inline-flex;
+                align-items: center;
                 color: $DGBlue2;
                 transition: $transition ease color 0s;
 
                 @media (any-hover: hover) {
                     &:hover {
-                        color: $accentColor;
+                        color: var(--accentColor);
+
+                        i {
+                            animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                        }
+                    }
+                }
+
+                i {
+                    font-size: 14px;
+                    color: var(--accentColor);
+
+                    &:not(:last-child) {
+                        margin-right: 8px;
                     }
                 }
             }
@@ -388,19 +395,10 @@
             transition: $transition ease height 0s;
 
             @media screen and (max-width: 991px) {
-                height: $size-header-height;
+                height: var(--size-header-height);
             }
             @media screen and (max-width: 767px) {
                 height: $size-header-height-mobile;
-            }
-        }
-
-        &._scrolled {
-            .header_left {
-                @media screen and (max-width: 767px) {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                }
             }
         }
     }
@@ -420,10 +418,10 @@
             padding: 10px;
             border-radius: 100%;
             background-color: transparent;
-            
+
             &:hover {
-                color: $accentColor;
-                background-color: #EFEEFD;
+                color: var(--accentColor);
+                background-color: #efeefd;
             }
         }
 
@@ -440,67 +438,33 @@
     }
 
     .cart-btn {
-        padding: 4px 8px;
-        background: rgba(97, 85, 231, 0.1);
-        border-radius: 40px;
         height: auto;
         width: auto;
         border: 1px solid transparent;
         transition: $transition ease all 0s;
+        padding: initial;
+        background: transparent;
 
         @media (any-hover: hover) {
             &:hover {
                 box-shadow: none;
 
                 i {
-                    color: $accentColor;
+                    color: var(--accentColor);
                     animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
                 }
             }
         }
 
         i {
-            color: $DGBlue2;
-            @include adaptiv-font(24, 24, 18, 1);
             transition: $transition ease color 0s;
-
-            &:not(:last-child) {
-                margin-right: 8px;
-            }
-        }
-
-        &__body {
-            display: flex;
-            align-items: center;
-            border-radius: 30px;
-            background: $SBlue;
-            padding: 2px 7px;
-            font-weight: 600;
-            @include adaptiv-font(12, 17, 10, 1);
-            color: $White;
-
-            .sum {
-                &:not(:last-child) {
-                    margin-right: 5px;
-                }
-            }
-
-            .count {
-                font-weight: 400;
-            }
-        }
-
-        &._active {
-            border-color: $accentColor;
         }
     }
 
     &--horizontal {
         .header {
-            border-bottom: 1px solid $LCyan;
-
             &_container {
-                height: $size-header-height;
+                height: var(--size-header-height);
 
                 @media screen and (max-width: 767px) {
                     height: $size-header-height-mobile;
@@ -602,17 +566,6 @@
             }
 
             &_contacts {
-                flex-direction: row;
-                align-items: center;
-                text-align: left;
-                margin-right: 0;
-
-                div {
-                    &:not(:last-child) {
-                        @include adaptiv-value("margin-right", 32, 0, 1);
-                    }
-                }
-
                 @media screen and (max-width: 991px) {
                     display: flex;
                 }
@@ -644,25 +597,216 @@
             }
 
             &_dilator {
-                height: $size-header-height;
+                height: var(--size-header-height);
 
                 @media screen and (max-width: 767px) {
                     height: $size-header-height-mobile;
                 }
             }
+        }
+    }
 
-            &._scrolled {
-                .header_container {
-                    height: calc(#{$size-header-height} - 10px);
+    &.template1 {
+        .header {
+            @media screen and (max-width: 991px) {
+                border-bottom: 1px solid $LCyan;
+            }
 
-                    @media screen and (max-width: 767px) {
-                        height: $size-header-height-mobile;
+            &_city {
+                @media (any-hover: hover) {
+                    &:hover {
+                        span {
+                            text-decoration: underline var(--accentColor) from-font;
+                        }
+                    }
+                }
+            }
+
+            &_menu {
+                border-left: 1px solid $LCyan;
+            }
+        }
+
+        .cart-btn {
+            padding: 4px 8px;
+            background: rgba(97, 85, 231, 0.1);
+            border-radius: 40px;
+
+            i {
+                color: $DGBlue2;
+                @include adaptiv-font(24, 24, 18, 1);
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            &__body {
+                display: flex;
+                align-items: center;
+                border-radius: 30px;
+                background: var(--accentColor);
+                padding: 2px 7px;
+                font-weight: 600;
+                @include adaptiv-font(12, 17, 10, 1);
+                color: $White;
+
+                .sum {
+                    &:not(:last-child) {
+                        margin-right: 5px;
                     }
                 }
 
-                & + .header_dilator {
-                    height: calc(#{$size-header-height} - 10px);
+                .count {
+                    font-weight: 400;
+                }
+            }
 
+            &._active {
+                border-color: var(--accentColor);
+            }
+        }
+
+        &.home-template--horizontal {
+            .header {
+                border-bottom: 1px solid $LCyan;
+
+                &_contacts {
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: left;
+                    margin-right: 0;
+
+                    div {
+                        &:not(:last-child) {
+                            @include adaptiv-value("margin-right", 32, 0, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.template2 {
+        .header {
+            &_logo {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-right", 48, 0, 1);
+                    @include adaptiv-value("padding-right", 48, 0, 1);
+                    border-right: 1px solid rgba($color: $White, $alpha: 0.3);
+
+                    @media screen and (max-width: 991px) {
+                        padding-right: 0;
+                        border-right: 0;
+                    }
+                }
+            }
+
+            &_city {
+                @media screen and (min-width: 768px) {
+                    padding: 8px;
+                    border-radius: 10px;
+                    background: rgba($color: #fff, $alpha: 0.06);
+                    color: $White;
+
+                    .icon-location {
+                        font-size: 16px;
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+            &_menu {
+                a {
+                    color: $White;
+                }
+            }
+
+            &_phone {
+                a {
+                    color: $White;
+                }
+            }
+
+            &_work {
+                color: rgba($color: #fff, $alpha: 0.5);
+            }
+
+            &_hamburger {
+                color: $White;
+
+                &-icon {
+                    &::before,
+                    &::after,
+                    span {
+                        background-color: $White;
+                    }
+                }
+            }
+        }
+
+        .header_user {
+            flex: 0 0 40px;
+            @include adaptiv-value("width", 40, 30, 1);
+            @include adaptiv-value("height", 40, 30, 1);
+            @include adaptiv-value("flex-basis", 40, 30, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @include adaptiv-font(18, 18, 16, 1);
+            padding: 10px;
+            border-radius: 100%;
+            background: rgba($color: $White, $alpha: 0.1);
+            box-sizing: border-box;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 32, -30, 1);
+
+                @media screen and (max-width: 991px) {
+                    @include adaptiv-value("margin-right", 32, -10, 0);
+                }
+                @media screen and (max-width: 767px) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .cart-btn {
+            i {
+                justify-content: center;
+                flex: 0 0 40px;
+                @include adaptiv-value("width", 40, 30, 1);
+                @include adaptiv-value("height", 40, 30, 1);
+                @include adaptiv-value("flex-basis", 40, 30, 1);
+                border-radius: 100%;
+                background: rgba($color: $White, $alpha: 0.1);
+                @include adaptiv-font(18, 18, 16, 1);
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            &__body {
+                .sum {
+                    font-weight: 700;
+                    @include adaptiv-font(14, 20, 12, 1);
+                }
+
+                .count {
+                    font-size: 10px;
+                    line-height: 14px;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &.home-template--horizontal {
+            .header {
+                &_container {
+                    @media screen and (max-width: 991px) {
+                        height: 50px;
+                    }
                     @media screen and (max-width: 767px) {
                         height: $size-header-height-mobile;
                     }

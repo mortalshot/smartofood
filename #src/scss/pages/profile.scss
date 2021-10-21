@@ -110,7 +110,7 @@
 
                         & > div {
                             &:last-child {
-                                color: $fontColor;
+                                color: var(--fontColor);
                             }
 
                             &:not(:last-child) {
@@ -121,7 +121,7 @@
 
                     .po_order {
                         font-weight: 400;
-                        color: $fontColor;
+                        color: var(--fontColor);
                     }
 
                     .btn {
@@ -171,14 +171,14 @@
         margin: 0;
 
         a {
-            color: $fontColor;
+            color: var(--fontColor);
             text-decoration: underline transparent from-font;
             text-underline-offset: 3px;
             transition: $transition ease text-decoration 0s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    text-decoration: underline $fontColor from-font;
+                    text-decoration: underline var(--fontColor) from-font;
                 }
             }
         }

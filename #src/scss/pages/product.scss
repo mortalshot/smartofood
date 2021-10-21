@@ -42,7 +42,7 @@
 
         &_descr {
             @include adaptiv-font(16, 24, 14, 1);
-            color: $fontColor;
+            color: var(--fontColor);
 
             &:not(:last-child) {
                 @include adaptiv-value("margin-bottom", 32, 40, 1);
@@ -84,7 +84,7 @@
             .nut {
                 font-weight: 600;
                 @include adaptiv-font(12, 17, 10, 1);
-                color: $fontColor;
+                color: var(--fontColor);
                 text-align: center;
                 padding: 8px 16px;
                 margin: 0;
@@ -124,7 +124,7 @@
                 &-wrapper {
                     width: 100%;
                     background-color: rgba($color: $accentColor, $alpha: 0.1);
-                    color: $accentColor;
+                    color: var(--accentColor);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -147,7 +147,7 @@
                         width: 16px;
                         height: 16px;
                         font-size: 16px;
-                        background: $accentColor;
+                        background: var(--accentColor);
                         border-radius: 100%;
                         color: $White;
                         cursor: pointer;
@@ -167,11 +167,11 @@
         }
 
         &_ingredients-btn {
-            border-color: $accentColor;
+            border-color: var(--accentColor);
             font-weight: 600;
             font-size: 14px;
             line-height: 20px;
-            color: $fontColor;
+            color: var(--fontColor);
             margin: 0;
             padding: 15px 40px 15px 26px;
             height: auto;
@@ -182,7 +182,7 @@
             }
 
             i {
-                background-color: $accentColor;
+                background-color: var(--accentColor);
                 border-radius: 100%;
                 width: 17px;
                 height: 17px;

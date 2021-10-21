@@ -1,0 +1,20 @@
+<div class="products_item">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="@@img" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">@@title</div>
+                @@if (context.size) {
+                    <div class="products_item-size size">@@size</div>
+                }
+                @@if (context.desc) {
+                    <div class="products_item-desc desc">@@desc</div>
+                }
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">@@price</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>

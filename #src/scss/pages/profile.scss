@@ -56,6 +56,7 @@
                 height: 32px;
                 @include adaptiv-font(14, 20, 12, 1);
                 padding: 5px 19px;
+                border-radius: 10px;
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -165,6 +166,11 @@
                 }
             }
         }
+
+        .ui-selectmenu-button {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
     }
 
     .profile-orders {
@@ -184,6 +190,12 @@
         }
 
         &__table {
+            th.profile-orders__table-pos {
+                text-align: center;
+            }
+            th.profile-orders__table-total {
+                text-align: right;
+            }
         }
 
         &__table-pos {

@@ -343,6 +343,10 @@
                             border-color: var(--accentColor);
                         }
                     }
+
+                    &:not(:last-child) {
+                        padding-right: 50px;
+                    }
                 }
 
                 .form__radio-title {
@@ -370,6 +374,14 @@
                             margin-right: 24px;
                         }
                     }
+                }
+
+                .form__radio-image {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    max-width: 24px;
                 }
             }
         }

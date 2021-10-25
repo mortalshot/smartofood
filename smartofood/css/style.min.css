@@ -423,7 +423,7 @@ html.template2 {
 }
 .home-template .ui-selectmenu-button {
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   padding: 16px;
   border-radius: 10px;
   background: #f0f4f6;
@@ -1058,6 +1058,9 @@ html.template2 {
     border-color: var(--accentColor);
   }
 }
+.home-template .form__radio--box .form__radio-wrapper:not(:last-child) {
+  padding-right: 50px;
+}
 .home-template .form__radio--box .form__radio-title {
   font-size: 16px;
   line-height: 22px;
@@ -1091,6 +1094,13 @@ html.template2 {
 }
 .home-template .form__radio--box .form__radio-row div:not(:last-child) {
   margin-right: 24px;
+}
+.home-template .form__radio--box .form__radio-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  max-width: 24px;
 }
 .home-template input[type=text].text-input,
 .home-template input[type=text].value-input,
@@ -5204,7 +5214,7 @@ html.template2 {
 }
 .home-template .cart-header .header_container {
   height: auto;
-  padding-top: 15px;
+  padding-top: 30px;
   padding-bottom: 15px;
   align-items: flex-start;
 }
@@ -5698,6 +5708,7 @@ html.template2 {
     flex: 0 0 28px;
     width: 28px;
     height: 28px;
+    color: #ea1d27;
     order: 5;
     top: auto;
     right: auto;
@@ -5918,6 +5929,11 @@ html.template2 {
 }
 .home-template .cart-points--profile {
   align-items: flex-start;
+}
+@media screen and (max-width: 450px) {
+  .home-template .cart-points--profile {
+    display: flex;
+  }
 }
 .home-template .cart-points--profile .cart-points__text {
   font-size: 14px;
@@ -6221,7 +6237,7 @@ html.template2 {
   margin-bottom: 24px;
 }
 .home-template #ontime-select-button {
-  font-weight: 700;
+  font-weight: 500;
   min-width: 240px;
   padding: 16px 24px 16px 50px;
   width: auto;
@@ -6491,7 +6507,7 @@ html.template2 {
     flex: 0 0 33.333%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .home-template .offers .offer {
     flex: 0 0 50%;
   }
@@ -6633,6 +6649,7 @@ html.template2 {
   font-size: 14px;
   line-height: 20px;
   padding: 5px 19px;
+  border-radius: 10px;
 }
 @media (max-width: 1280px) {
   .home-template .profile .po_list .btn {
@@ -6728,6 +6745,10 @@ html.template2 {
     margin: 0px 0px 24px 0px;
   }
 }
+.home-template .profile .ui-selectmenu-button {
+  padding-left: 24px;
+  padding-right: 24px;
+}
 .home-template .profile-orders {
   margin: 0;
 }
@@ -6741,6 +6762,12 @@ html.template2 {
   .home-template .profile-orders a:hover {
     text-decoration: underline var(--fontColor) from-font;
   }
+}
+.home-template .profile-orders__table th.profile-orders__table-pos {
+  text-align: center;
+}
+.home-template .profile-orders__table th.profile-orders__table-total {
+  text-align: right;
 }
 .home-template .profile-orders__table-pos {
   text-align: center;

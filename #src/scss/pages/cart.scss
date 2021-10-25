@@ -15,7 +15,7 @@
 
             .header_container {
                 height: auto;
-                padding-top: 15px;
+                padding-top: 30px;
                 padding-bottom: 15px;
                 align-items: flex-start;
 
@@ -441,6 +441,7 @@
                     flex: 0 0 28px;
                     width: 28px;
                     height: 28px;
+                    color: $Red;
                     order: 5;
                     top: auto;
                     right: auto;
@@ -685,6 +686,10 @@
 
         &--profile {
             align-items: flex-start;
+
+            @media screen and (max-width: 450px) {
+                display: flex;
+            }
 
             .cart-points__text {
                 @include adaptiv-font(14, 20, 12, 1);
@@ -972,7 +977,7 @@
     }
 
     #ontime-select-button {
-        font-weight: 700;
+        font-weight: 500;
         min-width: 240px;
         padding: 16px 24px 16px 50px;
         width: auto;

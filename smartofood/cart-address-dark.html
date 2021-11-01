@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template template2">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartofood</title>
+
+<link type="text/css" href="assets/css/sweetalert2.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/jquery-ui.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/ion.rangeSlider.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/main.min.css" rel="stylesheet" media="all">
+<!-- <link type="text/css" href="https://cdn.ivanov.team/assets/css/cyan.css?ver=1.5.0" rel="stylesheet" media="all"> -->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/style.min.css">
+
+<!-- <script type="text/javascript">var appVersion = "1.5.0", appEnv = "prod", appCdn = "https://cdn.smartofood.ru", uploadsCdn = "https://cdn.smartofood.ru";</script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="assets/js/pages.js" src="assets/js/pages.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="assets/js/lib/config.js" src="assets/js/lib/config.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="assets/js/lib/app.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="banners" src="assets/js/lib/banners.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="swal" src="assets/js/lib/sweetalert2.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jui" src="assets/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mask" src="assets/js/lib/jquery.mask.min.js"></script> -->
+
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://cdn.ivanov.team/assets/js/lib/config.js?ver=1.5.0" src="https://cdn.ivanov.team/assets/js/lib/config.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://cdn.ivanov.team/assets/js/lib/jquery.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="https://cdn.ivanov.team/assets/js/lib/app.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="banners" src="https://cdn.ivanov.team/assets/js/lib/banners.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="swal" src="https://cdn.ivanov.team/assets/js/lib/sweetalert2.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jui" src="https://cdn.ivanov.team/assets/js/lib/jquery-ui.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mask" src="https://cdn.ivanov.team/assets/js/lib/jquery.mask.min.js?ver=1.5.0"></script> -->
+</head>
+
+<body>
+    <div class="site__wrap">
+        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
+    <div class="cp_products scroll-vert" style="height: 330px;">
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-11.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Вок острый с креветками и лососем</div>
+                <div class="dop">800 г</div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-12.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Стейк из говядины </div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-14.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Вок острый с креветками и лососем </div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cpp_total">
+        <div class="cpp_total-wrapper">
+            <div class="cppt_num">3&nbsp;шт</div>
+            <div class="sum">400&nbsp;₽</div>
+        </div>
+        <div class="btn btn-color noselect" data-link="/cart">Перейти в корзину</div>
+    </div>
+</div>
+
+<div id="city-dropdown" class="dropdown noselect opened" style="top: 50px; left: 150px; bottom: auto; width: 240px; opacity: 1;">
+    <div class="dropdown_title">Выберите ваш город</div>
+    <div class="dropdown_list-wrapper">
+        <div class="shadow shadow--top"></div>
+        <div class="shadow shadow--bottom"></div>
+
+        <div class="dropdown_list">
+            <div class="dropdown_item selected" data-link="">Тюмень</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+        </div>
+    </div>
+</div>
+
+<div id="auth-window" class="window">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="close-cross">
+                <i class="icon-close"></i>
+                <span>Закрыть</span>
+            </div>
+
+            <div class="window_body">
+                <div class="signin d-none">
+                    <div class="window_title"> <span>Вход на сайт</span> </div>
+                    <div class="message"> ПИН-код для входа на&nbsp;сайт будет отправлен по&nbsp;СМС </div>
+
+                    <div class="signin_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Получить код</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Получить код», вы&nbsp;принимаете условия пользовательского соглашения</div>
+                </div>
+
+                <div class="pincode">
+                    <div class="window_title"> <span>Войти</span> </div>
+                    <div class="message"> Введите ПИН-код из СМС </div>
+
+                    <div class="code-panel">
+                        <input class="code-input" type="text" autocomplete="one-time-code" maxlength="4">
+                        <div class="digit">5</div>
+                        <div class="digit">4</div>
+                        <div class="digit">3</div>
+                        <div class="digit">2</div>
+                    </div>
+
+                    <div class="code-fail"></div>
+
+                    <div class="resend noselect disabled">
+                        <div class="button">Отправить повторно</div> &nbsp;
+                        <div class="count">через: 40 сек</div>
+                    </div>
+                    <div class="wrong-number noselect">Ввести другой номер телефона</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="city-window" class="window city">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите город</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <input type="text" class="text-input cw_search" placeholder="Поиск">
+                <div class="cw_result scroll-vert noselect" data-cities="[{&quot;id&quot;:2,&quot;folder&quot;:&quot;Siktivkar&quot;,&quot;name&quot;:&quot;Сыктывкар&quot;,&quot;selected&quot;:false},{&quot;id&quot;:1,&quot;folder&quot;:&quot;&quot;,&quot;name&quot;:&quot;Тюмень&quot;,&quot;selected&quot;:true}]">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="shops-window" class="window shops">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите заведение</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="shops_window">
+                    <div class="sw_shops hidescroll">
+                        <div class="sws_block">
+                            <div class="sws_title">
+                                <div class="text">Тюмень</div>
+                            </div>
+                            <div class="sws_list">
+                                <div class="sws_shop selected" data-id="1">
+                                    <div class="swss_name">Кофейня Garden Калинка</div>
+                                    <div class="swss_addr">Республики, 65</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="2">
+                                    <div class="swss_name">Кофейня Garden Океан</div>
+                                    <div class="swss_addr">Республики, 42</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="3">
+                                    <div class="swss_name">Кофейня Garden Советская</div>
+                                    <div class="swss_addr">Советская, 51 к 3</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 21:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="4">
+                                    <div class="swss_name">Кофейня Garden Паруса</div>
+                                    <div class="swss_addr">Малыгина, 90</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="5">
+                                    <div class="swss_name">Кофейня Garden Новин</div>
+                                    <div class="swss_addr">50 лет Октября, 57в</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="6">
+                                    <div class="swss_name">Кофейня Garden Эрвье</div>
+                                    <div class="swss_addr">Ю.-Р.Г.Эрвье, 30 к 4</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="callback-window" class="window">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Обратный звонок</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+
+            <div class="window_body">
+                <div class="callback">
+                    <div class="callback_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Заказать звонок</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Заказать звонок», вы принимаете условия пользовательского соглашения.</div>
+                </div>
+
+                <div class="callback-success d-none">
+                    Скоро мы вам позвоним
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mods-window" class="window mods">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Что добавить в пиццу</span>
+
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="mods_window">
+                    <div class="mw_mods hidescroll">
+                        <div class="ingredients">
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Мясо</div>
+
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
+
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Сыр</div>
+
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
+
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window_footer">
+                <div class="mods_sum">
+                    <div class="mods_sum-added"><span>+&nbsp;293&nbsp;₽</span></div>
+                    <div class="mwt_sum">Итоговая сумма&nbsp;<span>3&nbsp;190&nbsp;₽</span></div>
+                </div>
+                <div class="btn btn-sm btn-color">Добавить</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cart-notification" class="cart-notification">
+    <div class="title"></div>
+    <div class="text"></div>
+</div>
+
+<div id="navigation" class="navigation">
+    <div class="navigation__wrapper nav_panel hidescroll">
+        <div class="navigation__heading">
+            <div class="header_logo">
+                <a href="/" class="header_logo-wrapper">
+                    <img src="img/sf-logo@3x.png" loading="lazy">
+                </a>
+            </div>
+
+            <div class="close-block noselect">
+                <div class="close-cross"><i class="icon-close"></i></div>
+            </div>
+        </div>
+
+        <div class="navigation__body">
+            <div class="navigation__menu-wrapper">
+                <div class="nav_menu">
+                    <a href="" class="nav_menu_item">Суши и роллы</a>
+                    <a href="" class="nav_menu_item">Пицца</a>
+                    <a href="" class="nav_menu_item">WOK и паста</a>
+                    <a href="" class="nav_menu_item">Бургеры</a>
+                    <a href="" class="nav_menu_item">Завтраки</a>
+                    <a href="" class="nav_menu_item">Салаты и закуски</a>
+                    <a href="" class="nav_menu_item">Напитки</a>
+                </div>
+            </div>
+
+            <div class="navigation__footer">
+                <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+                <div class="header_phone offservice">
+                    <a class="black" href="tel:73452696262">+7 (3452) 69-62-62</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="cart-header">
+            <div class="cart-wrapper">
+                <div class="header_container">
+                    <div class="cart-nav">
+                        <div class="cart-steps__wrapper">
+                            <div class="cart-steps">
+                                <div class="cs_step finished" data-link="">
+                                    <div class="css_number">1</div>
+                                    <div class="css_name">Корзина</div>
+                                </div>
+                                <div class="cs_step now" data-link="">
+                                    <div class="css_number">2</div>
+                                    <div class="css_name">Оформление заказа</div>
+                                </div>
+                                <div class="cs_step" data-link="">
+                                    <div class="css_number">3</div>
+                                    <div class="css_name">Подтверждение</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart body">
+            <div class="content-wrapper">
+                <div class="cart__heading">
+                    <h1 class="cart__title block-title">Оформление заказа</h1>
+
+                    <div class="page-back">
+                        <a href="cart-dark.html" class="page-back__link">
+                            <i class="icon-arrow-left"></i>
+                            <span>Вернуться назад</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cart_container main">
+                    <div class="form cart_blocks address_page main__content" data-type="">
+                        <div class="main__content-block">
+                            <div class="cart_blocks-wrapper">
+                                <div class="cb_plate guest-info">
+                                    <div class="cb_title">Информация о вас</div>
+
+                                    <div class="form__row">
+                                        <div class="form__item col-12 col-md-6 guest-name">
+                                            <label for="cartAddressName" class="form__label">Имя</label>
+                                            <input id="cartAddressName" type="text" class="value-input text-input" autocomplete="off" placeholder="Введите имя" value="Демо Аккаунт">
+                                        </div>
+                                        <div class="form__item col-12 col-md-6 guest-phone">
+                                            <label for="cartAddressPhone" class="form__label">Телефон </label>
+                                            <input id="cartAddressPhone" type="text" class="value-input text-input" placeholder="Введите телефон" value="+7 777 777-77-77" readonly="" maxlength="16">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cb_plate">
+                                    <div class="cb_title">Как вам будет удобно получить заказ</div>
+
+                                    <div class="delivery-types noselect">
+                                        <div class="dt_type dt_delivery selected" data-type="delivery">Доставка
+                                        </div>
+                                        <div class="dt_type dt_pickup" data-type="pickup">Самовывоз
+                                        </div>
+                                    </div>
+
+                                    <div class="address-list newaddr noselect">
+                                        <div class="form__row">
+                                            <div class="form__item al_item col-12">
+                                                <label class="form__radio form__radio--box">
+                                                    <input type="radio" name="address" value="1" class="custom-radio">
+
+                                                    <div class="form__radio-wrapper">
+                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
+                                                        <div class="form__radio-row">
+                                                            <div>5 подъезд</div>
+                                                            <div>4 этаж</div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                            <div class="form__item al_item col-12">
+                                                <label class="form__radio form__radio--box">
+                                                    <input type="radio" name="address" value="2" class="custom-radio">
+
+                                                    <div class="form__radio-wrapper">
+                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
+                                                        <div class="form__radio-row">
+                                                            <div>5 подъезд</div>
+                                                            <div>4 этаж</div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <form action="" class="block-hidden" data-autocomplete="on">
+                                            <a href="" class="newaddr__link block-hidden__link">
+                                                <i class="icon-plus"></i>
+                                                <span>Добавить адрес</span>
+                                            </a>
+
+                                            <div class="newaddr__wrapper block-hidden__wrapper">
+                                                <input class="hidden-kladr" type="hidden" value="">
+                                                <input class="hidden-addr" type="hidden" value="">
+                                                <input class="hidden-city" type="hidden" value="">
+
+                                                <div class="new-address form__row">
+                                                    <div class="form__item col-12">
+                                                        <input type="text" class="text-input street ui-autocomplete-input invalid" placeholder="Адрес доставки" value="" autocomplete="off">
+                                                    </div>
+                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
+                                                        <input type="text" class="text-input street ui-autocomplete-input invalid" placeholder="Дом" value="" autocomplete="off">
+                                                    </div>
+                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
+                                                        <input type="text" class="text-input apartment" placeholder="Квартира" value="">
+                                                    </div>
+                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
+                                                        <input type="text" class="text-input entrance" placeholder="Подъезд" value="">
+                                                    </div>
+                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
+                                                        <input type="text" class="text-input floor" placeholder="Этаж" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form__row">
+                                                    <div class="form__item col-12">
+                                                        <label class="form__checkbox">
+                                                            <input type="checkbox">
+                                                            <span>Сохранить адрес</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="newaddr__controls">
+                                                    <button type="submit" class="newaddr__save btn btn-color">Применить</button>
+                                                    <button type="reset" class="newaddr__reset btn btn-border">Отменить</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="address-list noselect shop d-none">
+                                        <div class="form__row">
+                                            <div class="form__item al_item col-12 col-md-6">
+                                                <label class="form__radio form__radio--box">
+                                                    <input type="radio" name="shop-address" value="1" class="custom-radio">
+
+
+                                                    <div class="form__radio-wrapper">
+                                                        <img src="img/icons/house-2.svg" alt="" class="form__radio-image" loading="lazy">
+
+                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
+
+                                                        <div class="form__radio-row">
+                                                            <div>
+                                                                <img src="img/icons/clock-2.svg" alt="">
+                                                                <span>Круглосуточно</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form__item al_item col-12 col-md-6">
+                                                <label class="form__radio form__radio--box">
+                                                    <input type="radio" name="shop-address" value="1" class="custom-radio">
+
+
+                                                    <div class="form__radio-wrapper">
+                                                        <img src="img/icons/house-2.svg" alt="" class="form__radio-image" loading="lazy">
+
+                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
+                                                        
+                                                        <div class="form__radio-row">
+                                                            <div>
+                                                                <img src="img/icons/clock-2.svg" alt="">
+                                                                <span>9:00–23:00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cb_plate">
+                                    <div class="cc_ontime">
+                                        <div class="cb_title cco_title">Время доставки</div>
+                                        <select id="ontime-select" class="custom-select" style="display: none;">
+                                            <option value="">Ближайшее</option>
+                                            <option value="2021-10-13 16:00:00">
+                                                16:00 </option>
+                                            <option value="2021-10-13 16:15:00">
+                                                16:15 </option>
+                                            <option value="2021-10-13 16:30:00">
+                                                16:30 </option>
+                                            <option value="2021-10-13 16:45:00">
+                                                16:45 </option>
+                                            <option value="2021-10-13 17:00:00">
+                                                17:00 </option>
+                                            <option value="2021-10-13 17:15:00">
+                                                17:15 </option>
+                                            <option value="2021-10-13 17:30:00">
+                                                17:30 </option>
+                                            <option value="2021-10-13 17:45:00">
+                                                17:45 </option>
+                                            <option value="2021-10-13 18:00:00">
+                                                18:00 </option>
+                                            <option value="2021-10-13 18:15:00">
+                                                18:15 </option>
+                                            <option value="2021-10-13 18:30:00">
+                                                18:30 </option>
+                                            <option value="2021-10-13 18:45:00">
+                                                18:45 </option>
+                                            <option value="2021-10-13 19:00:00">
+                                                19:00 </option>
+                                            <option value="2021-10-13 19:15:00">
+                                                19:15 </option>
+                                            <option value="2021-10-13 19:30:00">
+                                                19:30 </option>
+                                            <option value="2021-10-13 19:45:00">
+                                                19:45 </option>
+                                            <option value="2021-10-13 20:00:00">
+                                                20:00 </option>
+                                            <option value="2021-10-13 20:15:00">
+                                                20:15 </option>
+                                            <option value="2021-10-13 20:30:00">
+                                                20:30 </option>
+                                            <option value="2021-10-13 20:45:00">
+                                                20:45 </option>
+                                            <option value="2021-10-13 21:00:00">
+                                                21:00 </option>
+                                            <option value="2021-10-13 21:15:00">
+                                                21:15 </option>
+                                            <option value="2021-10-13 21:30:00">
+                                                21:30 </option>
+                                            <option value="2021-10-13 21:45:00">
+                                                21:45 </option>
+                                            <option value="2021-10-13 22:00:00">
+                                                22:00 </option>
+                                            <option value="2021-10-13 22:15:00">
+                                                22:15 </option>
+                                            <option value="2021-10-13 22:30:00">
+                                                22:30 </option>
+                                            <option value="2021-10-13 22:45:00">
+                                                22:45 </option>
+                                            <option value="2021-10-13 23:00:00">
+                                                23:00 </option>
+                                            <option value="2021-10-13 23:15:00">
+                                                23:15 </option>
+                                            <option value="2021-10-13 23:30:00">
+                                                23:30 </option>
+                                            <option value="2021-10-13 23:45:00">
+                                                23:45 </option>
+                                            <option value="2021-10-14 00:00:00">
+                                                0:00 </option>
+                                            <option value="2021-10-14 00:15:00">
+                                                0:15 </option>
+                                            <option value="2021-10-14 00:30:00">
+                                                0:30 </option>
+                                            <option value="2021-10-14 00:45:00">
+                                                0:45 </option>
+                                            <option value="2021-10-14 01:00:00">
+                                                1:00 </option>
+                                            <option value="2021-10-14 01:15:00">
+                                                1:15 </option>
+                                            <option value="2021-10-14 01:30:00">
+                                                1:30 </option>
+                                            <option value="2021-10-14 01:45:00">
+                                                1:45 </option>
+                                            <option value="2021-10-14 02:00:00">
+                                                2:00 </option>
+                                            <option value="2021-10-14 02:15:00">
+                                                2:15 </option>
+                                            <option value="2021-10-14 02:30:00">
+                                                2:30 </option>
+                                            <option value="2021-10-14 02:45:00">
+                                                2:45 </option>
+                                            <option value="2021-10-14 03:00:00">
+                                                3:00 </option>
+                                            <option value="2021-10-14 03:15:00">
+                                                3:15 </option>
+                                            <option value="2021-10-14 03:30:00">
+                                                3:30 </option>
+                                            <option value="2021-10-14 03:45:00">
+                                                3:45 </option>
+                                            <option value="2021-10-14 04:00:00">
+                                                4:00 </option>
+                                            <option value="2021-10-14 04:15:00">
+                                                4:15 </option>
+                                            <option value="2021-10-14 04:30:00">
+                                                4:30 </option>
+                                            <option value="2021-10-14 04:45:00">
+                                                4:45 </option>
+                                            <option value="2021-10-14 05:00:00">
+                                                5:00 </option>
+                                            <option value="2021-10-14 05:15:00">
+                                                5:15 </option>
+                                            <option value="2021-10-14 05:30:00">
+                                                5:30 </option>
+                                            <option value="2021-10-14 05:45:00">
+                                                5:45 </option>
+                                            <option value="2021-10-14 06:00:00">
+                                                6:00 </option>
+                                            <option value="2021-10-14 06:15:00">
+                                                6:15 </option>
+                                            <option value="2021-10-14 06:30:00">
+                                                6:30 </option>
+                                            <option value="2021-10-14 06:45:00">
+                                                6:45 </option>
+                                            <option value="2021-10-14 07:00:00">
+                                                7:00 </option>
+                                            <option value="2021-10-14 07:15:00">
+                                                7:15 </option>
+                                            <option value="2021-10-14 07:30:00">
+                                                7:30 </option>
+                                            <option value="2021-10-14 07:45:00">
+                                                7:45 </option>
+                                            <option value="2021-10-14 08:00:00">
+                                                8:00 </option>
+                                            <option value="2021-10-14 08:15:00">
+                                                8:15 </option>
+                                            <option value="2021-10-14 08:30:00">
+                                                8:30 </option>
+                                            <option value="2021-10-14 08:45:00">
+                                                8:45 </option>
+                                            <option value="2021-10-14 09:00:00">
+                                                9:00 </option>
+                                            <option value="2021-10-14 09:15:00">
+                                                9:15 </option>
+                                            <option value="2021-10-14 09:30:00">
+                                                9:30 </option>
+                                            <option value="2021-10-14 09:45:00">
+                                                9:45 </option>
+                                            <option value="2021-10-14 10:00:00">
+                                                10:00 </option>
+                                            <option value="2021-10-14 10:15:00">
+                                                10:15 </option>
+                                            <option value="2021-10-14 10:30:00">
+                                                10:30 </option>
+                                            <option value="2021-10-14 10:45:00">
+                                                10:45 </option>
+                                            <option value="2021-10-14 11:00:00">
+                                                11:00 </option>
+                                            <option value="2021-10-14 11:15:00">
+                                                11:15 </option>
+                                            <option value="2021-10-14 11:30:00">
+                                                11:30 </option>
+                                            <option value="2021-10-14 11:45:00">
+                                                11:45 </option>
+                                            <option value="2021-10-14 12:00:00">
+                                                12:00 </option>
+                                            <option value="2021-10-14 12:15:00">
+                                                12:15 </option>
+                                            <option value="2021-10-14 12:30:00">
+                                                12:30 </option>
+                                            <option value="2021-10-14 12:45:00">
+                                                12:45 </option>
+                                            <option value="2021-10-14 13:00:00">
+                                                13:00 </option>
+                                            <option value="2021-10-14 13:15:00">
+                                                13:15 </option>
+                                            <option value="2021-10-14 13:30:00">
+                                                13:30 </option>
+                                            <option value="2021-10-14 13:45:00">
+                                                13:45 </option>
+                                            <option value="2021-10-14 14:00:00">
+                                                14:00 </option>
+                                            <option value="2021-10-14 14:15:00">
+                                                14:15 </option>
+                                            <option value="2021-10-14 14:30:00">
+                                                14:30 </option>
+                                            <option value="2021-10-14 14:45:00">
+                                                14:45 </option>
+                                            <option value="2021-10-14 15:00:00">
+                                                15:00 </option>
+                                        </select>
+                                        <span tabindex="0" id="ontime-select-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="ontime-select-menu" aria-haspopup="true" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Ближайшее</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="cb_plate cart_comment">
+                                    <div class="cb_title">Пожелания к заказу</div>
+                                    <div class="form__row">
+                                        <div class="form__item col-12">
+                                            <textarea class="text-input" placeholder="Например: не звонить в домофон, спит ребёнок" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart_sidebar main__sidebar main__sidebar--sticky">
+                        <div class="main__sidebar-wrapper">
+                            <div class="main__sidebar-block">
+                                <div class="sidebar_plate">
+                                    <div class="cart_sidebar-row">
+                                        <div class="cart-resume sp_block">
+                                            <div class="cart-resume__body">
+                                                <div class="cart-resume__item">
+                                                    <div>Товаров</div>
+                                                    <div>3&nbsp;шт</div>
+                                                </div>
+
+                                                <div class="cart-resume__item">
+                                                    <div>Скидка</div>
+                                                    <div>316&nbsp;₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item">
+                                                    <div>Промокод</div>
+                                                    <div>0</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-resume__footer">
+                                                <div class="cart-resume__item sp_price total d-none">
+                                                    <div class="spp_name">Сумма без скидки:</div>
+                                                    <div class="spp_sum">840 ₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item sp_price discount d-none">
+                                                    <div class="spp_name">Сумма скидки:</div>
+                                                    <div class="spp_sum">0 ₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item sp_price pay">
+                                                    <div class="spp_name">Итого:</div>
+                                                    <div class="spp_sum big">2&nbsp;578&nbsp;₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="sp_block">
+                                            <!-- to show active condition add class _active -->
+                                            <div class="sp_promo">
+                                                <input type="text" class="text-input" placeholder="Промокод" value="">
+                                                <div class="btn btn-border noselect">
+                                                    <span>Применить</span>
+                                                    <i class="icon-check"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn btn-color sp_submit noselect"> Оформить заказ </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sp_block">
+                                        <div class="cart-delivery">
+                                            <img src="img/icons/truck-3.svg" alt="Доставка бесплатная" loading="lazy">
+                                            <span> Доставка <b>бесплатная</b></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+    <div class="content-wrapper">
+        <div class="footer_container">
+            <div class="footer_top footer_row">
+                <div class="footer_left">
+                    <div class="footer_column">
+                        <a href="" class="footer_logo"> smarto<b>food</b> </a>
+                    </div>
+
+                    <div class="footer_column">
+                        <div class="footer_contact footer_contact--phone">
+                            <a href="tel:+73452395555" class="footer_contact-wrapper">
+                                <div class="footer_contact-image">
+                                    <i class="icon-phone"></i>
+                                </div>
+                                <div class="footer_contact-body">
+                                    <div class="footer_contact-text">+7 (3452) 39-55-55</div>
+                                    <div class="footer_contact-label">Телефон для заказов</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_menu footer_column">
+                    <div class="footer_menu-items">
+                        <nav class="footer_nav">
+                            <div class="footer_menu-label">Смартфуд</div>
+                            <ul class="footer_menu-list">
+                                <li class="footer_menu-item"> <a href=""> О нас </a> </li>
+                                <li class="footer_menu-item"> <a href="delivery.html"> Доставка и оплата </a> </li>
+                                <li class="footer_menu-item"> <a href="offers.html"> Акции </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer_column">
+                    <div class="footer_app">
+                        <div class="footer_app-title">Заказывайте через приложение</div>
+
+                        <div class="footer_app-links">
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://play.google.com/store/apps/details?id=com.smartofood">
+                                    <i class="icon-google-play"></i>
+                                    <span>GooglePlay</span>
+                                </a>
+                            </div>
+                            
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://apple.co/2WJYg5m">
+                                    <i class="icon-apple"></i>
+                                    <span>AppStore</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_developer">Разработка Ivanov Team 2020</div>
+                </div>
+            </div>
+
+            <div class="footer_bottom footer_row">
+                <div class="footer_column footer_column--copy">
+                    <div class="footer_copy">© 2020 Delivery Ivanov Team. Все права защищены.</div>
+                </div>
+                <div class="footer_column footer_column--development">
+                    <a href="" class="footer_development">
+                        <span>Разработано на</span>
+                        <img src="img/sf-logo.png" alt="smartofood" loading="lazy">
+                    </a>
+                </div>
+                <div class="footer_column footer_column--social">
+                    <div class="footer_social social">
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/instagram.svg" alt="instagram" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/facebook.svg" alt="facebook" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/twitter.svg" alt="twitter" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/telegram.svg" alt="telegram" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

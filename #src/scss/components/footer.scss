@@ -11,8 +11,8 @@
         }
 
         &_row {
-            margin-left: -20px;
-            margin-right: -20px;
+            @include adaptiv-value("margin-left", -20, -15, 1);
+            @include adaptiv-value("margin-right", -20, -15, 1);
 
             @media screen and (max-width: 575px) {
                 flex-wrap: wrap;
@@ -106,8 +106,8 @@
 
         &_column {
             flex-grow: 1;
-            padding-left: 20px;
-            padding-right: 20px;
+            @include adaptiv-value("padding-left", 20, 15, 1);
+            @include adaptiv-value("padding-right", 20, 15, 1);
 
             @media screen and (max-width: 575px) {
                 flex: 0 0 100%;
@@ -422,6 +422,27 @@
             @media (any-hover: hover) {
                 &:hover {
                     opacity: 0.6;
+                }
+            }
+        }
+
+        &--small {
+            .footer_container {
+                padding-top: 39px;
+                padding-bottom: 39px;
+            }
+    
+            .footer_bottom {
+                align-items: center;
+            }
+    
+            .footer_column--copy,
+            .footer_column--social {
+                @media screen and (max-width: 767px) {
+                    flex: 0 0 50%;
+                }
+                @media screen and (max-width: 575px) {
+                    flex: 0 0 100%;
                 }
             }
         }

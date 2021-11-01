@@ -11,6 +11,10 @@
             }
         }
 
+        .text-input {
+            height: 54px;
+        }
+
         .form__row {
             &:not(:last-child) {
                 margin-bottom: 22px;
@@ -170,6 +174,7 @@
         .ui-selectmenu-button {
             padding-left: 24px;
             padding-right: 24px;
+            height: 54px;
         }
     }
 
@@ -225,6 +230,99 @@
                 padding-top: 18px;
                 padding-bottom: 18px;
                 height: auto;
+            }
+        }
+    }
+
+    &.template2 {
+        .profile {
+            .main {
+                &__content-block {
+                    & > .form__row {
+                        @media screen and (max-width: 767px) {
+                            display: flex;
+                            flex-direction: column-reverse;
+
+                            & > div:last-child {
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                }
+
+                &__sidebar-block {
+                    background: $DGBlue4;
+                }
+            }
+
+            .po_list {
+                .btn {
+                    @media screen and (min-width: 768px) {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 17px;
+                        color: var(--accentColor);
+                        text-decoration: underline var(--accentColor) from-font;
+                        text-underline-offset: 2px;
+                        transition: $transition ease text-decoration 0s;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                text-decoration: underline transparent from-font;
+                            }
+                        }
+                    }
+                }
+
+                &--mobile {
+                    @media screen and (max-width: 767px) {
+                        .po_item-wrapper {
+                            border-color: rgba($color: $White, $alpha: 0.4);
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                color: var(--accentColor);
+            }
+        }
+
+        .profile-orders {
+            .table {
+                table {
+                    border-spacing: 0 8px;
+                    border-collapse: initial;
+
+                    th,
+                    td {
+                        @include adaptiv-value("padding-left", 24, 10, 1);
+                        @include adaptiv-value("padding-right", 24, 10, 1);
+                    }
+
+                    th {
+                        padding-bottom: 8px;
+                        color: rgba($color: $White, $alpha: 0.5);
+                    }
+
+                    td {
+                        font-size: 14px;
+                        line-height: 20px;
+                        border-top: 0;
+                        background-color: $DGBlue4;
+
+                        &:first-child {
+                            border-radius: 10px 0 0 10px;
+                        }
+                        &:last-child {
+                            border-radius: 0 10px 10px 0;
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,309 @@
+.home-template {
+    // cart-address ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    .cart_blocks {
+        &-wrapper {
+            @media screen and (min-width: 992px) {
+                max-width: 646px;
+            }
+        }
+    }
+
+    .cb_plate {
+        padding: 0;
+        background: transparent;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 72, 48, 1);
+        }
+    }
+
+    .cb_title {
+        margin: 0;
+        font-weight: 600;
+        @include adaptiv-font(20, 24, 16, 1);
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .delivery-types {
+        border-radius: 30px;
+        background-color: $LGBlue;
+        padding: 4px;
+        display: inline-flex;
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        }
+
+        .dt {
+            &_type {
+                font-weight: 700;
+                @include adaptiv-font(14, 20, 12, 1);
+                color: $DGBlue;
+                @include adaptiv-value("padding-top", 12, 10, 1);
+                @include adaptiv-value("padding-bottom", 12, 10, 1);
+                @include adaptiv-value("padding-left", 60, 30, 1);
+                @include adaptiv-value("padding-right", 60, 30, 1);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border-radius: 30px;
+                cursor: pointer;
+                flex: 0 1 50%;
+                transition: $transition ease color 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: var(--accentColor);
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+
+                &.selected {
+                    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+                    background-color: $White;
+                    color: var(--fontColor);
+                }
+            }
+        }
+    }
+
+    .address-list {
+        margin: 0;
+
+        .al {
+            &_item {
+                border: 0;
+                padding-bottom: 8px !important;
+            }
+        }
+
+        .ali {
+            &_selector {
+            }
+
+            &_container {
+            }
+
+            &_name {
+            }
+
+            &_work {
+            }
+        }
+
+        .newaddr {
+            &:not(:first-child) {
+                .newaddr__link {
+                    margin-top: 6px;
+                }
+
+                .newaddr__wrapper {
+                    margin-top: 16px;
+                }
+            }
+
+            &__wrapper {
+                @include adaptiv-value("padding", 24, 15, 1);
+                border-radius: 10px;
+                border: 1px solid $GBlue;
+            }
+
+            &__controls {
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: 575px) {
+                    display: block;
+                }
+
+                button {
+                    @media screen and (max-width: 575px) {
+                        width: 100%;
+                    }
+
+                    &:not(:last-child) {
+                        @include adaptiv-value("margin-right", 47, 20, 1);
+
+                        @media screen and (max-width: 575px) {
+                            margin: 0px 0px 20px 0px;
+                        }
+                    }
+                }
+            }
+
+            &__save {
+                height: 54px;
+                @include adaptiv-value("padding-left", 54, 30, 1);
+                @include adaptiv-value("padding-right", 54, 30, 1);
+            }
+
+            &__reset {
+                background: transparent;
+                color: var(--accentColor);
+                height: auto;
+                padding: 5px;
+            }
+        }
+
+        .new-address {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    #ontime-select-button {
+        font-weight: 500;
+        min-width: 240px;
+        padding: 16px 24px;
+        padding-right: 52px;
+        width: auto;
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+    }
+
+    // template1 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    &.template1 {
+        #ontime-select-button {
+            padding: 16px 52px 16px 50px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 18px;
+                background: url(../img/icons/clock-2.svg) no-repeat center/contain;
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    // template2 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    &.template2 {
+        .cb_title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .delivery-types {
+            border-radius: 10px;
+            padding: 6px;
+            background: #16161d;
+
+            .dt {
+                &_type {
+                    padding: 6px;
+                    font-weight: 500;
+                    color: rgba($color: $White, $alpha: 0.6);
+                    @include adaptiv-value("padding-left", 34, 15, 1);
+                    @include adaptiv-value("padding-right", 34, 15, 1);
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    border-radius: 6px;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            color: var(--accentColor);
+                        }
+                    }
+
+                    &.selected {
+                        color: $White;
+                        background: $DGBlue4;
+                        box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+
+        .address-list {
+            .newaddr {
+                &__link {
+                    font-size: 14px;
+                    line-height: 20px;
+                    border-radius: 10px;
+                    @include adaptiv-value("padding", 32, 20, 1);
+                    border: 1px dashed rgba(255, 255, 255, 0.4);
+                    width: 100%;
+                    justify-content: center;
+                    transition: $transition ease border-color 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            border-color: var(--accentColor);
+                        }
+                    }
+
+                    i {
+                        border-radius: 100%;
+                        background-color: var(--accentColor);
+                        padding: 3px;
+                        color: var(--fontColor);
+
+                        &:not(:last-child) {
+                            margin-right: 17px;
+                        }
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        color: var(--fontColor);
+                        border-bottom: 0;
+                    }
+                }
+
+                &__controls {
+                    align-items: stretch;
+
+                    button {
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        @include adaptiv-value("padding-left", 54, 30, 1);
+                        @include adaptiv-value("padding-right", 54, 30, 1);
+                        font-size: 12px;
+                        line-height: 17px;
+                        height: auto;
+
+                        &:not(:last-child) {
+                            margin-right: 18px;
+
+                            @media screen and (max-width: 575px) {
+                                margin: 0px 0px 20px 0px;
+                            }
+                        }
+                    }
+                }
+
+                &__reset {
+                    color: $White;
+                    border-color: $White;
+                    transition: $transition ease all 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            color: var(--accentColor);
+                            border-color: var(--accentColor);
+                            background: rgba(71, 203, 84, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

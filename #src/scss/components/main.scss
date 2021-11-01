@@ -76,4 +76,35 @@
             }
         }
     }
+
+    &.template2 {
+        .main {
+            &__content {
+            }
+
+            &__content-block {
+                background: $DBlue;
+            }
+
+            &__sidebar {
+                flex: 0 0 380px;
+
+                @media screen and (min-width: 992px) {
+                    margin-left: 20px;
+                }
+            }
+
+            &__sidebar-block {
+                background: $DBlue;
+                box-shadow: none;
+                @include adaptiv-value("padding-top", 40, 20, 1);
+                @include adaptiv-value("padding-bottom", 40, 20, 1);
+                @include adaptiv-value("padding-left", 32, 15, 1);
+                @include adaptiv-value("padding-right", 32, 15, 1);
+            }
+
+            .sidebar_plate {
+            }
+        }
+    }
 }

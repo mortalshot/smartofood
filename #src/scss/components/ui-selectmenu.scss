@@ -1,0 +1,126 @@
+.home-template {
+    .ui {
+        &-button {
+            &:active,
+            &:focus,
+            &:hover {
+                border-radius: 10px;
+                background: $LGBlue;
+                border-color: $LGBlue2;
+                font-family: var(--fontMain);
+                color: var(--fontColor);
+            }
+        }
+
+        &-selectmenu-button {
+            margin: 0;
+            font-weight: 500;
+            padding: 16px;
+            padding-right: 52px;
+            border-radius: 10px;
+            background: $LGBlue;
+            border-color: $LGBlue2;
+            font-family: var(--fontMain);
+            color: var(--fontColor);
+            width: 100%;
+            transition: $transition ease border-color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: var(--accentColor);
+                }
+            }
+
+            &::after {
+                content: "\e904";
+                font-family: "icomoon" !important;
+                speak: never;
+                color: var(--fontColor);
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%) rotate(90deg);
+                width: 22px;
+                height: 22px;
+                background: transparent;
+                background-position: 0 !important;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition ease transform 0s;
+            }
+
+            &-open {
+                &::after {
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
+        }
+
+        &-widget-content {
+            background: $White;
+            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            padding: 16px 10px;
+            border-radius: 10px;
+        }
+
+        &-menu-item {
+            font-family: var(--fontMain);
+            @include adaptiv-font(16, 22, 14, 1);
+            color: var(--fontColor);
+
+            &:last-child {
+                .ui-menu-item-wrapper {
+                    padding: 8px 14px;
+                }
+            }
+        }
+
+        &-menu-item-wrapper {
+            padding: 8px 14px;
+            border-radius: 10px;
+            border-bottom: 0;
+            transition: $transition ease color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--accentColor);
+                }
+            }
+
+            &.ui-state-active {
+                color: var(--fontColor);
+                background: #efeefd;
+            }
+        }
+    }
+
+    &.template2 {
+        .ui {
+            &-button {
+                &:active,
+                &:focus,
+                &:hover {
+                    border-color: var(--accentColor);
+                }
+            }
+
+            &-selectmenu-button {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
+            }
+
+            &-widget-content {
+                background: $DGBlue5;
+                box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            }
+
+            &-menu-item-wrapper {
+                &.ui-state-active {
+                    color: var(--accentColor);
+                    background: rgba(71, 203, 84, 0.1);
+                }
+            }
+        }
+    }
+}

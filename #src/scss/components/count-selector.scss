@@ -26,13 +26,11 @@
                 font-size: 9px;
             }
 
-            &.disabled {
-                opacity: 0.6;
-            }
-
-            @media (any-hover: hover) {
-                &:hover {
-                    opacity: 0.8;
+            &:not(.disabled) {
+                @media (any-hover: hover) {
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
             }
 
@@ -46,6 +44,73 @@
             font-size: 14px;
             line-height: 20px;
             color: $DGBlue2;
+        }
+    }
+
+    &.template2 {
+        .count-selector {
+            background: transparent;
+            border-radius: 10px;
+            border: 1px solid #3e3e49;
+            padding: 13px 16px;
+            height: auto;
+            width: auto;
+            flex-basis: initial;
+
+            .minus,
+            .plus {
+                width: 24px;
+                height: 24px;
+                background: transparent;
+                color: $White;
+
+                i {
+                    transition: $transition ease color 0s;
+                }
+
+                i.icon-minus {
+                    font-size: 16px;
+                }
+
+                i.icon-plus {
+                    font-size: 16px;
+                }
+
+                &.disabled {
+                    opacity: 0.6;
+                }
+            }
+
+            .minus {
+                &:not(.disabled) {
+                    @media (any-hover: hover) {
+                        &:hover {
+                            opacity: 1;
+                            color: $Red;
+                        }
+                    }
+                }
+            }
+
+            .plus {
+                &:not(.disabled) {
+                    @media (any-hover: hover) {
+                        &:hover {
+                            opacity: 1;
+                            color: var(--accentColor);
+                        }
+                    }
+                }
+            }
+
+            .count {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: $White;
+                @include adaptiv-value("margin-left", 17, 10, 1);
+                @include adaptiv-value("margin-right", 17, 10, 1);
+            }
         }
     }
 }

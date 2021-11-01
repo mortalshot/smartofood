@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template home-template--horizontal template2">
+
+<head>
+    @@include('html-components/_head.html', {
+    "title": "Smartofood"
+    })
+</head>
+
+<body>
+    <div class="site__wrap">
+        @@include('html-components/popup.html', { })
+
+        <div class="header">
+            <div class="content-wrapper">
+                <div class="header_container noselect">
+                    <div class="header_left">
+                        <div class="header_logo">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_city c-pointer" data-cities="2">
+                            <i class="icon-location"></i>
+                            <span class="header_city-span">Тюмень</span>
+                            <i class="icon-chevron-left"></i>
+                        </div>
+
+                        <ul class="header_menu">
+                            <li class=""> <a href="#"> О нас </a> </li>
+                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+                            <li class=""> <a href="offers.html"> Акции </a> </li>
+                        </ul>
+                    </div>
+
+                    <div class="header_right">
+                        <div class="header_contacts">
+                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+
+                            <div class="header_phone offservice">
+								<a href="tel:73452696262">
+									<i class="icon-phone"></i>
+									<span>+7 (3452) 69-62-62</span>
+								</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_dilator"></div>
+
+        <div class="profile body">
+            <div class="content-wrapper">
+                <div class="body_nav">
+                    <div class="content-wrapper">
+                        <div class="body_nav-wrapper">
+                            <div class="header_hamburger">
+                                <div class="header_hamburger-icon"><span></span></div>
+                                <div class="header_hamburger-label">Меню</div>
+                            </div>
+
+                            @@include('html-components/body-nav-menu.html', { })
+
+                            <div class="body_nav-controls">
+                                <a href="profile.html" class="header_user">
+                                    <i class="icon-user"></i>
+                                </a>
+                                <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
+                                    <i class="icon-bag"></i>
+                                    <div class="cart-btn__body">
+                                        <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                        <div class="count">3 товара</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body_nav-dilator"></div>
+
+                <h1 class="block-title">Личный кабинет</h1>
+
+                <div class="main">
+                    <div class="main__content">
+                        <div class="main__content-block">
+                            <div class="form__row">
+                                <div class="col-12 col-md-8 col-lg-9">
+                                    <div class="profile__wrapper">
+                                        <div class="cb_plate">
+                                            <div class="cb_title">Персональная информация</div>
+                                            <div class="form__row">
+                                                <div class="form__item col-12 col-md-6">
+                                                    <label for="guest-name" class="form__label">Имя</label>
+                                                    <input id="guest-name" type="text" class="text-input" placeholder="Имя" value="Демо Аккаунт" data-last="Демо Аккаунт" autocomplete="off">
+                                                </div>
+                                                <div class="form__item col-12 col-md-6">
+                                                    <label for="guest-phone" class="form__label">Телефон</label>
+                                                    <input id="guest-phone" type="text" class="text-input c-pointer" placeholder="Номер телефона" value="+7 777 777-77-77" readonly="" maxlength="16">
+                                                </div>
+                                            </div>
+        
+                                            <div class="form__row">
+                                                <div class="form__item col-12 col-md-6">
+                                                    <label for="guest-email" class="form__label">Почта</label>
+                                                    <input id="guest-email" type="text" class="text-input" placeholder="Электронная  почта" data-last="" value="" autocomplete="off">
+                                                </div>
+                                                <div class="form__item col-12 col-md-6">
+                                                    <label class="form__label">День рождения</label>
+                                                    <div class="form__row pcl_field" data-changed="" id="guest-bchange">
+                                                        <div class="form__item col-12 col-sm-5 col-md-5">
+                                                            <select id="guest-day" class="custom-select" style="display: none;">
+                                                                <option value="01">1</option>
+                                                                <option value="02">2</option>
+                                                                <option value="03">3</option>
+                                                                <option value="04">4</option>
+                                                                <option value="05">5</option>
+                                                                <option value="06">6</option>
+                                                                <option value="07">7</option>
+                                                                <option value="08">8</option>
+                                                                <option value="09">9</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                                <option value="12">12</option>
+                                                                <option value="13">13</option>
+                                                                <option value="14">14</option>
+                                                                <option value="15">15</option>
+                                                                <option value="16">16</option>
+                                                                <option value="17">17</option>
+                                                                <option value="18">18</option>
+                                                                <option value="19">19</option>
+                                                                <option value="20">20</option>
+                                                                <option value="21">21</option>
+                                                                <option value="22">22</option>
+                                                                <option value="23">23</option>
+                                                                <option value="24">24</option>
+                                                                <option value="25">25</option>
+                                                                <option value="26">26</option>
+                                                                <option value="27">27</option>
+                                                                <option value="28">28</option>
+                                                                <option value="29">29</option>
+                                                                <option value="30">30</option>
+                                                                <option value="31">31</option>
+                                                            </select><span tabindex="0" id="guest-day-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="guest-day-menu" aria-haspopup="true" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">1</span></span>
+                                                        </div>
+                                                        <div class="form__item col-12 col-sm-7 col-md-7">
+                                                            <select id="guest-month" class="custom-select" style="display: none;">
+                                                                <option value="01">января</option>
+                                                                <option value="02">февраля</option>
+                                                                <option value="03">марта</option>
+                                                                <option value="04">апреля</option>
+                                                                <option value="05">мая</option>
+                                                                <option value="06">июня</option>
+                                                                <option value="07">июля</option>
+                                                                <option value="08">августа</option>
+                                                                <option value="09">сентября</option>
+                                                                <option value="10">октября</option>
+                                                                <option value="11">ноября</option>
+                                                                <option value="12">декабря</option>
+                                                            </select><span tabindex="0" id="guest-month-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="guest-month-menu" aria-haspopup="true" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">января</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cb_plate">
+                                            <div class="profile-actions">
+                                                <div class="btn btn-color" id="guest-save">Сохранить изменения</div>
+                                                <div class="profile-actions__mailing">
+                                                    <label class="form__checkbox">
+                                                        <input type="checkbox" name="mailing" checked>
+                                                        <span>Получать промокоды и другие предложения</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="main__sidebar-block">
+                                        <div class="sp_block cart-points cart-points--profile">
+                                            <div class="cart-points__text">
+                                                <span>198 баллов</span>
+                                                Вы можете оплатить ими часть покупи.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__content-block">
+                            <div class="profile-orders" data-page="1">
+                                <div class="cb_title">История заказов</div>
+
+                                <div class="po_list po_list--desktop">
+                                    <div class="profile-orders__table table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Заказ</th>
+                                                    <th>Дата и время</th>
+                                                    <th>Статус</th>
+                                                    <th class="profile-orders__table-pos">Позиций</th>
+                                                    <th class="profile-orders__table-total">Сумма</th>
+                                                    <th class="profile-orders__table-more"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Принят</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Отклонён</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>В разработке</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Отказано</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>В пути</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Принят</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Принят</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="order.html">#454</a>
+                                                    </td>
+                                                    <td>29.01.2021 11:29</td>
+                                                    <td>Принят</td>
+                                                    <td class="profile-orders__table-pos">3</td>
+                                                    <td class="profile-orders__table-total">2 980 ₽</td>
+                                                    <td class="profile-orders__table-more">
+                                                        <a href="order.html" class="btn">Подробнее</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="po_list po_list--mobile">
+                                    <div class="po_item">
+                                        <div class="po_item-wrapper">
+                                            <div class="po_line">
+                                                <div class="po_order c-pointer" data-link="/cart/success?id=b74d1c25-c5a0-4231-822e-23e130860bfb"> #107 </div>
+                                                <div>15.10.21 19:21</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Статус</div>
+                                                <div>Принят</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Позиций</div>
+                                                <div>3</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Сумма</div>
+                                                <div>2 980 ₽</div>
+                                            </div>
+
+                                            <a href="order.html" class="btn btn-border">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="po_item">
+                                        <div class="po_item-wrapper">
+                                            <div class="po_line">
+                                                <div class="po_order c-pointer" data-link="/cart/success?id=b74d1c25-c5a0-4231-822e-23e130860bfb"> #107 </div>
+                                                <div>15.10.21 19:21</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Статус</div>
+                                                <div>Принят</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Позиций</div>
+                                                <div>3</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Сумма</div>
+                                                <div>2 980 ₽</div>
+                                            </div>
+
+                                            <a href="order.html" class="btn btn-border">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="po_item">
+                                        <div class="po_item-wrapper">
+                                            <div class="po_line">
+                                                <div class="po_order c-pointer" data-link="/cart/success?id=b74d1c25-c5a0-4231-822e-23e130860bfb"> #107 </div>
+                                                <div>15.10.21 19:21</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Статус</div>
+                                                <div>В разработке</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Позиций</div>
+                                                <div>3</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Сумма</div>
+                                                <div>2 980 ₽</div>
+                                            </div>
+
+                                            <a href="order.html" class="btn btn-border">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="po_item">
+                                        <div class="po_item-wrapper">
+                                            <div class="po_line">
+                                                <div class="po_order c-pointer" data-link="/cart/success?id=b74d1c25-c5a0-4231-822e-23e130860bfb"> #107 </div>
+                                                <div>15.10.21 19:21</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Статус</div>
+                                                <div>Отказано</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Позиций</div>
+                                                <div>3</div>
+                                            </div>
+                                            <div class="po_line">
+                                                <div>Сумма</div>
+                                                <div>2 980 ₽</div>
+                                            </div>
+
+                                            <a href="order.html" class="btn btn-border">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="po_load">
+                                    <div class="btn btn-border">ПОКАЗАТЬ ЕЩЁ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html-components/footer.html', {})
+    </div>
+
+    @@include('html-components/_js.html', {})
+</body>
+
+</html>

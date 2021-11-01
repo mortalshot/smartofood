@@ -94,7 +94,6 @@
             &_info {
                 padding: 24px;
                 border-radius: 10px;
-                margin-top: -8px;
                 background-color: $White;
                 flex: unset;
 
@@ -116,6 +115,60 @@
                     font-size: 14px;
                     line-height: 21px;
                     color: $DGBlue;
+                }
+            }
+        }
+    }
+
+    &.template1 {
+        .offer {
+            &_info {
+                margin-top: -8px;
+            }
+        }
+    }
+    &.template2 {
+        .offers {
+            margin: -10px;
+
+            .offer {
+                flex: 0 0 50%;
+                padding: 10px;
+
+                &_wrapper {
+                    background-color: $DBlue;
+                    padding: 8px;
+                }
+
+                &_image {
+                    border-radius: 6px;
+                    overflow: hidden;
+
+                    img {
+                        border-radius: inherit;
+                    }
+                }
+
+                &_labels {
+                    padding: 16px;
+                }
+
+                &_label {
+                    background-color: $DBlue;
+                    color: rgba($color: $White, $alpha: 0.5);
+                }
+
+                &_info {
+                    background-color: $DBlue;
+                    @include adaptiv-value("padding-top", 32, 16, 1);
+                    @include adaptiv-value("padding-bottom", 32, 16, 1);
+                    @include adaptiv-value("padding-left", 24, 8, 1);
+                    @include adaptiv-value("padding-right", 24, 8, 1);
+
+                    .oi_text {
+                        font-weight: 500;
+                        color: rgba($color: $White, $alpha: 0.8);
+                    }
                 }
             }
         }

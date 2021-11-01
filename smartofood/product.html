@@ -37,16 +37,19 @@
 
 <body>
     <div class="site__wrap">
-        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 70px; right: 30.3995px;">
+        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
     <div class="cp_products scroll-vert" style="height: 330px;">
-        <div class="cpp_item" data-hash="36a0c6ab7fde0cde292d9656424d0a35" data-amount="1">
-            <div class="delete-cross icon-trash"></div><img src="img/categories/category-1.jpg" class="image" loading="lazy">
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-11.jpg" class="image" loading="lazy">
+
             <div class="cpp_info">
-                <div class="name">Вок острый с креветками и стрый с креветками лососем</div>
+                <div class="name">Вок острый с креветками и лососем</div>
                 <div class="dop">800 г</div>
                 <div class="cpp_action">
                     <div class="count-selector noselect">
-                        <div class="minus disabled"><i class="icon-minus"></i></div>
+                        <div class="minus"><i class="icon-minus"></i></div>
                         <div class="count">1</div>
                         <div class="plus"><i class="icon-plus"></i></div>
                     </div>
@@ -54,14 +57,33 @@
                 </div>
             </div>
         </div>
-        <div class="cpp_item" data-hash="36a0c6ab7fde0cde292d9656424d0a35" data-amount="1">
-            <div class="delete-cross icon-trash"></div><img src="img/home-slider/home-slider-item-1.jpg" class="image" loading="lazy">
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-12.jpg" class="image" loading="lazy">
+
             <div class="cpp_info">
-                <div class="name">Сингапур</div>
-                <div class="dop"></div>
+                <div class="name">Стейк из говядины </div>
                 <div class="cpp_action">
                     <div class="count-selector noselect">
-                        <div class="minus disabled"><i class="icon-minus"></i></div>
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-14.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Вок острый с креветками и лососем </div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
                         <div class="count">1</div>
                         <div class="plus"><i class="icon-plus"></i></div>
                     </div>
@@ -79,17 +101,29 @@
     </div>
 </div>
 
-<div id="city-dropdown" class="dropdown noselect" style="top: 50px; left: 150px; bottom: auto; width: 240px; opacity: 1;">
+<div id="city-dropdown" class="dropdown noselect opened" style="top: 50px; left: 150px; bottom: auto; width: 240px; opacity: 1;">
     <div class="dropdown_title">Выберите ваш город</div>
     <div class="dropdown_list-wrapper">
         <div class="shadow shadow--top"></div>
         <div class="shadow shadow--bottom"></div>
 
         <div class="dropdown_list">
-            <div class="dropdown_item selected" data-link="/profile/city?id=1">Тюмень</div>
-            <div class="dropdown_item" data-link="/profile/city?id=2">Сыктывкар</div>
-            <div class="dropdown_item" data-link="/profile/city?id=2">Ростов-на-Дону</div>
-            <div class="dropdown_item" data-link="/profile/city?id=2">Краснодар</div>
+            <div class="dropdown_item selected" data-link="">Тюмень</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
         </div>
     </div>
 </div>
@@ -580,7 +614,7 @@
                                 <div class="header_hamburger-label">Меню</div>
                             </div>
 
-                            <div class="nav_menu" style="height: auto;">
+                            <div class="nav_menu">
     <div class="nav_menu_item-wrapper _active">
         <a href="#" class="nav_menu_item"> Суши и роллы </a>
     </div>
@@ -647,12 +681,55 @@
                                         <h1 class="product_title pp_title">Маргарита</h1>
                                         <div class="product_descr pp_desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
 
-                                        <div class="switch-selector selectors noselect" data-group="7467fb79-d2b3-4951-b132-a033817d3ed8">
-                                            <div class="ss_wrapper hidescroll">
-                                                <div class="ss_item selected" data-info="{&quot;id&quot;:179371,&quot;product_id&quot;:&quot;8eff8cdd-5ad6-4002-9c46-7f9b6c3aec20&quot;,&quot;image_path&quot;:&quot;&quot;,&quot;image_alt&quot;:&quot;&quot;,&quot;name&quot;:&quot;Тонкое&quot;,&quot;place&quot;:0,&quot;price&quot;:&quot;0 ₽&quot;,&quot;carbohydrate&quot;:&quot;0,00&quot;,&quot;energy&quot;:&quot;0,00&quot;,&quot;fat&quot;:&quot;0,00&quot;,&quot;fiber&quot;:&quot;0,00&quot;,&quot;weight&quot;:&quot;0 г&quot;,&quot;measure_unit&quot;:&quot;порц&quot;,&quot;price_raw&quot;:0,&quot;carbohydrate_raw&quot;:0,&quot;energy_raw&quot;:0,&quot;fat_raw&quot;:0,&quot;fiber_raw&quot;:0,&quot;weight_raw&quot;:0,&quot;min&quot;:0,&quot;max&quot;:0,&quot;default&quot;:0,&quot;is_required&quot;:false}">
-                                                    Маленькая</div>
-                                                <div class="ss_item" data-info="{&quot;id&quot;:179372,&quot;product_id&quot;:&quot;5c3a791f-7f57-4e55-822f-9839948a4d8e&quot;,&quot;image_path&quot;:&quot;&quot;,&quot;image_alt&quot;:&quot;&quot;,&quot;name&quot;:&quot;Толстое&quot;,&quot;place&quot;:0,&quot;price&quot;:&quot;0 ₽&quot;,&quot;carbohydrate&quot;:&quot;0,00&quot;,&quot;energy&quot;:&quot;0,00&quot;,&quot;fat&quot;:&quot;0,00&quot;,&quot;fiber&quot;:&quot;0,00&quot;,&quot;weight&quot;:&quot;0 г&quot;,&quot;measure_unit&quot;:&quot;порц&quot;,&quot;price_raw&quot;:0,&quot;carbohydrate_raw&quot;:0,&quot;energy_raw&quot;:0,&quot;fat_raw&quot;:0,&quot;fiber_raw&quot;:0,&quot;weight_raw&quot;:0,&quot;min&quot;:0,&quot;max&quot;:0,&quot;default&quot;:0,&quot;is_required&quot;:false}">
-                                                    Большая</div>
+                                        <div class="switch-selector" data-group="">
+                                            <div class="ss_wrapper">
+                                                <div class="ss_item selected" data-info=""> Маленькая</div>
+                                                <div class="ss_item" data-info=""> Большая</div>
+                                                <div class="ss_item" data-info=""> Большая</div>
+                                                <div class="ss_item" data-info=""> Большая</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="switch-selector switch-selector--select">
+                                            <select id="product-select" class="custom-select" style="display: none;">
+                                                <option value="Маленькая">Маленькая</option>
+                                                <option value="Средняя">Средняя</option>
+                                                <option value="Больше средней">Больше средней</option>
+                                                <option value="Большая">Большая</option>
+                                                <option value="Очень большая">Очень большая</option>
+                                                <option value="Очень маленькая">Очень маленькая</option>
+                                                <option value="XXXL">XXL</option>
+                                            </select>
+                                            <span tabindex="0" id="product-select-button" class="ui-selectmenu-button ui-button ui-widget ui-selectmenu-button-open">
+                                                <span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span>
+                                                <span class="ui-selectmenu-text">Ближайшее</span>
+                                            </span>
+
+                                            <!-- add the ui-selectmenu-open class to show select options -->
+                                            <div class="ui-selectmenu-menu ui-front" style="width: 100%; bottom: 0; transform: translateY(100%);">
+                                                <ul id="product-select-menu" role="listbox" tabindex="0" class="ui-menu ui-corner-bottom ui-widget ui-widget-content ui-widget-overflow hidescroll">
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-3" tabindex="-1" role="option" class="ui-menu-item-wrapper ui-state-active">Маленькая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-4" tabindex="-1" role="option" class="ui-menu-item-wrapper">Средняя</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-5" tabindex="-1" role="option" class="ui-menu-item-wrapper">Больше средней</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-6" tabindex="-1" role="option" class="ui-menu-item-wrapper">Большая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-7" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень большая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-8" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень маленькая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-9" tabindex="-1" role="option" class="ui-menu-item-wrapper">XXXL</div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
 

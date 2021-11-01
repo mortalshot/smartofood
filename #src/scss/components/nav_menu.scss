@@ -29,7 +29,7 @@
                 @include adaptiv-value("margin-left", -24, 6, 1);
                 @include adaptiv-value("margin-right", -24, 6, 1);
                 width: auto;
-                justify-content: space-between;
+                justify-content: flex-start;
             }
             @media screen and (max-width: 767px) {
                 display: none;
@@ -146,10 +146,21 @@
         }
     }
 
+    &.template1 {
+        .nav_menu {
+            height: auto;
+        }
+    }
+
     &.template2 {
         .nav_menu_item {
             font-size: 14px;
             line-height: 20px;
+
+            @media screen and (min-width: 992px) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
         }
     }
 }

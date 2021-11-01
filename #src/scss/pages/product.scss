@@ -2,7 +2,6 @@
     .product {
         display: block;
         padding: 0;
-        @include adaptiv-value("margin-bottom", 100, 50, 1);
 
         .breadcrumbs {
             &:not(:last-child) {
@@ -23,6 +22,10 @@
         &_info {
             order: 2;
             padding: 0;
+
+            @media screen and (min-width: 768px) {
+                max-width: 45%;
+            }
         }
 
         &_panel {
@@ -64,6 +67,14 @@
             .ss_item {
                 @include adaptiv-value("padding-left", 56, 43, 1);
                 @include adaptiv-value("padding-right", 56, 43, 1);
+            }
+
+            &--select {
+                background: transparent;
+
+                .ui-selectmenu-button {
+                    width: auto;
+                }
             }
         }
 
@@ -181,6 +192,12 @@
                 width: 100%;
             }
 
+            * {
+                &:not(:last-child) {
+                    margin-right: 18px;
+                }
+            }
+
             i {
                 background-color: var(--accentColor);
                 border-radius: 100%;
@@ -189,52 +206,16 @@
                 justify-content: center;
                 font-size: 10px;
                 color: $White;
-
-                &:not(:last-child) {
-                    margin-right: 18px;
-                }
             }
         }
 
         &_footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
-            background: $White;
-            border-radius: 10px;
-            padding: 16px;
-            @include adaptiv-value("padding-left", 32, 16, 1);
-            @include adaptiv-value("padding-right", 32, 16, 1);
-            width: 100%;
-
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-                display: block;
-            }
-            @media screen and (max-width: 575px) {
-                display: block;
-            }
         }
 
         &_total {
             margin: 0;
             display: flex;
             align-items: center;
-
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
-
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-                &:not(:last-child) {
-                    margin: 0px 0px 24px 0px;
-                }
-            }
-            @media screen and (max-width: 575px) {
-                &:not(:last-child) {
-                    margin: 0px 0px 24px 0px;
-                }
-            }
 
             .ppt_sum {
                 font-weight: 700;
@@ -280,6 +261,7 @@
             flex: 0 0 49%;
             order: 1;
             border-radius: 20px;
+            overflow: hidden;
 
             &:not(:last-child) {
                 @include adaptiv-value("margin-right", 100, -100, 1);
@@ -291,9 +273,248 @@
                     margin: 0px 0px 30px 0px;
                 }
             }
+        }
+    }
 
-            img {
-                border-radius: 20px;
+    &.template1 {
+        .product {
+            &_footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+                background: $White;
+                border-radius: 10px;
+                padding: 16px;
+                @include adaptiv-value("padding-left", 32, 16, 1);
+                @include adaptiv-value("padding-right", 32, 16, 1);
+                width: 100%;
+
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    display: block;
+                }
+                @media screen and (max-width: 575px) {
+                    display: block;
+                }
+            }
+
+            &_total {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    &:not(:last-child) {
+                        margin: 0px 0px 24px 0px;
+                    }
+                }
+                @media screen and (max-width: 575px) {
+                    &:not(:last-child) {
+                        margin: 0px 0px 24px 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.template2 {
+        .product {
+            &_row {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+            &_image,
+            &_info {
+                flex: 0 0 50%;
+                margin: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &_image {
+                border-radius: 10px;
+
+                @media screen and (max-width: 767px) {
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            &_info {
+                @media screen and (min-width: 768px) {
+                    max-width: 50%;
+                }
+            }
+
+            &_panel {
+                border-radius: 10px;
+                background: $DBlue;
+                @include adaptiv-value("padding-top", 48, 16, 1);
+                @include adaptiv-value("padding-bottom", 48, 16, 1);
+                @include adaptiv-value("padding-left", 48, 0, 1);
+                @include adaptiv-value("padding-right", 48, 0, 1);
+
+                @media screen and (max-width: 767px) {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+            }
+
+            &_title {
+                @include adaptiv-font(24, 34, 18, 1);
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            &_descr {
+                opacity: 0.5;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .switch-selector {
+                .ss_item {
+                    padding: 14px 24px;
+                    white-space: nowrap;
+                }
+
+                &--selector {
+                    width: auto;
+                }
+            }
+
+            &_nutrition {
+                margin: -5px -16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            &_nutrition-item {
+                display: block;
+                padding: 5px 16px;
+            }
+
+            &_nutrition-val {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &_nutrition-label {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                opacity: 0.5;
+            }
+
+            &_ingredients {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+
+            &_ingredients-items {
+                .ppm_mod {
+                    display: inline-flex;
+                    flex: initial;
+
+                    &-wrapper {
+                        font-weight: 500;
+                        @include adaptiv-font(14, 20, 12, 1);
+                        color: var(--fontColor);
+                        padding: 4px 4px 4px 12px;
+                        background: rgba(255, 255, 255, 0.08);
+
+                        i {
+                            background: rgba(255, 255, 255, 0.2);
+                            color: var(--fontColor);
+                            transition: $transition ease color 0s;
+
+                            
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    opacity: 1;
+                                    color: $Red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_ingredients-btn {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 17px;
+                text-transform: uppercase;
+                border-radius: 10px;
+                border-color: transparent;
+                background: $DGBlue4;
+                padding: 16.5px 17px 16.5px 32px;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &_total {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+
+                .ppt_sum {
+                    @include adaptiv-font(24, 34, 18, 1);
+                }
+
+                .ppt_weight {
+                    font-weight: 700;
+                    font-size: 10px;
+                    line-height: 14px;
+                    color: $White;
+                    margin: 0;
+                    padding: 8px 10px;
+                    border-radius: 4px;
+                    background: rgba(0, 0, 0, 0.3);
+
+                    &:not(:first-child) {
+                        margin-left: 32px;
+                    }
+                }
+            }
+
+            &_footer-row {
+                display: flex;
+                justify-content: space-between;
+
+                @media screen and (max-width: 450px) {
+                    display: block;
+                }
+
+                & > div {
+                    &:not(:last-child) {
+                        @include adaptiv-value("margin-right", 24, 10, 1);
+
+                        @media screen and (max-width: 450px) {
+                            margin: 0px 0px 20px 0px;
+                        }
+                    }
+                }
+            }
+
+            &_btn {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                flex: 1;
+                text-transform: uppercase;
+                padding-right: 24px;
+                border-radius: 10px;
             }
         }
     }

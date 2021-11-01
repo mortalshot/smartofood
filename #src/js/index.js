@@ -5,4 +5,4 @@
 @@include('components/slider.js')
 @@include('components/scroll-shadows.js')
 
-@@include('components/media-query.js')
+/* @@include('components/media-query.js') */

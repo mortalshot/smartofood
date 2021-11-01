@@ -17,6 +17,10 @@
         }
     }
 
+    .align-items-end {
+        align-items: flex-end;
+    }
+
     a {
         &:active {
             color: var(--accentColor);
@@ -55,17 +59,22 @@
             opacity: 0;
         }
 
-        &:hover {
-            box-shadow: none;
+        span {
+            position: relative;
+        }
 
-            &::before {
-                opacity: 1;
-                width: 200%;
-                height: 200%;
+        &:not(.disabled) {
+            &:hover {
+                box-shadow: none;
+
+                &::before {
+                    opacity: 1;
+                    width: 200%;
+                    height: 200%;
+                }
             }
         }
     }
-
     .btn-border {
         font-weight: 600;
         color: var(--fontColor);
@@ -83,7 +92,6 @@
 
     .text {
         max-width: 832px;
-        margin: 0 auto;
     }
 
     ._content {
@@ -176,48 +184,6 @@
         max-width: calc($size-container + $containerPadding * 2) + px;
         @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
         @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
-    }
-
-    .ui {
-        &-button {
-            &:active,
-            &:focus,
-            &:hover {
-                border-radius: 10px;
-                background: $LGBlue;
-                border-color: $LGBlue2;
-                font-family: var(--fontMain);
-                color: var(--fontColor);
-            }
-        }
-
-        &-selectmenu-button {
-            margin: 0;
-            font-weight: 500;
-            padding: 16px;
-            border-radius: 10px;
-            background: $LGBlue;
-            border-color: $LGBlue2;
-            font-family: var(--fontMain);
-            color: var(--fontColor);
-            width: 100%;
-            transition: $transition ease border-color 0s;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    border-color: var(--accentColor);
-                }
-            }
-
-            &::after {
-                top: 50%;
-                transform: translateY(-50%);
-                width: 16px;
-                height: 16px;
-                background: url(../img/icons/chevron-select.svg) no-repeat center/contain;
-                background-position: 0 !important;
-            }
-        }
     }
 
     .swiper {
@@ -435,24 +401,52 @@
             &__button {
             }
         }
+
+        .text {
+            margin: 0 auto;
+        }
     }
 
     &.template2 {
+        .btn {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            border-radius: 10px;
+
+            &::before {
+                background: rgba(0, 0, 0, 0.1);
+            }
+        }
+        .btn-color {
+            color: var(--fontColor);
+        }
+
+        .page-back {
+            &__link {
+                font-weight: 500;
+            }
+        }
+
         .swiper {
             &__button {
-                background: rgba(255, 255, 255, 0.8);
+                background: rgba(255, 255, 255, 0.2);
+                color: $White;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        &:not(.swiper-button-disabled) {
+                            &.swiper__button-prev {
+                                transform: rotate(180deg) translateY(-3px);
+                            }
+                        }
+                    }
+                }
             }
 
             &__button-prev {
                 transform: rotate(180deg);
-
-                // &.swiper-button-disabled {
-                //     @media (any-hover: hover) {
-                //         &:hover {
-                //             transform: translateY(0) rotate(180deg);
-                //         }
-                //     }
-                // }
             }
 
             &__button-next {

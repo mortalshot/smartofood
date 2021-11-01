@@ -751,6 +751,12 @@
             &_phone {
                 a {
                     color: $White;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            color: var(--accentColor);
+                        }
+                    }
                 }
             }
 

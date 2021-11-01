@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template template2">
+
+<head>
+    @@include('html-components/_head.html', {
+    "title": "Smartofood"
+    })
+</head>
+
+<body>
+    <div class="site__wrap">
+        @@include('html-components/popup.html', { })
+
+        <div class="cart-header">
+            <div class="cart-wrapper">
+                <div class="header_container">
+                    <div class="cart-nav">
+                        <div class="cart-steps__wrapper">
+                            <div class="cart-steps">
+                                <div class="cs_step now" data-link="">
+                                    <div class="css_number">1</div>
+                                    <div class="css_name">Корзина</div>
+                                </div>
+                                <div class="cs_step" data-link="">
+                                    <div class="css_number">2</div>
+                                    <div class="css_name">Оформление заказа</div>
+                                </div>
+                                <div class="cs_step" data-link="">
+                                    <div class="css_number">3</div>
+                                    <div class="css_name">Подтверждение</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart body">
+            <div class="content-wrapper">
+                <div class="cart__heading">
+                    <h1 class="cart__title block-title">Корзина</h1>
+
+                    <div class="page-back">
+                        <a href="index-dark.html" class="page-back__link">
+                            <i class="icon-arrow-left"></i>
+                            <span>Вернуться назад</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cart_container main">
+                    <div class="main__content">
+                        <div class="cart__items">
+                            <div class="cart_list cart_page">
+                                <div class="cl_item">
+                                    <div class="cl_item-image">
+                                        <img src="img/products/product-8.jpg" class="image" loading="lazy">
+                                    </div>
+        
+                                    <div class="cl_item-row">
+                                        <div class="cl_info">
+                                            <div class="name">Стейк из говядины</div>
+                                        </div>
+        
+                                        <div class="cl_action">
+                                            <div class="count-selector">
+                                                <div class="minus"><i class="icon-minus"></i></div>
+                                                <div class="count">2</div>
+                                                <div class="plus"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="sum">900&nbsp;₽</div>
+        
+                                        <div class="delete-cross">
+                                            <i class="icon-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cl_item">
+                                    <div class="cl_item-image">
+                                        <img src="img/products/product-9.jpg" class="image" loading="lazy">
+                                    </div>
+        
+                                    <div class="cl_item-row">
+                                        <div class="cl_info">
+                                            <div class="name">Зажарка с венскими сосисками и луком</div>
+                                        </div>
+        
+                                        <div class="cl_action">
+                                            <div class="count-selector noselect">
+                                                <div class="minus"><i class="icon-minus"></i></div>
+                                                <div class="count">1</div>
+                                                <div class="plus"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="sum">900&nbsp;₽</div>
+        
+                                        <div class="delete-cross">
+                                            <i class="icon-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cl_item">
+                                    <div class="cl_item-image">
+                                        <img src="img/products/product-10.jpg" class="image" loading="lazy">
+                                    </div>
+        
+                                    <div class="cl_item-row">
+                                        <div class="cl_info">
+                                            <div class="name">Борщь с говядиной</div>
+                                        </div>
+        
+                                        <div class="cl_action">
+                                            <div class="count-selector noselect">
+                                                <div class="minus"><i class="icon-minus"></i></div>
+                                                <div class="count">1</div>
+                                                <div class="plus"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="sum">900&nbsp;₽</div>
+        
+                                        <div class="delete-cross">
+                                            <i class="icon-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cl_item">
+                                    <div class="cl_item-image">
+                                        <img src="img/products/product-11.jpg" class="image" loading="lazy">
+                                    </div>
+        
+                                    <div class="cl_item-row">
+                                        <div class="cl_info">
+                                            <div class="name">Борщь с говядиной</div>
+                                        </div>
+        
+                                        <div class="cl_item-empty">Это блюдо не доступно</div>
+        
+                                        <div class="delete-cross">
+                                            <i class="icon-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart_sidebar main__sidebar main__sidebar--sticky">
+                        <div class="main__sidebar-wrapper">
+                            <div class="main__sidebar-block">
+                                <div class="sidebar_plate">
+                                    <div class="cart_sidebar-row">
+                                        <div class="cart-resume sp_block">
+                                            <div class="cart-resume__body">
+                                                <div class="cart-resume__item">
+                                                    <div>Товаров</div>
+                                                    <div>3&nbsp;шт</div>
+                                                </div>
+
+                                                <div class="cart-resume__item">
+                                                    <div>Скидка</div>
+                                                    <div>316&nbsp;₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item">
+                                                    <div>Промокод</div>
+                                                    <div>0</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-resume__footer">
+                                                <div class="cart-resume__item sp_price total d-none">
+                                                    <div class="spp_name">Сумма без скидки:</div>
+                                                    <div class="spp_sum">840 ₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item sp_price discount d-none">
+                                                    <div class="spp_name">Сумма скидки:</div>
+                                                    <div class="spp_sum">0 ₽</div>
+                                                </div>
+
+                                                <div class="cart-resume__item sp_price pay">
+                                                    <div class="spp_name">Итого:</div>
+                                                    <div class="spp_sum big">2&nbsp;578&nbsp;₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="sp_block">
+                                            <!-- to show active condition add class _active -->
+                                            <div class="sp_promo">
+                                                <input type="text" class="text-input" placeholder="Промокод" value="">
+                                                <div class="btn btn-border noselect">
+                                                    <span>Применить</span>
+                                                    <i class="icon-check"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn btn-color sp_submit noselect"> Оформить заказ </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sp_block">
+                                        <div class="cart-notice cart-notice--red">
+                                            <img src="img/icons/clock.svg" alt="На сегодня приём заказов окончен." loading="lazy">
+                                            <span>
+                                                На сегодня приём заказов окончен, повторите заказ завтра с 09:00. Приносим извинения за доставленные неудобства.
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="sp_block">
+                                        <div class="cart-notice cart-notice--orange">
+                                            <img src="img/icons/restaurant.svg" alt="Некоторые блюда, в данный момент, недоступны к заказу." loading="lazy">
+                                            <span>
+                                                Одно или несколько выбранных блюд сейчас не доступны. Удалите их из корзины или выберите другие. Приносим извинения за доставленные неудобства!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load_suggest products-section">
+                    <div class="block-title">Рекомендуем к вашему заказу</div>
+
+                    <div class="products swiper swiper--arrow-top">
+                        <div class="swiper__buttons">
+                            <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                            <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                        </div>
+
+                        <div class="swiper-wrapper">
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-8.jpg",
+                                "title": "Четыре сезона",
+                                "size": "от 350 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус",
+                                "price": "от 245 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-9.jpg",
+                                "title": "Маргарита большая",
+                                "size": "800 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты",
+                                "price": "от 245 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-10.jpg",
+                                "title": "Вок острый с креветками и лососем",
+                                "size": "200 г",
+                                "desc": "Лапша, креветки, соус, чеснок, зелень",
+                                "price": "1 890 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-11.jpg",
+                                "title": "Салат капрезе",
+                                "size": "300 гр.",
+                                "desc": "Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...",
+                                "price": "1 890 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-12.jpg",
+                                "title": "Маргарита большая",
+                                "size": "800 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты",
+                                "price": "от 245 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-13.jpg",
+                                "title": "Четыре сезона",
+                                "size": "от 350 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус",
+                                "price": "от 245 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-14.jpg",
+                                "title": "Салат капрезе",
+                                "size": "300 гр.",
+                                "desc": "Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...",
+                                "price": "1 890 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-15.jpg",
+                                "title": "Маргарита большая",
+                                "size": "800 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты",
+                                "price": "от 245 ₽",
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "swiper-slide",
+                                "img": "img/products/product-16.jpg",
+                                "title": "Четыре сезона",
+                                "size": "от 350 г",
+                                "desc": "Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус",
+                                "price": "от 245 ₽",
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html-components/footer.html', {})
+    </div>
+
+    @@include('html-components/_js.html', {})
+</body>
+
+</html>

@@ -7,6 +7,14 @@
         max-width: 515px;
 
         .cp_products {
+            &.scroll-vert {
+                padding-right: 0;
+
+                &::-webkit-scrollbar {
+                    width: 0px;
+                    height: 0px;
+                }
+            }
         }
 
         .cpp_item {
@@ -125,7 +133,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 27px;
-                color: $DGBlue2;
+                color: var(--fontColor);
             }
 
             .btn {
@@ -133,6 +141,83 @@
                 flex: initial;
                 height: auto;
                 padding: 18px 49px;
+            }
+        }
+    }
+
+    &.template2 {
+        .cart-popup {
+            background-color: $DGBlue5;
+
+            .cpp_item {
+                border-color: #35353d;
+
+                .image {
+                    width: 80px;
+                    height: 80px;
+                    flex: 0 0 80px;
+                }
+
+                .cpp_info {
+                    .name {
+                        font-weight: 400;
+                        color: var(--fontColor);
+                    }
+
+                    .dop {
+                    }
+
+                    .sum {
+                        color: var(--fontColor);
+                    }
+                }
+
+                .count-selector {
+                    padding: 0;
+                    border: 0;
+
+                    .minus,
+                    .plus {
+                        background: $White;
+                        color: $DGBlue2;
+                    }
+
+                    .minus {
+                        &:not(.disabled) {
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    color: $Red;
+                                }
+                            }
+                        }
+                    }
+
+                    .plus {
+                        &:not(.disabled) {
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    color: var(--accentColor);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .delete-cross {
+                    border-color: rgba($color: $White, $alpha: 0.5);
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            border-color: $Red;
+                        }
+                    }
+                }
+            }
+
+            .cpp_total {
+                .cppt_num {
+                    color: var(--fontColor);
+                }
             }
         }
     }

@@ -1,0 +1,316 @@
+.home-template {
+    // cart-pay ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    .pay-info {
+        border-radius: 10px;
+        @include adaptiv-value("padding", 32, 24, 1);
+
+        .form__row {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .ali_addr {
+            margin: 0;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $DGBlue;
+
+            span {
+                padding: 0;
+                display: block;
+                margin-top: 4px;
+                font-weight: 500;
+                @include adaptiv-font(16, 22, 14, 1);
+            }
+        }
+    }
+
+    .pay-types {
+        .pt_selectors {
+            display: inline-flex;
+            padding: 4px;
+            border-radius: 30px;
+            background-color: $LGBlue;
+        }
+
+        .pt_selector {
+            padding: 0;
+            border: 0;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            .pts_line {
+                flex: 0 1 50%;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        label {
+                            color: var(--accentColor);
+                        }
+                    }
+                }
+
+                input {
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+
+                    &:checked {
+                        & + label {
+                            box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+                            background-color: $White;
+                            color: var(--fontColor);
+                        }
+                    }
+                }
+
+                label {
+                    font-weight: 700;
+                    @include adaptiv-font(14, 20, 12, 1);
+                    color: $DGBlue;
+                    @include adaptiv-value("padding-top", 12, 10, 1);
+                    @include adaptiv-value("padding-bottom", 12, 10, 1);
+                    @include adaptiv-value("padding-left", 38, 30, 1);
+                    @include adaptiv-value("padding-right", 38, 30, 1);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    transition: $transition ease color 0s;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .cashback {
+        display: block;
+
+        &:not(:first-child) {
+            @include adaptiv-value("margin-top", 40, 48, 1);
+        }
+
+        &__label {
+            font-size: 14px;
+            line-height: 20px;
+            color: $DGBlue;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        .cash-change {
+            margin: 16px 0px 0px 0px;
+            @include adaptiv-font(16, 22, 14, 1);
+            color: var(--fontColor);
+            display: flex;
+            align-items: center;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 24px;
+                height: auto;
+            }
+
+            span {
+                margin-left: 8px;
+                color: inherit;
+            }
+        }
+    }
+
+    .sp_persons {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+
+        .count-selector {
+            height: auto;
+            background: $LGBlue;
+            border: 1px solid $LGBlue2;
+            transition: $transition ease border-color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: var(--accentColor);
+                }
+            }
+
+            .count {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: left;
+                padding-left: 12px;
+            }
+
+            .minus,
+            .plus {
+                width: 23px;
+                height: 23px;
+                display: flex;
+                color: $DGBlue;
+                background: #cdd7dc;
+
+                &:not(:last-child) {
+                    margin-bottom: 2px;
+                }
+            }
+
+            .minus {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &.template1 {
+        .pay-info {
+            border: 1px dashed $GBlue;
+        }
+
+        .cashback {
+            .text-input {
+                width: auto !important;
+                display: inline-block;
+            }
+
+            .cash-change {
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &.template2 {
+        .pay-info {
+            background-color: $DGBlue4;
+
+            .ali_addr {
+                color: rgba($color: $White, $alpha: 0.5);
+
+                span {
+                    color: $White;
+                }
+            }
+        }
+
+        .pay-types {
+            .pt_selectors {
+                border-radius: 10px;
+                padding: 6px;
+                background: #16161d;
+            }
+
+            .pt_selector {
+                .pts_line {
+                    input {
+                        &:checked {
+                            & + label {
+                                box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.3);
+                                background-color: $DGBlue4;
+                                color: var(--fontColor);
+                            }
+                        }
+                    }
+
+                    label {
+                        padding: 6px;
+                        font-weight: 500;
+                        color: rgba($color: $White, $alpha: 0.6);
+                        @include adaptiv-value("padding-left", 34, 15, 1);
+                        @include adaptiv-value("padding-right", 34, 15, 1);
+                        padding-top: 14px;
+                        padding-bottom: 14px;
+                        border-radius: 6px;
+                        background: transparent;
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: var(--accentColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .cashback {
+            .text-input {
+                height: 100%;
+            }
+        }
+
+        .cash-change {
+            display: inline-flex;
+            align-items: center;
+            margin: 0;
+            padding: 16px 24px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sp_persons {
+            .count-selector {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border-color: var(--accentColor);
+                    }
+                }
+
+                .minus,
+                .plus {
+                    background: $White;
+                    color: $DGBlue2;
+                }
+
+                .minus {
+                    &:not(.disabled) {
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: $Red;
+                            }
+                        }
+                    }
+                }
+
+                .count {
+                    padding: 0 9px;
+                    margin-left: 12px;
+                    margin-right: 12px;
+                }
+
+                .plus {
+                    &:not(.disabled) {
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: var(--accentColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

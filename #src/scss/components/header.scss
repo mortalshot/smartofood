@@ -15,7 +15,7 @@
                 height: var(--size-header-height);
             }
             @media screen and (max-width: 767px) {
-                height: 99px;
+                height: 99px !important;
                 flex-direction: column-reverse;
                 align-items: flex-start;
             }

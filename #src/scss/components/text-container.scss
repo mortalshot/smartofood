@@ -23,6 +23,10 @@
                     @include adaptiv-value("margin-bottom", 48, 24, 1);
                 }
             }
+
+            &::after {
+                display: none;
+            }
         }
 
         p {
@@ -37,13 +41,42 @@
         }
 
         .btn {
-            display: none;
+            margin-top: 24px !important;
+            display: inline-flex !important;
+            align-self: center;
             transition: $transition ease all 0s;
+
+            & > * {
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            i.icon-chevron-left {
+                transform: rotate(90deg);
+                transition: $transition ease transform 0s;
+            }
+
+            span {
+                &:nth-child(1) {
+                    display: none;
+                }
+            }
+            
         }
 
         &.hidden {
-            .text + .btn {
-                display: inline-flex;
+            .btn {
+                span:nth-child(1) {
+                    display: block;
+                }
+                span:nth-child(2) {
+                    display: none;
+                }
+
+                i.icon-chevron-left {
+                    transform: rotate(-90deg);
+                }
             }
         }
     }
@@ -66,6 +99,11 @@
                         @include adaptiv-value("margin-bottom", 40, 24, 1);
                     }
                 }
+            }
+
+            .btn {
+                color: var(--accentColor);
+                font-size: 12px;
             }
         }
     }

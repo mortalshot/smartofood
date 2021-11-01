@@ -27,7 +27,6 @@
             }
             @media screen and (max-width: 767px) {
                 display: flex;
-                flex-direction: row-reverse;
                 justify-content: space-between;
                 width: 100%;
                 padding-top: 15px;
@@ -42,19 +41,18 @@
 
             &:not(:last-child) {
                 @include adaptiv-value("margin-right", 43, 0, 1);
+
+                @media screen and (max-width: 450px) {
+                    margin-right: 20px;
+                }
             }
 
             @media screen and (max-width: 991px) {
-                order: 3;
-                flex: 1;
                 justify-content: center;
-
-                &:not(:last-child) {
-                    margin-right: 0;
-                }
             }
             @media screen and (max-width: 767px) {
                 order: 1;
+                flex: 1;
                 justify-content: flex-start;
             }
 
@@ -116,7 +114,6 @@
             margin: 0;
 
             @media screen and (max-width: 991px) {
-                order: 2;
             }
             @media screen and (max-width: 767px) {
                 order: 2;
@@ -164,7 +161,7 @@
 
         &_hamburger {
             @media screen and (max-width: 991px) {
-                display: flex;
+                display: none;
                 align-items: center;
                 background: transparent;
                 border: 0;
@@ -239,6 +236,7 @@
                 }
             }
             @media screen and (max-width: 767px) {
+                display: flex;
                 order: 1;
                 padding-left: 0;
                 padding-right: 0;
@@ -265,7 +263,7 @@
             @media screen and (max-width: $layoutDesktop + "px") {
                 display: flex;
             }
-            @media screen and (max-width: 991px) {
+            @media screen and (max-width: 767px) {
                 display: none;
             }
 
@@ -630,14 +628,18 @@
                 }
             }
         }
+
+        &.template1 {
+            .header {
+                @media screen and (max-width: 991px) {
+                    border-bottom: 1px solid $LCyan;
+                }
+            }
+        }
     }
 
     &.template1 {
         .header {
-            @media screen and (max-width: 991px) {
-                border-bottom: 1px solid $LCyan;
-            }
-
             &_city {
                 @media (any-hover: hover) {
                     &:hover {

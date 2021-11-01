@@ -9,12 +9,16 @@ let windowScrollTop = window.pageYOffset;
 
 if (headerWrapper.length > 0) {
     let headerHeight = headerWrapper[0].clientHeight;
-    setDilatorHeight(headerWrapper[0], headerHeight, headerWrapperDilator[0]);
+    setTimeout(() => {
+        setDilatorHeight(headerWrapper[0], headerHeight, headerWrapperDilator[0]);
+    }, 200);
 }
 
 if (bodyNav.length > 0) {
     let bodyNavHeight = bodyNav[0].clientHeight;
-    setDilatorHeight(bodyNav[0], bodyNavHeight, bodyNavDilator[0]);
+    setTimeout(() => {
+        setDilatorHeight(bodyNav[0], bodyNavHeight, bodyNavDilator[0]);
+    }, 200);
 }
 
 function setDilatorHeight(element, elementHeight, dilator) {

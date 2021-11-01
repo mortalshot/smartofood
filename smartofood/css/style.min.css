@@ -8399,6 +8399,9 @@ html.template2 {
 .home-template.template2 .profile .main__sidebar-block {
   background: #373742;
 }
+.home-template.template2 .profile .profile-actions .btn {
+  color: var(--fontColor);
+}
 @media screen and (min-width: 768px) {
   .home-template.template2 .profile .po_list .btn {
     font-weight: 500;

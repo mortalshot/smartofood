@@ -255,6 +255,12 @@
                 }
             }
 
+            .profile-actions {
+                .btn {
+                    color: var(--fontColor);
+                }
+            }
+
             .po_list {
                 .btn {
                     @media screen and (min-width: 768px) {

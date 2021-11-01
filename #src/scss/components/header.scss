@@ -15,7 +15,7 @@
                 height: var(--size-header-height);
             }
             @media screen and (max-width: 767px) {
-                height: auto;
+                height: 99px;
                 flex-direction: column-reverse;
                 align-items: flex-start;
             }
@@ -491,7 +491,7 @@
                 height: var(--size-header-height);
 
                 @media screen and (max-width: 767px) {
-                    height: $size-header-height-mobile;
+                    height: $size-header-height-mobile !important;
                 }
             }
 
@@ -624,7 +624,7 @@
                 height: var(--size-header-height);
 
                 @media screen and (max-width: 767px) {
-                    height: $size-header-height-mobile;
+                    height: $size-header-height-mobile !important;
                 }
             }
         }

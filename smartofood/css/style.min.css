@@ -2849,7 +2849,7 @@ html.template2 {
 }
 @media screen and (max-width: 767px) {
   .home-template .header_container {
-    height: auto;
+    height: 99px;
     flex-direction: column-reverse;
     align-items: flex-start;
   }
@@ -3331,7 +3331,7 @@ html.template2 {
 }
 @media screen and (max-width: 767px) {
   .home-template--horizontal .header_container {
-    height: 40px;
+    height: 40px !important;
   }
 }
 .home-template--horizontal .header_left {
@@ -3451,7 +3451,7 @@ html.template2 {
 }
 @media screen and (max-width: 767px) {
   .home-template--horizontal .header_dilator {
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media screen and (max-width: 991px) {

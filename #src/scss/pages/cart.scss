@@ -969,6 +969,26 @@
             }
         }
 
+        .cart-points {
+    
+            &__link {
+                a {
+                    font-size: 10px;
+                    line-height: 14px;
+                    color: var(--accentColor);
+                    text-transform: uppercase;
+                    text-underline-offset: 1px;
+                    text-decoration: underline var(--accentColor) from-font;
+                    
+                    @media (any-hover: hover) {
+                        &:hover {
+                            text-decoration: underline transparent from-font;
+                        }
+                    }
+                }
+            }
+        }
+    
         .cart-header {
             background: transparent;
 
@@ -1089,10 +1109,6 @@
 
         .sp_promo {
             align-items: stretch;
-
-            &:not(:last-child) {
-                @include adaptiv-value("margin-bottom", 70, 24, 1);
-            }
 
             input {
                 @include adaptiv-value("padding-left", 24, 10, 1);

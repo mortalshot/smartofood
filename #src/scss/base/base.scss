@@ -33,6 +33,7 @@
     .btn {
         -webkit-appearance: none;
         cursor: pointer;
+        font-family: var(--fontMain);
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
@@ -198,8 +199,8 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            @include adaptiv-value("padding-left", 33, 10, 1);
-            @include adaptiv-value("padding-right", 33, 10, 1);
+            @include adaptiv-value("padding-left", 15, 10, 1);
+            @include adaptiv-value("padding-right", 15, 10, 1);
             pointer-events: none;
         }
 
@@ -389,6 +390,13 @@
     }
 
     &--horizontal {
+        .swiper {
+            &__buttons {
+                @include adaptiv-value("padding-left", 33, 10, 1);
+                @include adaptiv-value("padding-right", 33, 10, 1);
+            }
+        }
+
         .body {
             &_container {
                 display: block;
@@ -402,12 +410,19 @@
             }
         }
 
-        .text {
-            margin: 0 auto;
+        &.home-template--horizontal {
+            .text {
+                margin: 0 auto;
+            }
         }
     }
 
     &.template2 {
+        .body {
+            @media screen and (max-width: 991px) {
+                @include adaptiv-value("margin-top", 32, 16, 0);
+            }
+        }
         .btn {
             font-weight: 500;
             font-size: 14px;
@@ -463,8 +478,10 @@
             }
         }
 
-        .body {
-            @include adaptiv-value("margin-top", 32, 16, 1);
+        &.home-template--horizontal {
+            .body {
+                @include adaptiv-value("margin-top", 32, 16, 1);
+            }
         }
     }
 }

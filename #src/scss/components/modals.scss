@@ -783,6 +783,10 @@
                 @include adaptiv-value("padding-top", 68, 50, 1);
                 @include adaptiv-value("padding-bottom", 58, 30, 1);
                 border-radius: 10px;
+
+                &::after {
+                    display: none;
+                }
             }
 
             .close-cross {

@@ -25,7 +25,8 @@
             }
 
             &::after {
-                display: none;
+                pointer-events: none;
+                background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
             }
         }
 
@@ -62,7 +63,6 @@
                     display: none;
                 }
             }
-            
         }
 
         &.hidden {
@@ -98,6 +98,10 @@
                     &:not(:last-child) {
                         @include adaptiv-value("margin-bottom", 40, 24, 1);
                     }
+                }
+
+                &::after {
+                    background: linear-gradient(0, #222229 0%, rgba(34, 34, 41, 0) 100%);
                 }
             }
 

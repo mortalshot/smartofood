@@ -11,16 +11,16 @@
             </div>
 
             <div class="products_item-foot">
-                <div class="products_item-price price">@@price</div>
-
-                <div class="products_item-foot-right">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">@@price</div>
                     @@if (context.size) {
                         <div class="products_item-size size">@@size</div>
                     }
-                    <div class="cart-btn empty @@btnClass">
-                        <span>Хочу</span>
-                        <span>Не хочу</span>
-                    </div>
+                </div>
+
+                <div class="cart-btn empty @@btnClass">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
                 </div>
             </div>
         </div>

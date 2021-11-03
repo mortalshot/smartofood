@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template template1">
+
+<head>
+    @@include('html-components/_head.html', {
+    "title": "Smartofood"
+    })
+</head>
+
+<body>
+    <div class="site__wrap">
+        @@include('html-components/popup.html', { })
+
+        <div class="header">
+            <div class="content-wrapper">
+                <div class="header_container noselect">
+                    <div class="header_left">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
+                        </div>
+
+                        <div class="header_logo _desktop">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_city c-pointer" data-cities="2">
+                            <i class="icon-location"></i>
+                            <span class="header_city-span">Тюмень</span>
+                            <i class="icon-chevron-left"></i>
+                        </div>
+
+                        <ul class="header_menu">
+                            <li class=""> <a href="#"> О нас </a> </li>
+                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+                            <li class=""> <a href="offers.html"> Акции </a> </li>
+                        </ul>
+                    </div>
+
+                    <div class="header_right">
+                        <div class="header_logo _mobile">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_contacts">
+                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+
+                            <div class="header_phone offservice">
+                                <a href="tel:73452696262">+7 (3452) 69-62-62</a>
+                            </div>
+                        </div>
+
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">(10)</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_dilator"></div>
+
+        <div class="body">
+            <div class="content-wrapper">
+                <div class="body_container">
+                    <div class="body_nav">
+                        @@include('html-components/body-nav-menu.html', { })
+                    </div>
+                    <div class="body_nav-dilator"></div>
+
+                    <div class="body_content">
+                        <div class="product" data-id="" data-name="Пицца Маргарита" data-price="" data-bzu="">
+                            <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <a href="/" itemprop="item">
+                                        <i class="icon-home"></i>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <a href="/" itemprop="item">
+                                        <span itemprop="name">Пицца Маргаритта</span>
+                                    </a>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ol>
+
+                            <div class="product_row">
+                                <div class="product_image">
+                                    <img src="img/products/product-7.jpg" alt="">
+                                </div>
+
+                                <div class="product_info">
+                                    <div class="product_panel">
+                                        <h1 class="product_title pp_title">Маргарита</h1>
+                                        <div class="product_descr pp_desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+
+                                        <div class="switch-selector" data-group="">
+                                            <div class="ss_wrapper">
+                                                <div class="ss_item selected" data-info=""> Маленькая</div>
+                                                <div class="ss_item" data-info=""> Большая</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="switch-selector switch-selector--select">
+                                            <select id="product-select" class="custom-select" style="display: none;">
+                                                <option value="Маленькая">Маленькая</option>
+                                                <option value="Средняя">Средняя</option>
+                                                <option value="Больше средней">Больше средней</option>
+                                                <option value="Большая">Большая</option>
+                                                <option value="Очень большая">Очень большая</option>
+                                                <option value="Очень маленькая">Очень маленькая</option>
+                                                <option value="XXXL">XXL</option>
+                                            </select>
+                                            <span tabindex="0" id="product-select-button" class="ui-selectmenu-button ui-button ui-widget ui-selectmenu-button-open">
+                                                <span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span>
+                                                <span class="ui-selectmenu-text">Ближайшее</span>
+                                            </span>
+
+                                            <!-- add the ui-selectmenu-open class to show select options -->
+                                            <div class="ui-selectmenu-menu ui-front" style="width: 100%; bottom: 0; transform: translateY(100%);">
+                                                <ul id="product-select-menu" role="listbox" tabindex="0" class="ui-menu ui-corner-bottom ui-widget ui-widget-content ui-widget-overflow hidescroll">
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-3" tabindex="-1" role="option" class="ui-menu-item-wrapper ui-state-active">Маленькая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-4" tabindex="-1" role="option" class="ui-menu-item-wrapper">Средняя</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-5" tabindex="-1" role="option" class="ui-menu-item-wrapper">Больше средней</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-6" tabindex="-1" role="option" class="ui-menu-item-wrapper">Большая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-7" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень большая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-8" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень маленькая</div>
+                                                    </li>
+                                                    <li class="ui-menu-item">
+                                                        <div id="ui-id-9" tabindex="-1" role="option" class="ui-menu-item-wrapper">XXXL</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="product_nutrition pp_nutrition">
+                                            <div class="product_nutrition-item">
+                                                <div class="nut">Жиры — 8,20&nbsp;г</div>
+                                            </div>
+                                            <div class="product_nutrition-item">
+                                                <div class="nut">Белки — 15,70&nbsp;г</div>
+                                            </div>
+                                            <div class="product_nutrition-item">
+                                                <div class="nut">Эн. цен. — 265&nbsp;ккал</div>
+                                            </div>
+                                            <div class="product_nutrition-item">
+                                                <div class="nut">Углеводов — 35,40&nbsp;г</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product_ingredients pp_mods noselect">
+                                            <div class="product_ingredients-items">
+                                                <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                                                    <div class="ppm_mod-wrapper">
+                                                        <span>Пармезан</span>
+                                                        <i class="icon-remove close"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                                                    <div class="ppm_mod-wrapper">
+                                                        <span>Пепперони</span>
+                                                        <i class="icon-remove close"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                                                    <div class="ppm_mod-wrapper">
+                                                        <span> Острый соус</span>
+                                                        <i class="icon-remove close"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                                                    <div class="ppm_mod-wrapper">
+                                                        <span>Грибы 30&nbsp;г</span>
+                                                        <i class="icon-remove close"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="product_ingredients-btn btn btn-border ppm_add">
+                                                <i class="icon-plus"></i>
+                                                <span>Добавить ингредиенты</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product_footer">
+                                            <div class="product_total pp_total">
+                                                <div class="ppt_sum">890&nbsp;₽</div>
+                                                <div class="ppt_weight" data-unit="порц"> <span>255&nbsp;г</span> </div>
+                                            </div>
+
+                                            <div class="product_btn btn btn-color noselect">
+                                                <i class="icon-bag"></i>
+                                                <span>Добавить в корзину</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="mods-info" class="d-none">
+                                <div class="mods_window">
+                                    <div class="mw_mods hidescroll">
+                                    </div>
+                                    <div class="mw_mods_grad"></div>
+                                    <div class="mw_total">
+                                        <div class="mwt_sum">Итоговая сумма:<span>400 ₽</span></div>
+                                        <div class="btn btn-sm btn-color">Применить
+                                            <div class="btn_icon plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html-components/footer.html', {})
+    </div>
+
+    @@include('html-components/_js.html', {})
+</body>
+
+</html>

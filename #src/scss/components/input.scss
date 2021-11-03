@@ -141,10 +141,24 @@
             }
         }
 
+        &-lg-4 {
+            @media screen and (min-width: 992px) {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+        }
+
         &-lg-6 {
             @media screen and (min-width: 992px) {
                 flex: 0 0 50%;
                 max-width: 50%;
+            }
+        }
+
+        &-lg-8 {
+            @media screen and (min-width: 992px) {
+                flex: 0 0 66.666%;
+                max-width: 66.666%;
             }
         }
 
@@ -166,6 +180,13 @@
             @media screen and (min-width: 1200px) {
                 flex: 0 0 25%;
                 max-width: 25%;
+            }
+        }
+
+        &-xl-9 {
+            @media screen and (min-width: 1200px) {
+                flex: 0 0 75%;
+                max-width: 75%;
             }
         }
     }
@@ -498,7 +519,7 @@
 
                         .form__radio-image {
                             display: block;
-                            
+
                             &:not(:last-child) {
                                 @include adaptiv-value("margin-bottom", 24, 16, 1);
                             }

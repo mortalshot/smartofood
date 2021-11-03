@@ -111,18 +111,20 @@
     }
 
     &.template2 {
-        &.home-template--horizontal {
-            .body_nav {
-                @media screen and (max-width: 991px) {
-                    top: 50px;
-                }
-                @media screen and (max-width: 767px) {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    top: $size-header-height-mobile;
-                }
-            }
+        .body_nav {
+            background: var(--bgColor);
 
+            @media screen and (max-width: 991px) {
+                top: 50px;
+            }
+            @media screen and (max-width: 767px) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                top: $size-header-height-mobile;
+            }
+        }
+
+        &.home-template--horizontal {
             .body_nav-wrapper {
                 width: 100%;
                 display: flex;

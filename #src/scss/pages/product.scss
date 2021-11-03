@@ -5,8 +5,8 @@
 
         .breadcrumbs {
             &:not(:last-child) {
-                @include adaptiv-value("padding-top", 32, 24, 1);
-                @include adaptiv-value("padding-bottom", 40, 32, 1);
+                @include adaptiv-value("padding-top", 24, 16, 1);
+                @include adaptiv-value("padding-bottom", 24, 16, 1);
             }
         }
 
@@ -264,11 +264,8 @@
             overflow: hidden;
 
             &:not(:last-child) {
-                @include adaptiv-value("margin-right", 100, -100, 1);
+                margin-right: 20px;
 
-                @media screen and (max-width: 992px) {
-                    margin-right: 20px;
-                }
                 @media screen and (max-width: 767px) {
                     margin: 0px 0px 30px 0px;
                 }
@@ -279,9 +276,6 @@
     &.template1 {
         .product {
             &_footer {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
                 background: $White;
                 border-radius: 10px;
@@ -289,28 +283,64 @@
                 @include adaptiv-value("padding-left", 32, 16, 1);
                 @include adaptiv-value("padding-right", 32, 16, 1);
                 width: 100%;
-
-                @media screen and (min-width: 768px) and (max-width: 991px) {
-                    display: block;
-                }
-                @media screen and (max-width: 575px) {
-                    display: block;
-                }
             }
 
             &_total {
                 &:not(:last-child) {
-                    margin-right: 20px;
+                    margin: 0px 0px 24px 0px;
                 }
+            }
+        }
 
-                @media screen and (min-width: 768px) and (max-width: 991px) {
+        &.home-template--horizontal {
+            .product {
+                .breadcrumbs {
                     &:not(:last-child) {
-                        margin: 0px 0px 24px 0px;
+                        @include adaptiv-value("padding-top", 32, 24, 1);
+                        @include adaptiv-value("padding-bottom", 40, 32, 1);
                     }
                 }
-                @media screen and (max-width: 575px) {
+
+                &_image {
                     &:not(:last-child) {
-                        margin: 0px 0px 24px 0px;
+                        @include adaptiv-value("margin-right", 100, -100, 1);
+
+                        @media screen and (max-width: 992px) {
+                            margin-right: 20px;
+                        }
+                        @media screen and (max-width: 767px) {
+                            margin: 0px 0px 30px 0px;
+                        }
+                    }
+                }
+
+                &_footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @media screen and (min-width: 768px) and (max-width: 991px) {
+                        display: block;
+                    }
+                    @media screen and (max-width: 575px) {
+                        display: block;
+                    }
+                }
+
+                &_total {
+                    &:not(:last-child) {
+                        margin: 0px 24px 0 0px;
+                    }
+
+                    @media screen and (min-width: 768px) and (max-width: 991px) {
+                        &:not(:last-child) {
+                            margin: 0px 0px 24px 0px;
+                        }
+                    }
+                    @media screen and (max-width: 575px) {
+                        &:not(:last-child) {
+                            margin: 0px 0px 24px 0px;
+                        }
                     }
                 }
             }
@@ -335,6 +365,9 @@
             &_image {
                 border-radius: 10px;
 
+                @media screen and (min-width: 992px) {
+                    flex: 0 0 40%;
+                }
                 @media screen and (max-width: 767px) {
                     &:not(:last-child) {
                         margin-bottom: 30px;
@@ -343,8 +376,13 @@
             }
 
             &_info {
+                flex: 0 0 60%;
+                
                 @media screen and (min-width: 768px) {
                     max-width: 50%;
+                }
+                @media screen and (min-width: 992px) {
+                    max-width: 60%;
                 }
             }
 
@@ -436,7 +474,6 @@
                             color: var(--fontColor);
                             transition: $transition ease color 0s;
 
-                            
                             @media (any-hover: hover) {
                                 &:hover {
                                     opacity: 1;
@@ -515,6 +552,15 @@
                 text-transform: uppercase;
                 padding-right: 24px;
                 border-radius: 10px;
+            }
+        }
+
+        &.home-template--horizontal {
+            .product {
+                &_image,
+                &_info {
+                    flex: 0 0 50%;
+                }
             }
         }
     }

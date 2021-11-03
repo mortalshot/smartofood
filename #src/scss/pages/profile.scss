@@ -1,7 +1,7 @@
 .home-template {
     .profile {
         .block-title {
-            @include adaptiv-value("margin-top", 40, 20, 1);
+            @include adaptiv-value("margin-top", 16, 8, 1);
             @include adaptiv-value("margin-bottom", 40, 20, 1);
         }
 
@@ -173,7 +173,7 @@
 
         .ui-selectmenu-button {
             padding-left: 24px;
-            padding-right: 24px;
+            padding-right: 34px;
             height: 54px;
         }
     }
@@ -230,6 +230,32 @@
                 padding-top: 18px;
                 padding-bottom: 18px;
                 height: auto;
+            }
+        }
+    }
+
+    &.template1 {
+        .profile {
+            .main {
+                &__content-block {
+                    & > .form__row {
+                        @media screen and (max-width: 767px) {
+                            display: flex;
+                            flex-direction: column-reverse;
+
+                            & > div:last-child {
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.home-template--horizontal {
+            .block-title {
+                @include adaptiv-value("margin-top", 40, 20, 1);
+                @include adaptiv-value("margin-bottom", 40, 20, 1);
             }
         }
     }

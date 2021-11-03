@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template template1">
+
+<head>
+    @@include('html-components/_head.html', {
+    "title": "Smartofood"
+    })
+</head>
+
+<body>
+    <div class="site__wrap">
+        @@include('html-components/popup.html', { })
+
+        <div class="header">
+            <div class="content-wrapper">
+                <div class="header_container noselect">
+                    <div class="header_left">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
+                        </div>
+
+                        <div class="header_logo _desktop">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_city c-pointer" data-cities="2">
+                            <i class="icon-location"></i>
+                            <span class="header_city-span">Тюмень</span>
+                            <i class="icon-chevron-left"></i>
+                        </div>
+
+                        <ul class="header_menu">
+                            <li class=""> <a href="#"> О нас </a> </li>
+                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+                            <li class=""> <a href="offers.html"> Акции </a> </li>
+                        </ul>
+                    </div>
+
+                    <div class="header_right">
+                        <div class="header_logo _mobile">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_contacts">
+                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+
+                            <div class="header_phone offservice">
+                                <a href="tel:73452696262">+7 (3452) 69-62-62</a>
+                            </div>
+                        </div>
+
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">(10)</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_dilator"></div>
+
+        <div class="body">
+            <div class="content-wrapper">
+                <div class="body_container">
+                    <div class="body_nav">
+                        @@include('html-components/body-nav-menu.html', { })
+                    </div>
+                    <div class="body_nav-dilator"></div>
+
+                    <div class="body_content">
+                        <div class="page-nav">
+                            <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <a href="/" itemprop="item">
+                                        <i class="icon-home"></i>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <a href="/" itemprop="item">
+                                        <span itemprop="name">Доставка и оплата</span>
+                                    </a>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ol>
+                        </div>
+
+
+                        <div class="text _content">
+                            <h1 class="offers-title block-title">Доставка и оплата</h1>
+
+                            <h2>Доставка и оплата:</h2>
+                            <ul>
+                                <li>Доставка осуществляется по всему городу Тюмень. Заказы принимаются ежедневно с 12:00 до 22:00</li>
+                                <li>По телефону <a href="tel:83452638637">8(3452) 638-637</a></li>
+                                <li>Через наш сайт <a href="italianotmn.ru">italianotmn.ru</a></li>
+                            </ul>
+                            <br>
+
+                            <h2>Условия и стоимость доставки:</h2>
+                            <p>Бесплатная доставка при заказе от 1500 рублей в радиусе 2 км от точки приготовления. Время доставки не более 60 минут. В пиковые часы время доставки, пожалуйста, уточните у оператора. Границы бесплатной доставки блюд, можно посмотреть ниже, на карте доставки.</p>
+                            <p>Заказы на сумму менее 500 рублей на доставку не принимаются.</p>
+                            <p>До 1500 рублей в радиусе 2 км от точки приготовления = 150 р.</p>
+                            <p>До 1500 рублей в радиусе от 5 км до 10 км от точки приготовления = 250 р.</p>
+                            <ul>
+                                <li>Доставка осуществляется по всему городу Тюмень. Заказы принимаются ежедневно с 12:00 до 22:00</li>
+                                <li>По телефону <a href="tel:83452638637">8(3452) 638-637</a></li>
+                                <li>Через наш сайт <a href="italianotmn.ru">italianotmn.ru</a></li>
+                            </ul>
+                            <br>
+
+                            <h2>Оплата</h2>
+                            <h3>Онлайн оплата. </h3>
+                            <p>При оформлении заказа на сайте для выбора оплаты с помощью банковской карты необходимо нажать кнопку Оплата заказа банковской картой. Оплаты происходит через ПАО СБЕРБАНК с использованием банковских карт всех платежных систем.</p>
+                            <h3>Безопасность</h3>
+                            <p>Данный сайт 256-битное шифрование. ПАО СБЕРБАНК обеспечивает конфиденциальность передаваемых персональных данных. Информация, которую вводит пользователь при оформлении заказа, не предоставляется третьим лицам, кроме случаев, предусмотренных законодательством РФ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html-components/footer.html', {})
+    </div>
+
+    @@include('html-components/_js.html', {})
+</body>
+
+</html>

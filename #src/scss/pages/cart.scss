@@ -14,7 +14,7 @@
             }
 
             .header_container {
-                height: auto;
+                height: auto !important;
                 padding-top: 30px;
                 padding-bottom: 15px;
                 align-items: flex-start;
@@ -1016,7 +1016,8 @@
                 &.now {
                     .css_number {
                         border-color: var(--accentColor);
-                        color: var(--accentColor);
+                        background-color: var(--accentColor);
+                        color: $White;
                     }
 
                     .css_name {
@@ -1047,6 +1048,7 @@
                     }
                     .css_name {
                         color: var(--accentColor);
+                        text-decoration: underline var(--accentColor) from-font;
                     }
                 }
             }

@@ -153,13 +153,61 @@
     }
 
     &.template2 {
-        .nav_menu_item {
-            font-size: 14px;
-            line-height: 20px;
+        .nav {
+            &_menu {
+                height: auto;
 
-            @media screen and (min-width: 992px) {
-                padding-top: 5px;
-                padding-bottom: 5px;
+                @media screen and (min-width: 992px) {
+                    background: $DBlue;
+                }
+            }
+
+            &_menu_item-wrapper {
+                &._active {
+                    .nav_menu_item {
+                        @media screen and (min-width: 992px) {
+                            background: var(--accentColor);
+                            color: $White;
+                        }
+                    }
+                }
+            }
+
+            &_menu_item {
+                font-weight: 500;
+                @include adaptiv-font(14, 20, 12, 1);
+
+                @media screen and (min-width: 992px) {
+                    padding: 15px 22px;
+                }
+            }
+        }
+
+        &.home-template--horizontal {
+            .nav {
+                &_menu {
+                    background: transparent;
+                }
+
+                &_menu_item-wrapper {
+                    &._active {
+                        .nav_menu_item {
+                            @media screen and (min-width: 992px) {
+                                background: transparent;
+                                color: var(--accentColor);
+                            }
+                        }
+                    }
+                }
+
+                &_menu_item {
+                    font-weight: 500;
+                    @include adaptiv-font(14, 20, 12, 1);
+
+                    @media screen and (min-width: 992px) {
+                        padding: 15px 0;
+                    }
+                }
             }
         }
     }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru" class="home-template template1">
+<html lang="ru" class="home-template template2">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smartofood</title>
@@ -36,8 +36,8 @@
 </head>
 
 <body>
-    <div class="site__wrap">
-        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
+	<div class="site__wrap">
+		<div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
     <div class="cp_products scroll-vert" style="height: 330px;">
         <div class="cpp_item" data-hash="" data-amount="">
             <div class="delete-cross icon-trash"></div>
@@ -562,463 +562,738 @@
     </div>
 </div>
 
-        <div class="cart-header">
-            <div class="cart-wrapper">
-                <div class="header_container noselect">
-                    <div class="page-back">
-                        <a href="/" class="page-back__link">
-                            <i class="icon-arrow-left"></i>
-                            <span>Вернуться назад</span>
-                        </a>
-                    </div>
-
-                    <div class="header_logo">
-                        <a href="/" class="header_logo-wrapper">
-                            <img src="img/sf-logo@3x.png" loading="lazy">
-                        </a>
-                    </div>
-
-                    <div class="cart-nav">
-                        <div class="cart-steps__wrapper">
-                            <div class="cart-steps">
-                                <div class="cs_step finished" data-link="">
-                                    <div class="css_number">1</div>
-                                    <div class="css_name">Корзина</div>
-                                </div>
-                                <div class="cs_step now" data-link="">
-                                    <div class="css_number">2</div>
-                                    <div class="css_name">Оформление заказа</div>
-                                </div>
-                                <div class="cs_step" data-link="">
-                                    <div class="css_number">3</div>
-                                    <div class="css_name">Подтверждение</div>
-                                </div>
-                            </div>
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="header_container noselect">
+					<div class="header_left">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
                         </div>
-                    </div>
+                        
+						<div class="header_logo _desktop">
+							<a href="/" class="header_logo-wrapper">
+								<img src="img/sf-logo@3x.png" loading="lazy">
+							</a>
+						</div>
+
+						<div class="header_city c-pointer" data-cities="2">
+							<i class="icon-location"></i>
+							<span class="header_city-span">Тюмень</span>
+							<i class="icon-chevron-left"></i>
+						</div>
+
+						<ul class="header_menu">
+							<li class=""> <a href="#"> О нас </a> </li>
+							<li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+							<li class=""> <a href="offers.html"> Акции </a> </li>
+						</ul>
+					</div>
+
+					<div class="header_right">
+                        <div class="header_logo _mobile">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+						<div class="header_contacts">
+							<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+
+							<div class="header_phone offservice">
+								<a href="tel:73452696262">
+									<i class="icon-phone"></i>
+									<span>+7 (3452) 69-62-62</span>
+								</a>
+							</div>
+						</div>
+
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">3 товара</div>
+                                </div>
+                            </a>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_dilator"></div>
+
+		<div class="body">
+			<div class="content-wrapper">
+				<div class="body_container">
+					<div class="body_nav">
+						<div class="nav_menu">
+    <div class="nav_menu_item-wrapper _active">
+        <a href="#" class="nav_menu_item"> Суши и роллы </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Пицца</a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> WOK и паста </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Бургеры </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Завтраки </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Салаты </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Напитки </a>
+    </div>
+</div>
+					</div>
+					<div class="body_nav-dilator"></div>
+
+					<div class="body_content">
+						<!-- add a class "home-slider--fixed" to slider fixed height  -->
+<div class="home-slider swiper "> 
+    <div class="swiper-wrapper">
+        <div class="home-slider__item swiper-slide">
+            <div class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-5.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <div class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-1.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-2.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-3.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-4.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+    </div>
+    <div class="swiper__buttons">
+        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+						<div class="categories">
+    <div class="categories__list">
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-8.jpg" alt="Роллы" loading="lazy">
+        <div class="categories__item-label">Роллы</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-15.jpg" alt="Пицца" loading="lazy">
+        <div class="categories__item-label">Пицца</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-9.jpg" alt="WOK" loading="lazy">
+        <div class="categories__item-label">WOK</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-10.jpg" alt="Бургеры" loading="lazy">
+        <div class="categories__item-label">Бургеры</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-11.jpg" alt="Салаты" loading="lazy">
+        <div class="categories__item-label">Салаты</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-12.jpg" alt="Напитки" loading="lazy">
+        <div class="categories__item-label">Напитки</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-13.jpg" alt="WOK" loading="lazy">
+        <div class="categories__item-label">WOK</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-14.jpg" alt="Напитки" loading="lazy">
+        <div class="categories__item-label">Напитки</div>
+    </a>
+</div>
+        <div class="categories__item">
+    <a href="categories.html" class="categories__item-wrapper ibg">
+        <img src="img/categories/category-16.jpg" alt="Пицца" loading="lazy">
+        <div class="categories__item-label">Пицца</div>
+    </a>
+</div>
+    </div>
+</div>
+
+						<section class="products-section">
+    <div class="block-title">Популярные продукты</div>
+
+    <div class="products">
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-8.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">11&nbsp;400&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">1&nbsp;289&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty _remove">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-9.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
 
-        <div class="cart body">
-            <div class="content-wrapper">
-                <h1 class="cart__title block-title">Оформление заказа</h1>
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
 
-                <div class="cart_container main">
-                    <div class="form cart_blocks address_page main__content" data-type="">
-                        <div class="main__content-block">
-                            <div class="cart_blocks-wrapper">
-                                <div class="cb_plate guest-info">
-                                    <div class="cb_title">Информация о вас</div>
-
-                                    <div class="form__row">
-                                        <div class="form__item col-12 col-md-6 guest-name">
-                                            <input type="text" class="value-input text-input" autocomplete="off" placeholder="Введите имя" value="Демо Аккаунт">
-                                        </div>
-                                        <div class="form__item col-12 col-md-6 guest-phone">
-                                            <input type="text" class="value-input text-input" placeholder="Введите телефон" value="+7 777 777-77-77" readonly="" maxlength="16">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cb_plate">
-                                    <div class="cb_title">Как вам будет удобно получить заказ</div>
-
-                                    <div class="delivery-types noselect">
-                                        <div class="dt_type dt_delivery selected" data-type="delivery">Доставка
-                                        </div>
-                                        <div class="dt_type dt_pickup" data-type="pickup">Самовывоз
-                                        </div>
-                                    </div>
-
-                                    <div class="address-list newaddr noselect">
-                                        <div class="form__row">
-                                            <div class="form__item al_item col-12">
-                                                <label class="form__radio form__radio--box">
-                                                    <input type="radio" name="address" value="1" class="custom-radio">
-
-                                                    <div class="form__radio-wrapper">
-                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
-                                                        <div class="form__radio-row">
-                                                            <div>5 подъезд</div>
-                                                            <div>4 этаж</div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="form__item al_item col-12">
-                                                <label class="form__radio form__radio--box">
-                                                    <input type="radio" name="address" value="2" class="custom-radio">
-
-                                                    <div class="form__radio-wrapper">
-                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
-                                                        <div class="form__radio-row">
-                                                            <div>5 подъезд</div>
-                                                            <div>4 этаж</div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <form action="" class="block-hidden" data-autocomplete="on">
-                                            <a href="" class="newaddr__link block-hidden__link">
-                                                <i class="icon-plus"></i>
-                                                <span>Добавить адрес</span>
-                                            </a>
-
-                                            <div class="newaddr__wrapper block-hidden__wrapper">
-                                                <input class="hidden-kladr" type="hidden" value="">
-                                                <input class="hidden-addr" type="hidden" value="">
-                                                <input class="hidden-city" type="hidden" value="">
-
-                                                <div class="new-address form__row">
-                                                    <div class="form__item col-12">
-                                                        <input type="text" class="text-input street ui-autocomplete-input invalid" placeholder="Адрес доставки" value="" autocomplete="off">
-                                                    </div>
-                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
-                                                        <input type="text" class="text-input street ui-autocomplete-input invalid" placeholder="Дом" value="" autocomplete="off">
-                                                    </div>
-                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
-                                                        <input type="text" class="text-input apartment" placeholder="Квартира" value="">
-                                                    </div>
-                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
-                                                        <input type="text" class="text-input entrance" placeholder="Подъезд" value="">
-                                                    </div>
-                                                    <div class="form__item col-12 col-sm-6 col-xl-3">
-                                                        <input type="text" class="text-input floor" placeholder="Этаж" value="">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form__row">
-                                                    <div class="form__item col-12">
-                                                        <label class="form__checkbox">
-                                                            <input type="checkbox">
-                                                            <span>Сохранить адрес</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="newaddr__controls">
-                                                    <button type="submit" class="newaddr__save btn btn-color">Применить</button>
-                                                    <button type="reset" class="newaddr__reset btn">Отменить</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <div class="address-list noselect shop d-none">
-                                        <div class="form__row">
-                                            <div class="form__item al_item col-12">
-                                                <label class="form__radio form__radio--box">
-                                                    <input type="radio" name="shop-address" value="1" class="custom-radio">
-
-                                                    <div class="form__radio-wrapper">
-                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
-                                                        <div class="form__radio-row">
-                                                            <div>
-                                                                <img src="img/icons/clock-2.svg" alt="">
-                                                                <span>Круглосуточно</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <img src="img/icons/house.svg" alt="" class="form__radio-image" loading="lazy">
-                                                </label>
-                                            </div>
-                                            <div class="form__item al_item col-12">
-                                                <label class="form__radio form__radio--box">
-                                                    <input type="radio" name="shop-address" value="2" class="custom-radio">
-
-                                                    <div class="form__radio-wrapper">
-                                                        <div class="form__radio-title">Проспект 75-летия Победы, дом 23б, кв. 68</div>
-                                                        <div class="form__radio-row">
-                                                            <div>
-                                                                <img src="img/icons/clock-2.svg" alt="">
-                                                                <span>9:00–23:00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <img src="img/icons/house.svg" alt="" class="form__radio-image" loading="lazy">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cb_plate">
-                                    <div class="cc_ontime">
-                                        <div class="cb_title cco_title">Время доставки</div>
-                                        <select id="ontime-select" class="custom-select" style="display: none;">
-                                            <option value="">Ближайшее</option>
-                                            <option value="2021-10-13 16:00:00">
-                                                16:00 </option>
-                                            <option value="2021-10-13 16:15:00">
-                                                16:15 </option>
-                                            <option value="2021-10-13 16:30:00">
-                                                16:30 </option>
-                                            <option value="2021-10-13 16:45:00">
-                                                16:45 </option>
-                                            <option value="2021-10-13 17:00:00">
-                                                17:00 </option>
-                                            <option value="2021-10-13 17:15:00">
-                                                17:15 </option>
-                                            <option value="2021-10-13 17:30:00">
-                                                17:30 </option>
-                                            <option value="2021-10-13 17:45:00">
-                                                17:45 </option>
-                                            <option value="2021-10-13 18:00:00">
-                                                18:00 </option>
-                                            <option value="2021-10-13 18:15:00">
-                                                18:15 </option>
-                                            <option value="2021-10-13 18:30:00">
-                                                18:30 </option>
-                                            <option value="2021-10-13 18:45:00">
-                                                18:45 </option>
-                                            <option value="2021-10-13 19:00:00">
-                                                19:00 </option>
-                                            <option value="2021-10-13 19:15:00">
-                                                19:15 </option>
-                                            <option value="2021-10-13 19:30:00">
-                                                19:30 </option>
-                                            <option value="2021-10-13 19:45:00">
-                                                19:45 </option>
-                                            <option value="2021-10-13 20:00:00">
-                                                20:00 </option>
-                                            <option value="2021-10-13 20:15:00">
-                                                20:15 </option>
-                                            <option value="2021-10-13 20:30:00">
-                                                20:30 </option>
-                                            <option value="2021-10-13 20:45:00">
-                                                20:45 </option>
-                                            <option value="2021-10-13 21:00:00">
-                                                21:00 </option>
-                                            <option value="2021-10-13 21:15:00">
-                                                21:15 </option>
-                                            <option value="2021-10-13 21:30:00">
-                                                21:30 </option>
-                                            <option value="2021-10-13 21:45:00">
-                                                21:45 </option>
-                                            <option value="2021-10-13 22:00:00">
-                                                22:00 </option>
-                                            <option value="2021-10-13 22:15:00">
-                                                22:15 </option>
-                                            <option value="2021-10-13 22:30:00">
-                                                22:30 </option>
-                                            <option value="2021-10-13 22:45:00">
-                                                22:45 </option>
-                                            <option value="2021-10-13 23:00:00">
-                                                23:00 </option>
-                                            <option value="2021-10-13 23:15:00">
-                                                23:15 </option>
-                                            <option value="2021-10-13 23:30:00">
-                                                23:30 </option>
-                                            <option value="2021-10-13 23:45:00">
-                                                23:45 </option>
-                                            <option value="2021-10-14 00:00:00">
-                                                0:00 </option>
-                                            <option value="2021-10-14 00:15:00">
-                                                0:15 </option>
-                                            <option value="2021-10-14 00:30:00">
-                                                0:30 </option>
-                                            <option value="2021-10-14 00:45:00">
-                                                0:45 </option>
-                                            <option value="2021-10-14 01:00:00">
-                                                1:00 </option>
-                                            <option value="2021-10-14 01:15:00">
-                                                1:15 </option>
-                                            <option value="2021-10-14 01:30:00">
-                                                1:30 </option>
-                                            <option value="2021-10-14 01:45:00">
-                                                1:45 </option>
-                                            <option value="2021-10-14 02:00:00">
-                                                2:00 </option>
-                                            <option value="2021-10-14 02:15:00">
-                                                2:15 </option>
-                                            <option value="2021-10-14 02:30:00">
-                                                2:30 </option>
-                                            <option value="2021-10-14 02:45:00">
-                                                2:45 </option>
-                                            <option value="2021-10-14 03:00:00">
-                                                3:00 </option>
-                                            <option value="2021-10-14 03:15:00">
-                                                3:15 </option>
-                                            <option value="2021-10-14 03:30:00">
-                                                3:30 </option>
-                                            <option value="2021-10-14 03:45:00">
-                                                3:45 </option>
-                                            <option value="2021-10-14 04:00:00">
-                                                4:00 </option>
-                                            <option value="2021-10-14 04:15:00">
-                                                4:15 </option>
-                                            <option value="2021-10-14 04:30:00">
-                                                4:30 </option>
-                                            <option value="2021-10-14 04:45:00">
-                                                4:45 </option>
-                                            <option value="2021-10-14 05:00:00">
-                                                5:00 </option>
-                                            <option value="2021-10-14 05:15:00">
-                                                5:15 </option>
-                                            <option value="2021-10-14 05:30:00">
-                                                5:30 </option>
-                                            <option value="2021-10-14 05:45:00">
-                                                5:45 </option>
-                                            <option value="2021-10-14 06:00:00">
-                                                6:00 </option>
-                                            <option value="2021-10-14 06:15:00">
-                                                6:15 </option>
-                                            <option value="2021-10-14 06:30:00">
-                                                6:30 </option>
-                                            <option value="2021-10-14 06:45:00">
-                                                6:45 </option>
-                                            <option value="2021-10-14 07:00:00">
-                                                7:00 </option>
-                                            <option value="2021-10-14 07:15:00">
-                                                7:15 </option>
-                                            <option value="2021-10-14 07:30:00">
-                                                7:30 </option>
-                                            <option value="2021-10-14 07:45:00">
-                                                7:45 </option>
-                                            <option value="2021-10-14 08:00:00">
-                                                8:00 </option>
-                                            <option value="2021-10-14 08:15:00">
-                                                8:15 </option>
-                                            <option value="2021-10-14 08:30:00">
-                                                8:30 </option>
-                                            <option value="2021-10-14 08:45:00">
-                                                8:45 </option>
-                                            <option value="2021-10-14 09:00:00">
-                                                9:00 </option>
-                                            <option value="2021-10-14 09:15:00">
-                                                9:15 </option>
-                                            <option value="2021-10-14 09:30:00">
-                                                9:30 </option>
-                                            <option value="2021-10-14 09:45:00">
-                                                9:45 </option>
-                                            <option value="2021-10-14 10:00:00">
-                                                10:00 </option>
-                                            <option value="2021-10-14 10:15:00">
-                                                10:15 </option>
-                                            <option value="2021-10-14 10:30:00">
-                                                10:30 </option>
-                                            <option value="2021-10-14 10:45:00">
-                                                10:45 </option>
-                                            <option value="2021-10-14 11:00:00">
-                                                11:00 </option>
-                                            <option value="2021-10-14 11:15:00">
-                                                11:15 </option>
-                                            <option value="2021-10-14 11:30:00">
-                                                11:30 </option>
-                                            <option value="2021-10-14 11:45:00">
-                                                11:45 </option>
-                                            <option value="2021-10-14 12:00:00">
-                                                12:00 </option>
-                                            <option value="2021-10-14 12:15:00">
-                                                12:15 </option>
-                                            <option value="2021-10-14 12:30:00">
-                                                12:30 </option>
-                                            <option value="2021-10-14 12:45:00">
-                                                12:45 </option>
-                                            <option value="2021-10-14 13:00:00">
-                                                13:00 </option>
-                                            <option value="2021-10-14 13:15:00">
-                                                13:15 </option>
-                                            <option value="2021-10-14 13:30:00">
-                                                13:30 </option>
-                                            <option value="2021-10-14 13:45:00">
-                                                13:45 </option>
-                                            <option value="2021-10-14 14:00:00">
-                                                14:00 </option>
-                                            <option value="2021-10-14 14:15:00">
-                                                14:15 </option>
-                                            <option value="2021-10-14 14:30:00">
-                                                14:30 </option>
-                                            <option value="2021-10-14 14:45:00">
-                                                14:45 </option>
-                                            <option value="2021-10-14 15:00:00">
-                                                15:00 </option>
-                                        </select>
-                                        <span tabindex="0" id="ontime-select-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="ontime-select-menu" aria-haspopup="true" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Ближайшее</span></span>
-                                    </div>
-                                </div>
-
-                                <div class="cb_plate cart_comment">
-                                    <div class="cb_title">Пожелания к заказу</div>
-                                    <div class="form__row">
-                                        <div class="form__item col-12">
-                                            <textarea class="text-input" placeholder="Например: не звонить в домофон, спит ребёнок" rows="6"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cart_sidebar main__sidebar main__sidebar--sticky">
-                        <div class="main__sidebar-wrapper">
-                            <div class="main__sidebar-block">
-                                <div class="sidebar_plate">
-                                    <div class="cart-resume sp_block">
-                                        <div class="cart-resume__footer">
-                                            <div class="cart-resume__item sp_price pay">
-                                                <div class="spp_name">Итого</div>
-                                                <div class="spp_sum big">2&nbsp;578&nbsp;₽</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="sp_block">
-                                        <div class="btn btn-color sp_submit noselect"> Оформить заказ </div>
-                                    </div>
-
-                                    <div class="sp_block">
-                                        <div class="cart-notice free_delivery cart-notice--red">
-                                            <img src="img/icons/alert.svg" alt=" Закажите еще на 150 ₽ для бесплатной доставки" loading="lazy">
-                                            <span> Закажите еще на&nbsp;<span>150 ₽</span> для бесплатной доставки </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="main__sidebar-block">
-                                <div class="sidebar_plate">
-                                    <div class="sp_block">
-                                        <div class="cart-delivery">
-                                            <img src="img/icons/truck-2.svg" alt="Доставка будет стоить 600 ₽" loading="lazy">
-                                            <span> Доставка будет стоить 600 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="main__sidebar-block">
-                                <div class="sidebar_plate">
-                                    <div class="sp_block">
-                                        <div class="cart-notice free_delivery cart-notice--red">
-                                            <img src="img/icons/alert.svg" alt=" Закажите еще на 150 ₽ для бесплатной доставки" loading="lazy">
-                                            <span> Закажите еще на&nbsp;<span>150 ₽</span> для бесплатной доставки </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="sp_block">
-                                        <div class="cart-notice minimum_order cart-notice--red">
-                                            <img src="img/icons/alert.svg" alt=" Минимальная сумма заказа для доставки 600 ₽" loading="lazy">
-                                            <span> Минимальная сумма заказа для доставки <span>600 ₽</span> </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-10.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Боршь</div>
+                
+                
+                    <div class="products_item-desc desc">Вода, капуста, свёкла, картошка, сметана, соль, перец, зелень</div>
+                
+            </div>
 
-        <div class="footer footer--small">
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-11.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из лосося</div>
+                
+                
+                    <div class="products_item-desc desc">Лосось, соль, перец, лимон</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">11&nbsp;400&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">1&nbsp;289&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty _remove">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-12.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Цезарь с курицей</div>
+                
+                
+                    <div class="products_item-desc desc">Лист салата, курица, пармезан, соус “Цезарь”, помидоры, лук</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">450&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">325&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-13.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Вок с креветками</div>
+                
+                
+                    <div class="products_item-desc desc">Лапша, креветки, соус, чеснок, зелень</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">600&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">450&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty _remove">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-14.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Салат капрезе</div>
+                
+                
+                    <div class="products_item-desc desc">Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-15.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-8.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-9.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-10.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Боршь</div>
+                
+                
+                    <div class="products_item-desc desc">Вода, капуста, свёкла, картошка, сметана, соль, перец, зелень</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-11.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из лосося</div>
+                
+                
+                    <div class="products_item-desc desc">Лосось, соль, перец, лимон</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">10&nbsp;400&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">289&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty _remove">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-12.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Цезарь с курицей</div>
+                
+                
+                    <div class="products_item-desc desc">Лист салата, курица, пармезан, соус “Цезарь”, помидоры, лук</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">450&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">325&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-13.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Вок с креветками</div>
+                
+                
+                    <div class="products_item-desc desc">Лапша, креветки, соус, чеснок, зелень</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">600&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">450&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty _remove">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-14.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Салат капрезе</div>
+                
+                
+                    <div class="products_item-desc desc">Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item ">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product-dark.html"><img src="img/products/product-15.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Стейк из говядины</div>
+                
+                
+                    <div class="products_item-desc desc">Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной</div>
+                
+            </div>
+
+            <div class="products_item-foot">
+                <div class="products_item-foot-left">
+                    <div class="products_item-price price">900&nbsp;₽</div>
+                    
+                        <div class="products_item-size size">300&nbsp;гр.</div>
+                    
+                </div>
+
+                <div class="cart-btn empty ">
+                    <span>Хочу</span>
+                    <span>Не хочу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+						<div class="text-container hidden">
+    <div class="text _content">
+        <h1>Доставка еды</h1>
+        <p>Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития. </p>
+
+        <p>С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Равным образом консультация с широким активом требуют определения и уточнения модели развития.С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития. </p>
+
+        <p>С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>
+    </div>
+    <div class="btn btn-sm btn-border noselect">
+        <span>Развернуть</span>
+        <span>Свернуть</span>
+        <i class="icon-chevron-left"></i>
+    </div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
     <div class="content-wrapper">
         <div class="footer_container">
+            <div class="footer_top footer_row">
+                <div class="footer_left">
+                    <div class="footer_column">
+                        <a href="" class="footer_logo"> smarto<b>food</b> </a>
+                    </div>
+
+                    <div class="footer_column">
+                        <div class="footer_contact footer_contact--phone">
+                            <a href="tel:+73452395555" class="footer_contact-wrapper">
+                                <div class="footer_contact-image">
+                                    <i class="icon-phone"></i>
+                                </div>
+                                <div class="footer_contact-body">
+                                    <div class="footer_contact-text">+7 (3452) 39-55-55</div>
+                                    <div class="footer_contact-label">Телефон для заказов</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_menu footer_column">
+                    <div class="footer_menu-items">
+                        <nav class="footer_nav">
+                            <div class="footer_menu-label">Смартфуд</div>
+                            <ul class="footer_menu-list">
+                                <li class="footer_menu-item"> <a href=""> О нас </a> </li>
+                                <li class="footer_menu-item"> <a href="delivery.html"> Доставка и оплата </a> </li>
+                                <li class="footer_menu-item"> <a href="offers.html"> Акции </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer_column">
+                    <div class="footer_app">
+                        <div class="footer_app-title">Заказывайте через приложение</div>
+
+                        <div class="footer_app-links">
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://play.google.com/store/apps/details?id=com.smartofood">
+                                    <i class="icon-google-play"></i>
+                                    <span>GooglePlay</span>
+                                </a>
+                            </div>
+                            
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://apple.co/2WJYg5m">
+                                    <i class="icon-apple"></i>
+                                    <span>AppStore</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_developer">Разработка Ivanov Team 2020</div>
+                </div>
+            </div>
+
             <div class="footer_bottom footer_row">
                 <div class="footer_column footer_column--copy">
                     <div class="footer_copy">© 2020 Delivery Ivanov Team. Все права защищены.</div>
@@ -1049,9 +1324,9 @@
         </div>
     </div>
 </div>
-    </div>
+	</div>
 
-    <!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>

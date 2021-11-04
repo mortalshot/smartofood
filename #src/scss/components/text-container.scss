@@ -81,6 +81,14 @@
         }
     }
 
+    &.template1 {
+        .text-container {
+            .text {
+                margin: 0;
+            }
+        }
+    }
+
     &.template2 {
         .text-container {
             background: #222229;

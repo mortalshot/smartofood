@@ -4747,6 +4747,9 @@ html.template2 {
 .home-template .text-container.hidden .btn i.icon-chevron-left {
   transform: rotate(-90deg);
 }
+.home-template.template1 .text-container .text {
+  margin: 0;
+}
 .home-template.template2 .text-container {
   background: #222229;
   border-radius: 10px;

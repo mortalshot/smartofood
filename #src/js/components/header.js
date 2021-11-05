@@ -18,7 +18,7 @@ if (bodyNav.length > 0) {
     let bodyNavHeight = bodyNav[0].clientHeight;
     setTimeout(() => {
         setDilatorHeight(bodyNav[0], bodyNavHeight, bodyNavDilator[0]);
-    }, 200);
+    }, 300);
 }
 
 function setDilatorHeight(element, elementHeight, dilator) {

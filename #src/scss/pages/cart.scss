@@ -61,9 +61,6 @@
                     @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
                     @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
                 }
-                @media screen and (max-width: 450px) {
-                    width: 100%;
-                }
             }
         }
 

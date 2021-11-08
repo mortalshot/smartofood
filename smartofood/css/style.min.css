@@ -6420,7 +6420,7 @@ html.template2 {
   padding-bottom: 15px;
   align-items: flex-start;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .home-template .cart-header .header_container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -6448,7 +6448,7 @@ html.template2 {
   order: initial;
   margin: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .home-template .cart-header .header_logo {
     display: none;
   }

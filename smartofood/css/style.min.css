@@ -2876,11 +2876,11 @@ html.template2 {
 .home-template--horizontal .main__sidebar--sticky .main__sidebar-wrapper {
   top: 105px;
 }
-.home-template.template1 .main__sidebar-block--recommendation {
+.home-template.template1 .main__sidebar-block--recommendations {
   position: relative;
   overflow: hidden;
 }
-.home-template.template1 .main__sidebar-block--recommendation::after {
+.home-template.template1 .main__sidebar-block--recommendations::after {
   content: "";
   display: block;
   position: absolute;

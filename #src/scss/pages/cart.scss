@@ -99,6 +99,7 @@
                 @include adaptiv-value("padding-right", 22, 15, 1);
                 position: relative;
                 max-width: 170px;
+                flex: 1;
 
                 &::before,
                 &::after {

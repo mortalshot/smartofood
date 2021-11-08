@@ -6507,6 +6507,7 @@ html.template2 {
   padding-right: 22px;
   position: relative;
   max-width: 170px;
+  flex: 1;
 }
 @media (max-width: 1280px) {
   .home-template .cart-steps .cs_step {

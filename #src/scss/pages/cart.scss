@@ -60,6 +60,7 @@
                     padding-bottom: 24px;
                     @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
                     @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
+                    width: 100%;
                 }
             }
         }
@@ -967,7 +968,6 @@
         }
 
         .cart-points {
-    
             &__link {
                 a {
                     font-size: 10px;
@@ -976,7 +976,7 @@
                     text-transform: uppercase;
                     text-underline-offset: 1px;
                     text-decoration: underline var(--accentColor) from-font;
-                    
+
                     @media (any-hover: hover) {
                         &:hover {
                             text-decoration: underline transparent from-font;
@@ -985,7 +985,7 @@
                 }
             }
         }
-    
+
         .cart-header {
             background: transparent;
 
@@ -1131,7 +1131,7 @@
                     padding-right: 23.5px;
                     display: none;
                 }
-                
+
                 @media (any-hover: hover) {
                     &:hover {
                         background: rgba(71, 203, 84, 0.2);
@@ -1161,6 +1161,11 @@
             padding: 16px;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.1);
+
+            &--recommendations {
+                font-weight: 400;
+                background: transparent;
+            }
         }
 
         .cart-delivery {

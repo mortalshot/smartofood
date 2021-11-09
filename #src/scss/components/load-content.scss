@@ -1,0 +1,116 @@
+.home-template {
+    .load-content {
+        background: var(--bgColor);
+        visibility: hidden;
+        pointer-events: none;
+        transition: $transition ease all 0s;
+
+        &_outer {
+            padding-top: 72px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 50px;
+
+            @media screen and (max-width: 991px) {
+                padding-top: 120px;
+            }
+            @media screen and (max-width: 767px) {
+                padding-top: 100px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__container {
+            max-width: calc($size-container + $containerPadding * 2) + px;
+            @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
+            @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
+
+            @media screen and (min-width: 992px) {
+                @include adaptiv-value("padding-left", 210 + $containerPadding, 210 + $containerPaddingMobile, 1);
+            }
+        }
+
+        &__close {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            background: transparent;
+            border: 0;
+            width: auto;
+            height: auto;
+            right: 0;
+            top: 0;
+            transition: $transition ease opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            &::before {
+                content: "\e905";
+                font-family: "icomoon";
+                font-size: 20px;
+                color: var(--fontColor);
+            }
+        }
+
+        &__inner {
+            position: relative;
+        }
+
+        &.loaded {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        &.cart {
+            margin-top: 0;
+            z-index: 10001;
+
+            .load-content {
+                &_outer {
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+
+    &.home-template--horizontal {
+        .load-content {
+            &_outer {
+                padding-top: 101px;
+
+                @media screen and (max-width: 991px) {
+                    padding-top: 120px;
+                }
+                @media screen and (max-width: 767px) {
+                    padding-top: 100px;
+                }
+            }
+
+            &__container {
+                @media screen and (min-width: 992px) {
+                    @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
+                }
+                @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
+            }
+        }
+    }
+
+    &.template2 {
+        &.home-template--horizontal {
+            .load-content {
+                &_outer {
+                    padding-top: 185px;
+                }
+            }
+        }
+    }
+}

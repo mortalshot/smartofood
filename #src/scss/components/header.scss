@@ -735,7 +735,7 @@
 
             &_logo {
                 &:not(:last-child) {
-                    @include adaptiv-value("margin-right", 48, -30, 1);
+                    @include adaptiv-value("margin-right", 48, -15, 1);
                     @include adaptiv-value("padding-right", 48, -30, 1);
                     border-right: 1px solid rgba($color: $White, $alpha: 0.3);
 

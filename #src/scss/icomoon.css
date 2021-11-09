@@ -27,6 +27,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\e91a";
+}
 .icon-clock:before {
   content: "\e917";
 }

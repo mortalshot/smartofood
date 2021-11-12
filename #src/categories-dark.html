@@ -7,7 +7,7 @@
     })
 </head>
 
-<body>
+<body class="category-page">
     <div class="site__wrap">
         @@include('html-components/popup.html', { })
 
@@ -86,9 +86,178 @@
                         "class": ""
                         })
 
-                        @@include('html-components/products-section-dark.html', {
-                        "title": "Пицца",
-                        })
+
+                        <div class="page-nav">
+                            <h1 class="name">Суши и роллы</h1>
+
+                            <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <a href="/" itemprop="item"> Главная </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                                    <span itemprop="item">
+                                        <span itemprop="name">Суши и роллы</span>
+                                    </span>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-selector">
+                            <div class="ts_wrapper">
+                                <div class="ts_item selected">Пицца</div>
+                                <a class="ts_item" href="">Суши</a>
+                                <a class="ts_item" href="">Роллы</a>
+                            </div>
+                        </div>
+
+                        <div class="products">
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-8.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "1&nbsp;289&nbsp;гр.",
+                                "price": "11&nbsp;400&nbsp;₽",
+                                "btnClass": "_remove"
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-9.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-10.jpg",
+                                "title": "Боршь",
+                                "desc": "Вода, капуста, свёкла, картошка, сметана, соль, перец, зелень",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-11.jpg",
+                                "title": "Стейк из лосося",
+                                "desc": "Лосось, соль, перец, лимон",
+                                "size": "1&nbsp;289&nbsp;гр.",
+                                "price": "11&nbsp;400&nbsp;₽",
+                                "btnClass": "_remove"
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-12.jpg",
+                                "title": "Цезарь с курицей",
+                                "desc": "Лист салата, курица, пармезан, соус “Цезарь”, помидоры, лук",
+                                "size": "325&nbsp;гр.",
+                                "price": "450&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-13.jpg",
+                                "title": "Вок с креветками",
+                                "desc": "Лапша, креветки, соус, чеснок, зелень",
+                                "size": "450&nbsp;гр.",
+                                "price": "600&nbsp;₽",
+                                "btnClass": "_remove"
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-14.jpg",
+                                "title": "Салат капрезе",
+                                "desc": "Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-15.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-8.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-9.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-10.jpg",
+                                "title": "Боршь",
+                                "desc": "Вода, капуста, свёкла, картошка, сметана, соль, перец, зелень",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-11.jpg",
+                                "title": "Стейк из лосося",
+                                "desc": "Лосось, соль, перец, лимон",
+                                "size": "289&nbsp;гр.",
+                                "price": "10&nbsp;400&nbsp;₽",
+                                "btnClass": "_remove"
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-12.jpg",
+                                "title": "Цезарь с курицей",
+                                "desc": "Лист салата, курица, пармезан, соус “Цезарь”, помидоры, лук",
+                                "size": "325&nbsp;гр.",
+                                "price": "450&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-13.jpg",
+                                "title": "Вок с креветками",
+                                "desc": "Лапша, креветки, соус, чеснок, зелень",
+                                "size": "450&nbsp;гр.",
+                                "price": "600&nbsp;₽",
+                                "btnClass": "_remove"
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-14.jpg",
+                                "title": "Салат капрезе",
+                                "desc": "Кускус, грибы лисички, броккли, шпинат, оливковое масло, булгу...",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                            @@include('html-components/products-item-dark.html', {
+                                "class": "",
+                                "img": "img/products/product-15.jpg",
+                                "title": "Стейк из говядины",
+                                "desc": "Вырезка говяжья, соль, перец, размарин, соус сливочно-нибной",
+                                "size": "300&nbsp;гр.",
+                                "price": "900&nbsp;₽",
+                                "btnClass": ""
+                            })
+                        </div>
 
                         @@include('html-components/text-container.html', { })
                     </div>

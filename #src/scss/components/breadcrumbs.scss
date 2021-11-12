@@ -5,10 +5,15 @@
         li.item {
             display: flex;
 
-            a {
+            & > span,
+            & > a {
                 display: inline-flex;
                 align-items: center;
                 @include adaptiv-font(14, 20, 12, 1);
+                color: $DGBlue;
+            }
+
+            a {
                 color: $DGBlue;
                 transition: $transition ease color 0s;
 
@@ -45,12 +50,13 @@
             li.item {
                 position: relative;
                 border-right: 0;
-                padding-right: 18px;
-                margin-right: 18px;
 
                 &:not(:last-child) {
+                    padding-right: 18px;
+                    margin-right: 18px;
+
                     &::after {
-                        content: '';
+                        content: "";
                         display: block;
                         width: 4px;
                         height: 4px;
@@ -62,9 +68,14 @@
                         transform: translate(50%, -50%);
                     }
                 }
-                
+
+                span,
                 a {
                     opacity: 0.5;
+                    color: var(--fontColor);
+                }
+
+                a {
                     color: var(--fontColor);
                     text-decoration: underline transparent from-font;
                     text-underline-offset: 2px;

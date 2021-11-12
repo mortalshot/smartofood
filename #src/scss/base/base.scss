@@ -178,7 +178,7 @@
         }
     }
 
-    .block-title {
+    .block-title, .page-nav .name {
         font-family: var(--fontMain);
         font-weight: 700;
         @include adaptiv-font(32, 38, 20, 1);

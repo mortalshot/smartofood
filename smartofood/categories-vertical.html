@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="home-template home-template--horizontal template1">
+<html lang="ru" class="home-template template1">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -589,7 +589,12 @@
             <div class="content-wrapper">
                 <div class="header_container noselect">
                     <div class="header_left">
-                        <div class="header_logo">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
+                        </div>
+
+                        <div class="header_logo _desktop">
                             <a href="/" class="header_logo-wrapper">
                                 <img src="img/sf-logo@3x.png" loading="lazy">
                             </a>
@@ -609,12 +614,31 @@
                     </div>
 
                     <div class="header_right">
+                        <div class="header_logo _mobile">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
                         <div class="header_contacts">
                             <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
 
                             <div class="header_phone offservice">
                                 <a href="tel:73452696262">+7 (3452) 69-62-62</a>
                             </div>
+                        </div>
+
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">(10)</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -626,13 +650,7 @@
             <div class="content-wrapper">
                 <div class="body_container">
                     <div class="body_nav">
-                        <div class="content-wrapper">
-                            <div class="header_hamburger">
-                                <div class="header_hamburger-icon"><span></span></div>
-                                <div class="header_hamburger-label">Меню</div>
-                            </div>
-
-                            <div class="nav_menu">
+                        <div class="nav_menu">
     <div class="nav_menu_item-wrapper _active">
         <a href="#" class="nav_menu_item"> Суши и роллы </a>
     </div>
@@ -655,20 +673,6 @@
         <a href="#" class="nav_menu_item"> Напитки </a>
     </div>
 </div>
-
-                            <div class="body_nav-controls">
-                                <a href="profile.html" class="header_user">
-                                    <i class="icon-user"></i>
-                                </a>
-                                <a href="cart.html" class="cart-btn" data-link="/cart">
-                                    <i class="icon-bag"></i>
-                                    <div class="cart-btn__body">
-                                        <div class="sum">140&nbsp;980&nbsp;₽</div>
-                                        <div class="count">(10)</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="body_nav-dilator"></div>
 

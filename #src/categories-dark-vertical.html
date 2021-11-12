@@ -1,90 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru" class="home-template home-template--horizontal template2">
+<html lang="ru" class="home-template template2">
 
 <head>
-    @@include('html-components/_head.html', {
-    "title": "Smartofood"
-    })
+	@@include('html-components/_head.html', {
+	"title": "Smartofood"
+	})
 </head>
 
 <body class="category-page">
-    <div class="site__wrap">
-        @@include('html-components/popup.html', { })
+	<div class="site__wrap">
+		@@include('html-components/popup.html', { })
 
-        <div class="header">
-            <div class="content-wrapper">
-                <div class="header_container noselect">
-                    <div class="header_left">
-                        <div class="header_logo">
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="header_container noselect">
+					<div class="header_left">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
+                        </div>
+                        
+						<div class="header_logo _desktop">
+							<a href="/" class="header_logo-wrapper">
+								<img src="img/sf-logo@3x.png" loading="lazy">
+							</a>
+						</div>
+
+						<div class="header_city c-pointer" data-cities="2">
+							<i class="icon-location"></i>
+							<span class="header_city-span">Тюмень</span>
+							<i class="icon-chevron-left"></i>
+						</div>
+
+						<ul class="header_menu">
+							<li class=""> <a href="#"> О нас </a> </li>
+							<li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+							<li class=""> <a href="offers.html"> Акции </a> </li>
+						</ul>
+					</div>
+
+					<div class="header_right">
+                        <div class="header_logo _mobile">
                             <a href="/" class="header_logo-wrapper">
                                 <img src="img/sf-logo@3x.png" loading="lazy">
                             </a>
                         </div>
 
-                        <div class="header_city c-pointer" data-cities="2">
-                            <i class="icon-location"></i>
-                            <span class="header_city-span">Тюмень</span>
-                            <i class="icon-chevron-left"></i>
-                        </div>
+						<div class="header_contacts">
+							<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
 
-                        <ul class="header_menu">
-                            <li class=""> <a href="#"> О нас </a> </li>
-                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
-                            <li class=""> <a href="offers.html"> Акции </a> </li>
-                        </ul>
-                    </div>
+							<div class="header_phone offservice">
+								<a href="tel:73452696262">
+									<i class="icon-phone"></i>
+									<span>+7 (3452) 69-62-62</span>
+								</a>
+							</div>
+						</div>
 
-                    <div class="header_right">
-                        <div class="header_contacts">
-                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
-
-                            <div class="header_phone offservice">
-                                <a href="tel:73452696262">
-                                    <i class="icon-phone"></i>
-                                    <span>+7 (3452) 69-62-62</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_dilator"></div>
-
-        <div class="body">
-            <div class="content-wrapper">
-                <div class="body_container">
-                    <div class="body_nav">
-                        <div class="content-wrapper">
-                            <div class="body_nav-wrapper">
-                                <div class="header_hamburger">
-                                    <div class="header_hamburger-icon"><span></span></div>
-                                    <div class="header_hamburger-label">Меню</div>
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">3 товара</div>
                                 </div>
-
-                                @@include('html-components/body-nav-menu.html', { })
-
-                                <div class="body_nav-controls">
-                                    <a href="profile.html" class="header_user">
-                                        <i class="icon-user"></i>
-                                    </a>
-                                    <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
-                                        <i class="icon-bag"></i>
-                                        <div class="cart-btn__body">
-                                            <div class="sum">140&nbsp;980&nbsp;₽</div>
-                                            <div class="count">3 товара</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="body_nav-dilator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_dilator"></div>
 
-                    <div class="body_content">
-                        @@include('html-components/home-slider.html', {
-                        "class": ""
-                        })
+		<div class="body">
+			<div class="content-wrapper">
+				<div class="body_container">
+					<div class="body_nav">
+						@@include('html-components/body-nav-menu.html', { })
+					</div>
+					<div class="body_nav-dilator"></div>
+
+					<div class="body_content">
+						@@include('html-components/home-slider.html', {
+						"class": ""
+						})
 
                         <div class="page-nav">
                             <h1 class="name">Суши и роллы</h1>
@@ -258,29 +260,29 @@
                             })
                         </div>
 
-                        @@include('html-components/text-container.html', { })
-                    </div>
-                </div>
-            </div>
-        </div>
+						@@include('html-components/text-container.html', { })
+					</div>
+				</div>
+			</div>
+		</div>
 
-        @@include('html-components/footer.html', {})
+		@@include('html-components/footer.html', {})
 
-        <div class="load-content">
-            <div class="load-content_outer">
-                <div class="load-content__container">
+		<div class="load-content">
+			<div class="load-content_outer">
+				<div class="load-content__container">
+					
+					<div class="load-content__inner">
+						<div class="load-content__close"></div>
+						
+						@@include('html-components/product-single-dark.html', {})
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                    <div class="load-content__inner">
-                        <div class="load-content__close"></div>
-
-                        @@include('html-components/product-single-dark.html', {})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @@include('html-components/_js.html', {})
+	@@include('html-components/_js.html', {})
 </body>
 
 </html>

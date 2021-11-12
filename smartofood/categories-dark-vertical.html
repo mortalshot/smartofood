@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru" class="home-template home-template--horizontal template2">
+<html lang="ru" class="home-template template2">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smartofood</title>
@@ -36,8 +36,8 @@
 </head>
 
 <body class="category-page">
-    <div class="site__wrap">
-        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
+	<div class="site__wrap">
+		<div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
     <div class="cp_products scroll-vert" style="height: 330px;">
         <div class="cpp_item" data-hash="" data-amount="">
             <div class="delete-cross icon-trash"></div>
@@ -585,58 +585,75 @@
     </div>
 </div>
 
-        <div class="header">
-            <div class="content-wrapper">
-                <div class="header_container noselect">
-                    <div class="header_left">
-                        <div class="header_logo">
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="header_container noselect">
+					<div class="header_left">
+                        <div class="header_hamburger">
+                            <div class="header_hamburger-icon"><span></span></div>
+                            <div class="header_hamburger-label">Меню</div>
+                        </div>
+                        
+						<div class="header_logo _desktop">
+							<a href="/" class="header_logo-wrapper">
+								<img src="img/sf-logo@3x.png" loading="lazy">
+							</a>
+						</div>
+
+						<div class="header_city c-pointer" data-cities="2">
+							<i class="icon-location"></i>
+							<span class="header_city-span">Тюмень</span>
+							<i class="icon-chevron-left"></i>
+						</div>
+
+						<ul class="header_menu">
+							<li class=""> <a href="#"> О нас </a> </li>
+							<li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+							<li class=""> <a href="offers.html"> Акции </a> </li>
+						</ul>
+					</div>
+
+					<div class="header_right">
+                        <div class="header_logo _mobile">
                             <a href="/" class="header_logo-wrapper">
                                 <img src="img/sf-logo@3x.png" loading="lazy">
                             </a>
                         </div>
 
-                        <div class="header_city c-pointer" data-cities="2">
-                            <i class="icon-location"></i>
-                            <span class="header_city-span">Тюмень</span>
-                            <i class="icon-chevron-left"></i>
-                        </div>
+						<div class="header_contacts">
+							<div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
 
-                        <ul class="header_menu">
-                            <li class=""> <a href="#"> О нас </a> </li>
-                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
-                            <li class=""> <a href="offers.html"> Акции </a> </li>
-                        </ul>
-                    </div>
+							<div class="header_phone offservice">
+								<a href="tel:73452696262">
+									<i class="icon-phone"></i>
+									<span>+7 (3452) 69-62-62</span>
+								</a>
+							</div>
+						</div>
 
-                    <div class="header_right">
-                        <div class="header_contacts">
-                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
-
-                            <div class="header_phone offservice">
-                                <a href="tel:73452696262">
-                                    <i class="icon-phone"></i>
-                                    <span>+7 (3452) 69-62-62</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_dilator"></div>
-
-        <div class="body">
-            <div class="content-wrapper">
-                <div class="body_container">
-                    <div class="body_nav">
-                        <div class="content-wrapper">
-                            <div class="body_nav-wrapper">
-                                <div class="header_hamburger">
-                                    <div class="header_hamburger-icon"><span></span></div>
-                                    <div class="header_hamburger-label">Меню</div>
+                        <div class="header_controls">
+                            <a href="profile.html" class="header_user">
+                                <i class="icon-user"></i>
+                            </a>
+                            <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
+                                <i class="icon-bag"></i>
+                                <div class="cart-btn__body">
+                                    <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                    <div class="count">3 товара</div>
                                 </div>
+                            </a>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_dilator"></div>
 
-                                <div class="nav_menu">
+		<div class="body">
+			<div class="content-wrapper">
+				<div class="body_container">
+					<div class="body_nav">
+						<div class="nav_menu">
     <div class="nav_menu_item-wrapper _active">
         <a href="#" class="nav_menu_item"> Суши и роллы </a>
     </div>
@@ -659,26 +676,11 @@
         <a href="#" class="nav_menu_item"> Напитки </a>
     </div>
 </div>
+					</div>
+					<div class="body_nav-dilator"></div>
 
-                                <div class="body_nav-controls">
-                                    <a href="profile.html" class="header_user">
-                                        <i class="icon-user"></i>
-                                    </a>
-                                    <a href="cart.html" class="cart-btn cart-btn--full" data-link="/cart">
-                                        <i class="icon-bag"></i>
-                                        <div class="cart-btn__body">
-                                            <div class="sum">140&nbsp;980&nbsp;₽</div>
-                                            <div class="count">3 товара</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="body_nav-dilator"></div>
-
-                    <div class="body_content">
-                        <!-- add a class "home-slider--fixed" to slider fixed height  -->
+					<div class="body_content">
+						<!-- add a class "home-slider--fixed" to slider fixed height  -->
 <div class="home-slider swiper "> 
     <div class="swiper-wrapper">
         <div class="home-slider__item swiper-slide">
@@ -1195,7 +1197,7 @@
 </div>
                         </div>
 
-                        <div class="text-container hidden">
+						<div class="text-container hidden">
     <div class="text _content">
         <h1>Доставка еды</h1>
         <p>Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития. </p>
@@ -1210,12 +1212,12 @@
         <i class="icon-chevron-left"></i>
     </div>
 </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <div class="footer">
+		<div class="footer">
     <div class="content-wrapper">
         <div class="footer_container">
             <div class="footer_top footer_row">
@@ -1308,14 +1310,14 @@
     </div>
 </div>
 
-        <div class="load-content">
-            <div class="load-content_outer">
-                <div class="load-content__container">
-
-                    <div class="load-content__inner">
-                        <div class="load-content__close"></div>
-
-                        <div class="product" data-id="" data-name="" data-price="" data-bzu="">
+		<div class="load-content">
+			<div class="load-content_outer">
+				<div class="load-content__container">
+					
+					<div class="load-content__inner">
+						<div class="load-content__close"></div>
+						
+						<div class="product" data-id="" data-name="" data-price="" data-bzu="">
     <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
         <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
             <a href="/" itemprop="item">Главная</a>
@@ -1466,13 +1468,13 @@
         </div>
     </div>
 </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="ru" class="home-template home-template--horizontal template1">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartofood</title>
+
+<link type="text/css" href="assets/css/sweetalert2.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/jquery-ui.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/ion.rangeSlider.min.css" rel="stylesheet" media="all">
+<link type="text/css" href="assets/css/main.min.css" rel="stylesheet" media="all">
+<!-- <link type="text/css" href="https://cdn.ivanov.team/assets/css/cyan.css?ver=1.5.0" rel="stylesheet" media="all"> -->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/style.min.css">
+
+<!-- <script type="text/javascript">var appVersion = "1.5.0", appEnv = "prod", appCdn = "https://cdn.smartofood.ru", uploadsCdn = "https://cdn.smartofood.ru";</script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="assets/js/pages.js" src="assets/js/pages.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="assets/js/lib/config.js" src="assets/js/lib/config.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="assets/js/lib/app.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="banners" src="assets/js/lib/banners.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="swal" src="assets/js/lib/sweetalert2.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jui" src="assets/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mask" src="assets/js/lib/jquery.mask.min.js"></script> -->
+
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://cdn.ivanov.team/assets/js/lib/config.js?ver=1.5.0" src="https://cdn.ivanov.team/assets/js/lib/config.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://cdn.ivanov.team/assets/js/lib/jquery.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="https://cdn.ivanov.team/assets/js/lib/app.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="banners" src="https://cdn.ivanov.team/assets/js/lib/banners.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="swal" src="https://cdn.ivanov.team/assets/js/lib/sweetalert2.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jui" src="https://cdn.ivanov.team/assets/js/lib/jquery-ui.min.js?ver=1.5.0"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mask" src="https://cdn.ivanov.team/assets/js/lib/jquery.mask.min.js?ver=1.5.0"></script> -->
+</head>
+
+<body class="">
+    <div class="site__wrap">
+        <div id="cart-popup" class="cart-popup" data-image="cover" style="top: 200px; right: 80px; opacity: 1;">
+    <div class="cp_products scroll-vert" style="height: 330px;">
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-11.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Вок острый с креветками и лососем</div>
+                <div class="dop">800 г</div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-12.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Стейк из говядины </div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+        <div class="cpp_item" data-hash="" data-amount="">
+            <div class="delete-cross icon-trash"></div>
+
+            <img src="img/products/product-14.jpg" class="image" loading="lazy">
+
+            <div class="cpp_info">
+                <div class="name">Вок острый с креветками и лососем </div>
+                <div class="cpp_action">
+                    <div class="count-selector noselect">
+                        <div class="minus"><i class="icon-minus"></i></div>
+                        <div class="count">1</div>
+                        <div class="plus"><i class="icon-plus"></i></div>
+                    </div>
+                    <div class="sum">400 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cpp_total">
+        <div class="cpp_total-wrapper">
+            <div class="cppt_num">3&nbsp;шт</div>
+            <div class="sum">400&nbsp;₽</div>
+        </div>
+        <div class="btn btn-color noselect" data-link="/cart">Перейти в корзину</div>
+    </div>
+</div>
+
+<div id="city-dropdown" class="dropdown noselect" style="top: 50px; left: 150px; bottom: auto; width: 240px; opacity: 1;">
+    <div class="dropdown_title">Выберите ваш город</div>
+    <div class="dropdown_list-wrapper">
+        <div class="shadow shadow--top"></div>
+        <div class="shadow shadow--bottom"></div>
+
+        <div class="dropdown_list">
+            <div class="dropdown_item selected" data-link="">Тюмень</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+            <div class="dropdown_item" data-link="">Сыктывкар</div>
+            <div class="dropdown_item" data-link="">Ростов-на-Дону</div>
+            <div class="dropdown_item" data-link="">Краснодар</div>
+        </div>
+    </div>
+</div>
+
+<div id="auth-window" class="window">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="close-cross">
+                <i class="icon-close"></i>
+                <span>Закрыть</span>
+            </div>
+
+            <div class="window_body">
+                <div class="signin">
+                    <div class="window_title"> <span>Вход на сайт</span> </div>
+                    <div class="message"> ПИН-код для входа на&nbsp;сайт будет отправлен по&nbsp;СМС </div>
+
+                    <div class="signin_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Получить код</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Получить код», вы&nbsp;принимаете условия <a href="">пользовательского соглашения</a></div>
+                </div>
+
+                <div class="pincode">
+                    <div class="window_title"> <span>Войти</span> </div>
+                    <div class="message"> Введите ПИН-код из СМС </div>
+
+                    <div class="code-panel">
+                        <input class="code-input" type="text" autocomplete="one-time-code" maxlength="4">
+                        <div class="digit">5</div>
+                        <div class="digit">4</div>
+                        <div class="digit">3</div>
+                        <div class="digit">2</div>
+                    </div>
+
+                    <div class="code-fail"></div>
+
+                    <div class="resend noselect">
+                        <div class="button">Отправить повторно</div> &nbsp;
+                        <div class="count">через: 40 сек</div>
+                    </div>
+                    <div class="wrong-number noselect"><span>Ввести другой телефон</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="city-window" class="window city">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите город</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="cw_search-wrapper">
+                    <i class="icon-search"></i>
+                    <input type="text" class="text-input cw_search" placeholder="Поиск города">
+                </div>
+                <ul class="cw_result scroll-vert noselect" data-cities="">
+                    <li class="cw_result-option">
+                        <i class="icon-location"></i>
+                        <span>Сыктывкар</span>
+                    </li>
+                    <li class="cw_result-option _active">
+                        <i class="icon-location"></i>
+                        <span>Ростов-на-Дону</span>
+                    </li>
+                    <li class="cw_result-option">
+                        <i class="icon-location"></i>
+                        <span>Краснодар</span>
+                    </li>
+                    <li class="cw_result-option">
+                        <i class="icon-location"></i>
+                        <span>Абинск</span>
+                    </li>
+                    <li class="cw_result-option">
+                        <i class="icon-location"></i>
+                        <span>Брянск</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="shops-window" class="window shops">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Выберите заведение</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="shops_window">
+                    <div class="sw_shops hidescroll">
+                        <div class="sws_block">
+                            <div class="sws_title">
+                                <div class="text">Тюмень</div>
+                            </div>
+                            <div class="sws_list">
+                                <div class="sws_shop selected" data-id="1">
+                                    <div class="swss_name">Кофейня Garden Калинка</div>
+                                    <div class="swss_addr">Республики, 65</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="2">
+                                    <div class="swss_name">Кофейня Garden Океан</div>
+                                    <div class="swss_addr">Республики, 42</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="3">
+                                    <div class="swss_name">Кофейня Garden Советская</div>
+                                    <div class="swss_addr">Советская, 51 к 3</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 21:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="4">
+                                    <div class="swss_name">Кофейня Garden Паруса</div>
+                                    <div class="swss_addr">Малыгина, 90</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="5">
+                                    <div class="swss_name">Кофейня Garden Новин</div>
+                                    <div class="swss_addr">50 лет Октября, 57в</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                                <div class="sws_shop" data-id="6">
+                                    <div class="swss_name">Кофейня Garden Эрвье</div>
+                                    <div class="swss_addr">Ю.-Р.Г.Эрвье, 30 к 4</div>
+                                    <div class="swss_wrapper"></div>
+                                    <div class="swss_time">7:00 — 22:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="callback-window" class="window">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Обратный звонок</span>
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+
+            <div class="window_body">
+                <div class="callback">
+                    <div class="callback_action">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <input type="text" class="text-input" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" maxlength="16">
+                            </div>
+                        </div>
+                        <div class="form__row signin_action-submit">
+                            <div class="form__item col-12">
+                                <div class="btn btn-color col-12 noselect">Заказать звонок</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agreement">Нажимая кнопку «Заказать звонок», вы принимаете условия пользовательского соглашения.</div>
+                </div>
+
+                <div class="callback-success d-none">
+                    Скоро мы вам позвоним
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mods-window" class="window mods">
+    <div class="window_wrapper">
+        <div class="window_panel">
+            <div class="window_title">
+                <span>Что добавить в пиццу</span>
+
+                <div class="close-cross">
+                    <i class="icon-close"></i>
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="window_body">
+                <div class="mods_window">
+                    <div class="mw_mods hidescroll">
+                        <div class="ingredients">
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Мясо</div>
+
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
+
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ingredients__block">
+                                <div class="ingredients__title">Сыр</div>
+
+                                <div class="ingredients__slider swiper swiper--arrow-top">
+                                    <div class="swiper__buttons">
+                                        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                    </div>
+
+                                    <div class="swiper-wrapper">
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Пармезан" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пармезан</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">65&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-2.jpg" alt="Пепперони" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Пепперони</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">120&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn checked" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-3.jpg" alt="Халапеньо" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Халапеньо</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ingredients__item swiper-slide">
+                                            <div class="ingredients__item-wrapper">
+                                                <div class="ingredients__item-image">
+                                                    <img src="img/ingredients/ingredient-1.jpg" alt="Базилик" class="swiper-lazy">
+                                                </div>
+                                                <div class="ingredients__item-title">Базилик</div>
+                                                <div class="ingredients__item-footer">
+                                                    <div class="ingredients__item-price">39&nbsp;₽</div>
+                                                    <div class="ingredients__item-btn plus-btn" data-info="{&quot;id&quot;:179370">
+                                                        <i class="icon-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window_footer">
+                <div class="mods_sum">
+                    <div class="mods_sum-added"><span>+&nbsp;293&nbsp;₽</span></div>
+                    <div class="mwt_sum">Итоговая сумма&nbsp;<span>3&nbsp;190&nbsp;₽</span></div>
+                </div>
+                <div class="btn btn-sm btn-color">Добавить</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navigation">
+    <div class="navigation__wrapper nav_panel hidescroll">
+        <div class="navigation__heading">
+            <div class="header_logo">
+                <a href="/" class="header_logo-wrapper">
+                    <img src="img/sf-logo@3x.png" loading="lazy">
+                </a>
+            </div>
+
+            <div class="close-block noselect">
+                <div class="close-cross"><i class="icon-close"></i></div>
+            </div>
+        </div>
+
+        <div class="navigation__body">
+            <div class="navigation__menu-wrapper">
+                <div class="nav_menu">
+                    <a href="" class="nav_menu_item">Суши и роллы</a>
+                    <a href="" class="nav_menu_item">Пицца</a>
+                    <a href="" class="nav_menu_item">WOK и паста</a>
+                    <a href="" class="nav_menu_item">Бургеры</a>
+                    <a href="" class="nav_menu_item">Завтраки</a>
+                    <a href="" class="nav_menu_item">Салаты и закуски</a>
+                    <a href="" class="nav_menu_item">Напитки</a>
+                </div>
+            </div>
+
+            <div class="navigation__footer">
+                <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+                <div class="header_phone offservice">
+                    <a class="black" href="tel:73452696262">+7 (3452) 69-62-62</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="header">
+            <div class="content-wrapper">
+                <div class="header_container noselect">
+                    <div class="header_left">
+                        <div class="header_logo">
+                            <a href="/" class="header_logo-wrapper">
+                                <img src="img/sf-logo@3x.png" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="header_city c-pointer" data-cities="2">
+                            <i class="icon-location"></i>
+                            <span class="header_city-span">Тюмень</span>
+                            <i class="icon-chevron-left"></i>
+                        </div>
+
+                        <ul class="header_menu">
+                            <li class=""> <a href="#"> О нас </a> </li>
+                            <li class=""> <a href="delivery.html"> Доставка и оплата </a> </li>
+                            <li class=""> <a href="offers.html"> Акции </a> </li>
+                        </ul>
+                    </div>
+
+                    <div class="header_right">
+                        <div class="header_contacts">
+                            <div class="header_work"> Сегодня работаем с 9:00 до 22:30 </div>
+
+                            <div class="header_phone offservice">
+                                <a href="tel:73452696262">+7 (3452) 69-62-62</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_dilator"></div>
+
+        <div class="body">
+            <div class="content-wrapper">
+                <div class="body_container">
+                    <div class="body_nav">
+                        <div class="content-wrapper">
+                            <div class="header_hamburger">
+                                <div class="header_hamburger-icon"><span></span></div>
+                                <div class="header_hamburger-label">Меню</div>
+                            </div>
+
+                            <div class="nav_menu">
+    <div class="nav_menu_item-wrapper _active">
+        <a href="#" class="nav_menu_item"> Суши и роллы </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Пицца</a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> WOK и паста </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Бургеры </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Завтраки </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Салаты </a>
+    </div>
+    <div class="nav_menu_item-wrapper">
+        <a href="#" class="nav_menu_item"> Напитки </a>
+    </div>
+</div>
+
+                            <div class="body_nav-controls">
+                                <a href="profile.html" class="header_user">
+                                    <i class="icon-user"></i>
+                                </a>
+                                <a href="cart.html" class="cart-btn" data-link="/cart">
+                                    <i class="icon-bag"></i>
+                                    <div class="cart-btn__body">
+                                        <div class="sum">140&nbsp;980&nbsp;₽</div>
+                                        <div class="count">(10)</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body_nav-dilator"></div>
+
+                    <div class="body_content">
+                        <!-- add a class "home-slider--fixed" to slider fixed height  -->
+<div class="home-slider swiper "> 
+    <div class="swiper-wrapper">
+        <div class="home-slider__item swiper-slide">
+            <div class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-5.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <div class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-1.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-2.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-3.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+        <div class="home-slider__item swiper-slide">
+            <a href="" class="home-slider__item-wrapper">
+                <img data-src="img/home-slider/home-slider-item-4.jpg" alt="banner" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </a>
+        </div>
+    </div>
+    <div class="swiper__buttons">
+        <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+        <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+                        <section class="products-section">
+    <div class="block-title">Пицца</div>
+
+    <div class="products">
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Минск</div>
+                
+                    <div class="products_item-size size">250 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">от 245 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Сингапур</div>
+                
+                    <div class="products_item-size size">205 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">320 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Калифорния</div>
+                
+                    <div class="products_item-size size">265 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">900 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Москва</div>
+                
+                    <div class="products_item-size size">250 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус шампиньоны, итальянские травы</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">520 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Пицца Маргарита</div>
+                
+                    <div class="products_item-size size">255 г</div>
+                
+                
+                    <div class="products_item-desc desc">Томатный соус, сыр, базилик</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">400 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Пицца Пепперони</div>
+                
+                    <div class="products_item-size size">310 г</div>
+                
+                
+                    <div class="products_item-desc desc">оматный соус, сыр, пепперони, базилик</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">550 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-1.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Минск</div>
+                
+                    <div class="products_item-size size">250 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">от 245 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-2.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Сингапур</div>
+                
+                    <div class="products_item-size size">205 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">320 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-3.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Калифорния</div>
+                
+                    <div class="products_item-size size">265 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">900 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-4.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Москва</div>
+                
+                    <div class="products_item-size size">250 г</div>
+                
+                
+                    <div class="products_item-desc desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус шампиньоны, итальянские травы</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">520 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Пицца Маргарита</div>
+                
+                    <div class="products_item-size size">255 г</div>
+                
+                
+                    <div class="products_item-desc desc">Томатный соус, сыр, базилик</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">400 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="products_item @@class">
+    <div class="products_item-wrapper">
+        <a class="products_item-image" href="product.html"><img src="img/products/product-5.jpg" alt="" class="image" loading="lazy"></a>
+        <div class="products_item-body">
+            <div class="products_item-content">
+                <div class="products_item-name name">Пицца Пепперони</div>
+                
+                    <div class="products_item-size size">310 г</div>
+                
+                
+                    <div class="products_item-desc desc">оматный соус, сыр, пепперони, базилик</div>
+                
+            </div>
+            <div class="products_item-foot foot simple noselect">
+                <div class="products_item-price price">550 ₽</div>
+                <div class="cart-btn empty" title=""><i class="icon-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+                        <div class="text-container hidden">
+    <div class="text _content">
+        <h1>Доставка еды</h1>
+        <p>Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития. </p>
+
+        <p>С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Равным образом консультация с широким активом требуют определения и уточнения модели развития.С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития. </p>
+
+        <p>С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>
+    </div>
+    <div class="btn btn-sm btn-border noselect">
+        <span>Развернуть</span>
+        <span>Свернуть</span>
+        <i class="icon-chevron-left"></i>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+    <div class="content-wrapper">
+        <div class="footer_container">
+            <div class="footer_top footer_row">
+                <div class="footer_left">
+                    <div class="footer_column">
+                        <a href="" class="footer_logo"> smarto<b>food</b> </a>
+                    </div>
+
+                    <div class="footer_column">
+                        <div class="footer_contact footer_contact--phone">
+                            <a href="tel:+73452395555" class="footer_contact-wrapper">
+                                <div class="footer_contact-image">
+                                    <i class="icon-phone"></i>
+                                </div>
+                                <div class="footer_contact-body">
+                                    <div class="footer_contact-text">+7 (3452) 39-55-55</div>
+                                    <div class="footer_contact-label">Телефон для заказов</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_menu footer_column">
+                    <div class="footer_menu-items">
+                        <nav class="footer_nav">
+                            <div class="footer_menu-label">Смартфуд</div>
+                            <ul class="footer_menu-list">
+                                <li class="footer_menu-item"> <a href=""> О нас </a> </li>
+                                <li class="footer_menu-item"> <a href="delivery.html"> Доставка и оплата </a> </li>
+                                <li class="footer_menu-item"> <a href="offers.html"> Акции </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer_column">
+                    <div class="footer_app">
+                        <div class="footer_app-title">Заказывайте через приложение</div>
+
+                        <div class="footer_app-links">
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://play.google.com/store/apps/details?id=com.smartofood">
+                                    <i class="icon-google-play"></i>
+                                    <span>GooglePlay</span>
+                                </a>
+                            </div>
+                            
+                            <div class="footer_app-btn">
+                                <a class="footer_app-btn-link" href="https://apple.co/2WJYg5m">
+                                    <i class="icon-apple"></i>
+                                    <span>AppStore</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_developer">Разработка Ivanov Team 2020</div>
+                </div>
+            </div>
+
+            <div class="footer_bottom footer_row">
+                <div class="footer_column footer_column--copy">
+                    <div class="footer_copy">© 2020 Delivery Ivanov Team. Все права защищены.</div>
+                </div>
+                <div class="footer_column footer_column--development">
+                    <a href="" class="footer_development">
+                        <span>Разработано на</span>
+                        <img src="img/sf-logo.png" alt="smartofood" loading="lazy">
+                    </a>
+                </div>
+                <div class="footer_column footer_column--social">
+                    <div class="footer_social social">
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/instagram.svg" alt="instagram" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/facebook.svg" alt="facebook" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/twitter.svg" alt="twitter" loading="lazy"></a>
+                        </div>
+                        <div class="social_item">
+                            <a href="" class="social_item-link"><img src="img/icons/telegram.svg" alt="telegram" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="load-content">
+            <div class="load-content_outer">
+                <div class="load-content__container">
+
+                    <div class="load-content__inner">
+                        <div class="load-content__close"></div>
+
+                        <div class="product" data-id="" data-name="" data-price="" data-bzu="">
+    <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+        <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item">
+                <i class="icon-home"></i>
+            </a>
+            <meta itemprop="position" content="1">
+        </li>
+        <li class="item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item">
+                <span itemprop="name">Пицца Маргаритта</span>
+            </a>
+            <meta itemprop="position" content="2">
+        </li>
+    </ol>
+
+    <div class="product_row">
+        <div class="product_image">
+            <img src="img/products/product-7.jpg" alt="">
+        </div>
+
+        <div class="product_info">
+            <div class="product_panel">
+                <h1 class="product_title pp_title">Маргарита</h1>
+                <div class="product_descr pp_desc">Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики брынзы, томаты, шампиньоны, итальянские травы, томатный соус</div>
+
+                <div class="switch-selector" data-group="">
+                    <div class="ss_wrapper">
+                        <div class="ss_item selected" data-info=""> Маленькая</div>
+                        <div class="ss_item" data-info=""> Большая</div>
+                        <div class="ss_item" data-info=""> Большая</div>
+                        <div class="ss_item" data-info=""> Большая</div>
+                    </div>
+                </div>
+
+                <div class="switch-selector switch-selector--select">
+                    <select id="product-select" class="custom-select" style="display: none;">
+                        <option value="Маленькая">Маленькая</option>
+                        <option value="Средняя">Средняя</option>
+                        <option value="Больше средней">Больше средней</option>
+                        <option value="Большая">Большая</option>
+                        <option value="Очень большая">Очень большая</option>
+                        <option value="Очень маленькая">Очень маленькая</option>
+                        <option value="XXXL">XXL</option>
+                    </select>
+                    <span tabindex="0" id="product-select-button" class="ui-selectmenu-button ui-button ui-widget ui-selectmenu-button-open">
+                        <span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span>
+                        <span class="ui-selectmenu-text">Ближайшее</span>
+                    </span>
+
+                    <!-- add the ui-selectmenu-open class to show select options -->
+                    <div class="ui-selectmenu-menu ui-front" style="width: 100%; bottom: 0; transform: translateY(100%);">
+                        <ul id="product-select-menu" role="listbox" tabindex="0" class="ui-menu ui-corner-bottom ui-widget ui-widget-content ui-widget-overflow hidescroll">
+                            <li class="ui-menu-item">
+                                <div id="ui-id-3" tabindex="-1" role="option" class="ui-menu-item-wrapper ui-state-active">Маленькая</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-4" tabindex="-1" role="option" class="ui-menu-item-wrapper">Средняя</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-5" tabindex="-1" role="option" class="ui-menu-item-wrapper">Больше средней</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-6" tabindex="-1" role="option" class="ui-menu-item-wrapper">Большая</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-7" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень большая</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-8" tabindex="-1" role="option" class="ui-menu-item-wrapper">Очень маленькая</div>
+                            </li>
+                            <li class="ui-menu-item">
+                                <div id="ui-id-9" tabindex="-1" role="option" class="ui-menu-item-wrapper">XXXL</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product_nutrition pp_nutrition">
+                    <div class="product_nutrition-item">
+                        <div class="nut">Жиры — 8,20&nbsp;г</div>
+                    </div>
+                    <div class="product_nutrition-item">
+                        <div class="nut">Белки — 15,70&nbsp;г</div>
+                    </div>
+                    <div class="product_nutrition-item">
+                        <div class="nut">Эн. цен. — 265&nbsp;ккал</div>
+                    </div>
+                    <div class="product_nutrition-item">
+                        <div class="nut">Углеводов — 35,40&nbsp;г</div>
+                    </div>
+                </div>
+
+                <div class="product_ingredients pp_mods noselect">
+                    <div class="product_ingredients-items">
+                        <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                            <div class="ppm_mod-wrapper">
+                                <span>Пармезан</span>
+                                <i class="icon-remove close"></i>
+                            </div>
+                        </div>
+                        <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                            <div class="ppm_mod-wrapper">
+                                <span>Пепперони</span>
+                                <i class="icon-remove close"></i>
+                            </div>
+                        </div>
+                        <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                            <div class="ppm_mod-wrapper">
+                                <span> Острый соус</span>
+                                <i class="icon-remove close"></i>
+                            </div>
+                        </div>
+                        <div class="ppm_mod" data-id="4f54cbc5-24eb-4fc1-8c21-ad81472cbfa2" data-group="00000000-0000-0000-0000-000000000000">
+                            <div class="ppm_mod-wrapper">
+                                <span>Грибы 30&nbsp;г</span>
+                                <i class="icon-remove close"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_ingredients-btn btn btn-border ppm_add">
+                        <i class="icon-plus"></i>
+                        <span>Добавить ингредиенты</span>
+                    </div>
+                </div>
+
+                <div class="product_footer">
+                    <div class="product_total pp_total">
+                        <div class="ppt_sum">890&nbsp;₽</div>
+                        <div class="ppt_weight" data-unit="порц"> <span>255&nbsp;г</span> </div>
+                    </div>
+
+                    <div class="product_btn btn btn-color noselect">
+                        <i class="icon-bag"></i>
+                        <span>Добавить в корзину</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script type="text/javascript" src="assets/js/lib/require.min.js" data-main="assets/js/pages.js"></script> -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

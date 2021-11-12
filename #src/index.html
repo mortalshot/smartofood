@@ -7,7 +7,7 @@
 	})
 </head>
 
-<body class="noscroll">
+<body class="">
 	<div class="site__wrap">
 		@@include('html-components/popup.html', { })
 
@@ -83,7 +83,9 @@
 
 						@@include('html-components/categories.html', { })
 
-						@@include('html-components/products-section.html', { })
+						@@include('html-components/products-section.html', {
+						"title" : "Популярные продукты",
+						})
 
 						@@include('html-components/text-container.html', { })
 					</div>
@@ -96,10 +98,10 @@
 		<div class="load-content">
 			<div class="load-content_outer">
 				<div class="load-content__container">
-					
+
 					<div class="load-content__inner">
 						<div class="load-content__close"></div>
-						
+
 						@@include('html-components/product-single.html', {})
 					</div>
 				</div>

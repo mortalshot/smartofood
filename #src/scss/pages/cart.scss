@@ -674,6 +674,10 @@
                 margin-right: 12px;
             }
         }
+
+        &--red {
+            color: #c62f2f;
+        }
     }
 
     .load_suggest {
@@ -794,6 +798,37 @@
                             background: $GBlue;
                         }
                     }
+                }
+            }
+        }
+
+        .cart-delivery,
+        .cart-notice {
+            background: $White;
+            box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 22px 24px;
+            @include adaptiv-value("padding-left", 24, 15, 1);
+            @include adaptiv-value("padding-right", 24, 15, 1);
+
+            &--free {
+                background: url(../img/icons/free-delivery.jpg) no-repeat center/cover;
+            }
+
+            &--recommendations {
+                position: relative;
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 4px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: #30c992;
+                    pointer-events: none;
                 }
             }
         }
@@ -1157,11 +1192,25 @@
             }
         }
 
-        .cart-notice {
-            font-weight: 500;
+        .cart-notice,
+        .cart-delivery {
             padding: 16px;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.1);
+
+            &--red {
+                background: rgba(253, 61, 1, 0.7);
+                color: var(--fontColor);
+            }
+
+            &--orange {
+                background: rgba(255, 157, 66, 0.7);
+                color: var(--fontColor);
+            }
+        }
+
+        .cart-notice {
+            font-weight: 500;
 
             &--recommendations {
                 font-weight: 400;
@@ -1172,9 +1221,6 @@
         .cart-delivery {
             font-weight: 400;
             @include adaptiv-font(14, 20, 12, 1);
-            padding: 16px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
         }
     }
 }

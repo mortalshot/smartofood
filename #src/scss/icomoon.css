@@ -27,6 +27,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-logout:before {
+  content: "\e91b";
+}
 .icon-search:before {
   content: "\e91a";
 }

@@ -1,8 +1,50 @@
 .home-template {
     .profile {
-        .block-title {
+        &__heading {
             @include adaptiv-value("margin-top", 16, 8, 1);
             @include adaptiv-value("margin-bottom", 40, 20, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .block-title {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &__logout {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 10px 16px 10px 10px;
+            background: transparent;
+            border: 1px solid $GBlue;
+            border-radius: 30px;
+            transition: $transition ease border-color, $transition color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $Red;
+                    border-color: $Red;
+
+                    i {
+                        color: $Red;
+                    }
+                }
+            }
+
+            i {
+                color: $GBlue;
+                font-size: 20px;
+                transition: $transition color 0s;
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
         }
 
         &__wrapper {
@@ -253,9 +295,18 @@
         }
 
         &.home-template--horizontal {
-            .block-title {
+            &__heading {
                 @include adaptiv-value("margin-top", 40, 20, 1);
                 @include adaptiv-value("margin-bottom", 40, 20, 1);
+
+                .block-title {
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
             }
         }
     }
@@ -321,6 +372,16 @@
 
             .btn {
                 color: var(--accentColor);
+            }
+
+            .profile__logout {
+                color: var(--fontColor);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $Red;
+                    }
+                }
             }
         }
 

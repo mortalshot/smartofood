@@ -93,9 +93,9 @@
 
                                 <div class="pay-types">
                                     <div class="pt_selectors">
-                                        <div class="pt_selector selected">
+                                        <div class="pt_selector">
                                             <div class="pts_line">
-                                                <input type="radio" name="payment" class="custom-radio" data-type="card" checked>
+                                                <input type="radio" name="payment" class="custom-radio" data-type="card">
                                                 <label>Картой курьеру</label>
                                             </div>
                                         </div>
@@ -106,9 +106,16 @@
                                                 <label>Наличными курьеру</label>
                                             </div>
                                         </div>
+
+                                        <div class="pt_selector selected">
+                                            <div class="pts_line">
+                                                <input type="radio" name="payment" data-type="cash" class="custom-radio" checked>
+                                                <label>Картой на сайте</label>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="pts_line cashback">
+                                    <div class="pay-types__item cashback d-none">
                                         <div class="cashback__label">С какой суммы нам приготовить сдачу</div>
                                         <div class="form__row">
                                             <div class="col-12 col-sm-3">
@@ -120,6 +127,24 @@
                                                     <span>Ваша сдача <b>2&nbsp;422&nbsp;₽</b></span>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pay-types__item card-pay">
+                                        <div class="card-pay__payment">
+                                            <div class="card-pay__payment-item">
+                                                <img src="img/icons/visa.svg" alt="visa" loading="lazy">
+                                            </div>
+                                            <div class="card-pay__payment-item">
+                                                <img src="img/icons/mir.svg" alt="mir" loading="lazy">
+                                            </div>
+                                            <div class="card-pay__payment-item">
+                                                <img src="img/icons/mastercard.svg" alt="mastercard" loading="lazy">
+                                            </div>
+                                        </div>
+
+                                        <div class="card-pay__text _content">
+                                            <p>Платеж безопасен. Мы не храним данные карт, все операции проводит ПАО «Сбербанк» с использованием банковских карт следующих платёжных систем: МИР, VISA, Mastercard Worldwide, JCB.</p>
                                         </div>
                                     </div>
                                 </div>

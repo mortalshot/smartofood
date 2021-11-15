@@ -42,19 +42,4 @@
             }
         }
     }
-
-    &.template2 {
-        .home-slider {
-            &:not(:last-child) {
-                @include adaptiv-value("margin-bottom", 100, 40, 1);
-            }
-
-            .swiper {
-                &__button {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: $Black2;
-                }
-            }
-        }
-    }
 }

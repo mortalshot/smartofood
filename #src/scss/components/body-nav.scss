@@ -100,48 +100,4 @@
             }
         }
     }
-
-    &.template1 {
-        &--horizontal {
-            .body_nav {
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-        }
-    }
-
-    &.template2 {
-        .body_nav {
-            background: var(--bgColor);
-
-            @media screen and (max-width: 991px) {
-                top: 50px;
-            }
-            @media screen and (max-width: 767px) {
-                padding-top: 5px;
-                padding-bottom: 5px;
-                top: $size-header-height-mobile;
-            }
-        }
-
-        &.home-template--horizontal {
-            .body_nav-wrapper {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                @media screen and (min-width: 992px) {
-                    // height: 76px;
-                    padding-top: 13px;
-                    padding-bottom: 13px;
-                    @include adaptiv-value("padding-left", 40, 20, 1);
-                    @include adaptiv-value("padding-right", 40, 20, 1);
-                    background: $DBlue;
-                    box-shadow: 0px 34px 34px -20px rgba(0, 0, 0, 0.15);
-                    border-radius: 10px;
-                }
-            }
-        }
-    }
 }

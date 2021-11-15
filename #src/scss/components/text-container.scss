@@ -80,43 +80,4 @@
             }
         }
     }
-
-    &.template1 {
-        .text-container {
-            .text {
-                margin: 0;
-            }
-        }
-    }
-
-    &.template2 {
-        .text-container {
-            background: #222229;
-            border-radius: 10px;
-
-            @include adaptiv-value("padding", 56, 16, 1);
-
-            .text {
-                padding: 0;
-                max-width: 928px;
-                margin: 0;
-                color: rgba($color: $White, $alpha: 0.8);
-
-                & > h1 {
-                    &:not(:last-child) {
-                        @include adaptiv-value("margin-bottom", 40, 24, 1);
-                    }
-                }
-
-                &::after {
-                    background: linear-gradient(0, #222229 0%, rgba(34, 34, 41, 0) 100%);
-                }
-            }
-
-            .btn {
-                color: var(--accentColor);
-                font-size: 12px;
-            }
-        }
-    }
 }

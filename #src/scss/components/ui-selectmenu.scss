@@ -93,34 +93,4 @@
             }
         }
     }
-
-    &.template2 {
-        .ui {
-            &-button {
-                &:active,
-                &:focus,
-                &:hover {
-                    border-color: var(--accentColor);
-                }
-            }
-
-            &-selectmenu-button {
-                background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.4);
-                border-radius: 10px;
-            }
-
-            &-widget-content {
-                background: $DGBlue5;
-                box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.1);
-            }
-
-            &-menu-item-wrapper {
-                &.ui-state-active {
-                    color: var(--accentColor);
-                    background: rgba(71, 203, 84, 0.1);
-                }
-            }
-        }
-    }
 }

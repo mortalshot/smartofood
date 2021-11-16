@@ -1,147 +1,149 @@
-.home-template {
-    .nav {
-        &_menu {
-            @media screen and (min-width: 992px) {
-                width: 190px;
-                padding: 10px;
-                background: $White;
-                box-shadow: 6px 13px 42px rgba(0, 0, 0, 0.1);
-                border-radius: 24px;
+.nav {
+    &_menu {
+        position: fixed;
+        overflow-y: auto;
+        z-index: 103;
 
-                &::-webkit-scrollbar {
-                    height: 0;
-                    width: 0;
+        @media screen and (min-width: 992px) {
+            width: 190px;
+            padding: 10px;
+            background: $White;
+            box-shadow: 6px 13px 42px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+
+            &::-webkit-scrollbar {
+                height: 0;
+                width: 0;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            height: auto;
+            min-height: auto;
+            background: transparent;
+            box-shadow: none;
+            position: relative;
+            border-radius: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include adaptiv-value("margin-left", -24, 6, 1);
+            @include adaptiv-value("margin-right", -24, 6, 1);
+            width: auto;
+            justify-content: flex-start;
+        }
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &_menu_item-wrapper {
+        @media screen and (min-width: 992px) {
+            &:not(:last-child) {
+                margin-bottom: 2px;
+            }
+
+            &._active {
+                a {
+                    border-radius: 14px;
+                    background: rgba(97, 86, 231, 0.1);
+                    padding: 15px 22px;
+                    color: var(--accentColor);
                 }
             }
-            @media screen and (max-width: 991px) {
-                height: auto;
-                min-height: auto;
-                background: transparent;
-                box-shadow: none;
-                position: relative;
-                border-radius: 0;
-                padding: 0;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                overflow-x: auto;
-                overflow-y: hidden;
-                @include adaptiv-value("margin-left", -24, 6, 1);
-                @include adaptiv-value("margin-right", -24, 6, 1);
-                width: auto;
-                justify-content: flex-start;
+        }
+        @media screen and (max-width: 991px) {
+            @include adaptiv-value("padding-left", 24, -6, 1);
+            @include adaptiv-value("padding-right", 24, -6, 1);
+        }
+    }
+
+    &_menu_item {
+        border-bottom: 0;
+        min-width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 5px 0;
+        font-weight: 600;
+        color: var(--fontColor);
+        @include adaptiv-font(14, 20, 10, 1);
+        transition: $transition ease color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--accentColor);
             }
+        }
+
+        @media screen and (min-width: 992px) {
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+    }
+}
+
+.home-template--horizontal {
+    .nav {
+        &_menu {
+            height: auto;
+            min-height: auto;
+            background: transparent;
+            box-shadow: none;
+            position: relative;
+            border-radius: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include adaptiv-value("margin-left", -24, 6, 1);
+            @include adaptiv-value("margin-right", -24, 6, 1);
+            width: auto;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", -4, 26, 1);
+            }
+
             @media screen and (max-width: 767px) {
                 display: none;
             }
         }
 
         &_menu_item-wrapper {
-            @media screen and (min-width: 992px) {
-                &:not(:last-child) {
-                    margin-bottom: 2px;
-                }
+            @include adaptiv-value("padding-left", 24, -6, 1);
+            @include adaptiv-value("padding-right", 24, -6, 1);
 
-                &._active {
-                    a {
-                        border-radius: 14px;
-                        background: rgba(97, 86, 231, 0.1);
-                        padding: 15px 22px;
-                        color: var(--accentColor);
-                    }
-                }
-            }
-            @media screen and (max-width: 991px) {
-                @include adaptiv-value("padding-left", 24, -6, 1);
-                @include adaptiv-value("padding-right", 24, -6, 1);
-            }
-        }
-
-        &_menu_item {
-            border-bottom: 0;
-            min-width: auto;
-            min-height: auto;
-            margin: 0;
-            padding: 5px 0;
-            font-weight: 600;
-            color: var(--fontColor);
-            @include adaptiv-font(14, 20, 10, 1);
-            transition: $transition ease color 0s;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    color: var(--accentColor);
-                }
+            &:not(:last-child) {
+                margin-bottom: 0;
             }
 
-            @media screen and (min-width: 992px) {
-                display: block;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                padding-left: 22px;
-                padding-right: 22px;
-            }
-        }
-    }
-
-    &--horizontal {
-        .nav {
-            &_menu {
-                height: auto;
-                min-height: auto;
-                background: transparent;
-                box-shadow: none;
-                position: relative;
-                border-radius: 0;
-                padding: 0;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                overflow-x: auto;
-                overflow-y: hidden;
-                @include adaptiv-value("margin-left", -24, 6, 1);
-                @include adaptiv-value("margin-right", -24, 6, 1);
-                width: auto;
-
-                &:not(:last-child) {
-                    @include adaptiv-value("margin-right", -4, 26, 1);
-                }
-
-                @media screen and (max-width: 767px) {
-                    display: none;
-                }
-            }
-
-            &_menu_item-wrapper {
-                @include adaptiv-value("padding-left", 24, -6, 1);
-                @include adaptiv-value("padding-right", 24, -6, 1);
-
+            &._active {
                 &:not(:last-child) {
                     margin-bottom: 0;
                 }
 
-                &._active {
-                    &:not(:last-child) {
-                        margin-bottom: 0;
-                    }
-
-                    a {
-                        padding-left: 0;
-                        padding-right: 0;
-                        background: transparent;
-                    }
-                }
-            }
-
-            &_menu_item {
-                padding-left: 0;
-                padding-right: 0;
-                @include adaptiv-font(16, 22, 10, 1);
-
-                @media screen and (min-width: 992px) {
+                a {
                     padding-left: 0;
                     padding-right: 0;
+                    background: transparent;
                 }
+            }
+        }
+
+        &_menu_item {
+            padding-left: 0;
+            padding-right: 0;
+            @include adaptiv-font(16, 22, 10, 1);
+
+            @media screen and (min-width: 992px) {
+                padding-left: 0;
+                padding-right: 0;
             }
         }
     }

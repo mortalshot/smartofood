@@ -1,177 +1,175 @@
-.home-template {
-    // cart-address ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    .cart_blocks {
-        &-wrapper {
-            @media screen and (min-width: 992px) {
-                max-width: 646px;
+// cart-address ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.cart_blocks {
+    &-wrapper {
+        @media screen and (min-width: 992px) {
+            max-width: 646px;
+        }
+    }
+}
+
+.cb_plate {
+    padding: 0;
+    background: transparent;
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 72, 48, 1);
+    }
+}
+
+.cb_title {
+    margin: 0;
+    font-weight: 600;
+    @include adaptiv-font(20, 24, 16, 1);
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.delivery-types {
+    border-radius: 30px;
+    background-color: $LGBlue;
+    padding: 4px;
+    display: inline-flex;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+    }
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 32, 24, 1);
+    }
+
+    .dt {
+        &_type {
+            font-weight: 700;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $DGBlue;
+            @include adaptiv-value("padding-top", 12, 10, 1);
+            @include adaptiv-value("padding-bottom", 12, 10, 1);
+            @include adaptiv-value("padding-left", 60, 30, 1);
+            @include adaptiv-value("padding-right", 60, 30, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 30px;
+            cursor: pointer;
+            flex: 0 1 50%;
+            transition: $transition ease color 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--accentColor);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            &.selected {
+                box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+                background-color: $White;
+                color: var(--fontColor);
             }
         }
     }
+}
 
-    .cb_plate {
-        padding: 0;
-        background: transparent;
+.address-list {
+    margin: 0;
 
-        &:not(:last-child) {
-            @include adaptiv-value("margin-bottom", 72, 48, 1);
+    .al {
+        &_item {
+            border: 0;
+            padding-bottom: 8px !important;
         }
     }
 
-    .cb_title {
-        margin: 0;
-        font-weight: 600;
-        @include adaptiv-font(20, 24, 16, 1);
+    .ali {
+        &_selector {
+        }
 
-        &:not(:last-child) {
-            margin-bottom: 32px;
+        &_container {
+        }
+
+        &_name {
+        }
+
+        &_work {
         }
     }
 
-    .delivery-types {
-        border-radius: 30px;
-        background-color: $LGBlue;
-        padding: 4px;
-        display: inline-flex;
+    .newaddr {
+        &:not(:first-child) {
+            .newaddr__link {
+                margin-top: 6px;
+            }
 
-        @media screen and (max-width: 450px) {
-            width: 100%;
+            .newaddr__wrapper {
+                margin-top: 16px;
+            }
         }
 
-        &:not(:last-child) {
-            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        &__wrapper {
+            @include adaptiv-value("padding", 24, 15, 1);
+            border-radius: 10px;
+            border: 1px solid $GBlue;
         }
 
-        .dt {
-            &_type {
-                font-weight: 700;
-                @include adaptiv-font(14, 20, 12, 1);
-                color: $DGBlue;
-                @include adaptiv-value("padding-top", 12, 10, 1);
-                @include adaptiv-value("padding-bottom", 12, 10, 1);
-                @include adaptiv-value("padding-left", 60, 30, 1);
-                @include adaptiv-value("padding-right", 60, 30, 1);
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                border-radius: 30px;
-                cursor: pointer;
-                flex: 0 1 50%;
-                transition: $transition ease color 0s;
+        &__controls {
+            display: flex;
+            align-items: center;
 
-                @media (any-hover: hover) {
-                    &:hover {
-                        color: var(--accentColor);
-                    }
+            @media screen and (max-width: 575px) {
+                display: block;
+            }
+
+            button {
+                @media screen and (max-width: 575px) {
+                    width: 100%;
                 }
 
                 &:not(:last-child) {
-                    margin-right: 5px;
-                }
+                    @include adaptiv-value("margin-right", 47, 20, 1);
 
-                &.selected {
-                    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
-                    background-color: $White;
-                    color: var(--fontColor);
-                }
-            }
-        }
-    }
-
-    .address-list {
-        margin: 0;
-
-        .al {
-            &_item {
-                border: 0;
-                padding-bottom: 8px !important;
-            }
-        }
-
-        .ali {
-            &_selector {
-            }
-
-            &_container {
-            }
-
-            &_name {
-            }
-
-            &_work {
-            }
-        }
-
-        .newaddr {
-            &:not(:first-child) {
-                .newaddr__link {
-                    margin-top: 6px;
-                }
-
-                .newaddr__wrapper {
-                    margin-top: 16px;
-                }
-            }
-
-            &__wrapper {
-                @include adaptiv-value("padding", 24, 15, 1);
-                border-radius: 10px;
-                border: 1px solid $GBlue;
-            }
-
-            &__controls {
-                display: flex;
-                align-items: center;
-
-                @media screen and (max-width: 575px) {
-                    display: block;
-                }
-
-                button {
                     @media screen and (max-width: 575px) {
-                        width: 100%;
-                    }
-
-                    &:not(:last-child) {
-                        @include adaptiv-value("margin-right", 47, 20, 1);
-
-                        @media screen and (max-width: 575px) {
-                            margin: 0px 0px 20px 0px;
-                        }
+                        margin: 0px 0px 20px 0px;
                     }
                 }
             }
-
-            &__save {
-                height: 54px;
-                @include adaptiv-value("padding-left", 54, 30, 1);
-                @include adaptiv-value("padding-right", 54, 30, 1);
-            }
-
-            &__reset {
-                background: transparent;
-                color: var(--accentColor);
-                height: auto;
-                padding: 5px;
-            }
         }
 
-        .new-address {
-            &:not(:last-child) {
-                margin-bottom: 24px;
-            }
+        &__save {
+            height: 54px;
+            @include adaptiv-value("padding-left", 54, 30, 1);
+            @include adaptiv-value("padding-right", 54, 30, 1);
+        }
+
+        &__reset {
+            background: transparent;
+            color: var(--accentColor);
+            height: auto;
+            padding: 5px;
         }
     }
 
-    #ontime-select-button {
-        font-weight: 500;
-        min-width: 240px;
-        padding: 16px 24px;
-        padding-right: 52px;
-        width: auto;
-
-        @media screen and (max-width: 450px) {
-            width: 100%;
+    .new-address {
+        &:not(:last-child) {
+            margin-bottom: 24px;
         }
+    }
+}
+
+#ontime-select-button {
+    font-weight: 500;
+    min-width: 240px;
+    padding: 16px 24px;
+    padding-right: 52px;
+    width: auto;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
     }
 }

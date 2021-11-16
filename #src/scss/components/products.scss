@@ -1,212 +1,221 @@
-.home-template {
-    .products-section {
+.products-section {
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 100, 40, 1);
+    }
+
+    .block-title {
         &:not(:last-child) {
-            @include adaptiv-value("margin-bottom", 100, 40, 1);
-        }
-
-        .block-title {
-            &:not(:last-child) {
-                @include adaptiv-value("margin-bottom", 40, 24, 1);
-            }
+            @include adaptiv-value("margin-bottom", 40, 24, 1);
         }
     }
+}
 
-    .products {
-        @include adaptiv-value("margin-top", -20, -8, 1);
-        @include adaptiv-value("margin-bottom", -20, -8, 1);
-        @include adaptiv-value("margin-left", -10, -8, 1);
-        @include adaptiv-value("margin-right", -10, -8, 1);
+.products {
+    @include adaptiv-value("margin-top", -20, -8, 1);
+    @include adaptiv-value("margin-bottom", -20, -8, 1);
+    @include adaptiv-value("margin-left", -10, -8, 1);
+    @include adaptiv-value("margin-right", -10, -8, 1);
+    overflow: initial;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+
+    &_item {
+        flex: 0 0 25%;
+        @include adaptiv-value("padding-top", 20, 8, 1);
+        @include adaptiv-value("padding-bottom", 20, 8, 1);
+        @include adaptiv-value("padding-left", 10, 8, 1);
+        @include adaptiv-value("padding-right", 10, 8, 1);
+        background-color: transparent;
+        margin: 0;
         overflow: initial;
-        justify-content: flex-start;
 
-        &_item {
-            flex: 0 0 25%;
-            @include adaptiv-value("padding-top", 20, 8, 1);
-            @include adaptiv-value("padding-bottom", 20, 8, 1);
-            @include adaptiv-value("padding-left", 10, 8, 1);
-            @include adaptiv-value("padding-right", 10, 8, 1);
-            background-color: transparent;
-            margin: 0;
-            overflow: initial;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    box-shadow: none;
-                }
-            }
-
-            @media screen and (max-width: 1250px) {
-                flex: 0 0 33.333%;
-            }
-            @media screen and (max-width: 767px) {
-                flex: 0 0 50%;
-            }
-            @media screen and (max-width: 450px) {
-                flex: 0 0 100%;
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: none;
             }
         }
 
-        &_item-wrapper {
-            border-radius: 20px;
-            background-color: $White;
-            box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.1);
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+        @media screen and (max-width: 1250px) {
+            flex: 0 0 33.333%;
         }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 50%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+        }
+    }
 
-        &_item-image {
-            flex: 0 0 209px;
-            @include adaptiv-value("flex-basis", 209, 196, 1);
-            @include adaptiv-value("height", 209, 196, 1);
-            overflow: hidden;
+    &_item-wrapper {
+        border-radius: 20px;
+        background-color: $White;
+        box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &_item-image {
+        flex: 0 0 209px;
+        @include adaptiv-value("flex-basis", 209, 196, 1);
+        @include adaptiv-value("height", 209, 196, 1);
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        &::before {
+            content: "";
             display: block;
-            position: relative;
-
-            &::before {
-                content: "";
-                display: block;
-                width: 0;
-                height: 0;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                position: absolute;
-                background: rgba($color: $White, $alpha: 0.2);
-                opacity: 0;
-                pointer-events: none;
-                transition: $transition ease all 0s;
-                border-radius: 100%;
-            }
-
-            @media (any-hover: hover) {
-                &:hover {
-                    &::before {
-                        opacity: 1;
-                        width: 200%;
-                        height: 200%;
-                    }
-                }
-            }
-
-            img {
-                @include adaptiv-value("height", 209, 196, 1);
-                border-radius: 10px 10px 0 0;
-                margin: 0;
-            }
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            background: rgba($color: $White, $alpha: 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition ease all 0s;
+            border-radius: 100%;
         }
 
-        &_item-body {
-            @include adaptiv-value("padding", 24, 10, 1);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        &_item-content {
-            flex: 1;
-
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-
-        &_item-name {
-            display: inline-block;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 20px;
-            color: var(--fontColor);
-
-            &:not(:last-child) {
-                margin-bottom: 4px;
-            }
-        }
-
-        a.products_item-name {
-            text-decoration: underline transparent from-font;
-            text-underline-offset: 3px;
-            transition: $transition ease text-decoration 0s;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    text-decoration: underline var(--fontColor) from-font;
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                    width: 200%;
+                    height: 200%;
                 }
             }
         }
 
-        &_item-size {
-            font-size: 12px;
-            line-height: 17px;
-            color: $DGBlue3;
-
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            @include adaptiv-value("height", 209, 196, 1);
+            border-radius: 10px 10px 0 0;
+            margin: 0;
         }
+    }
 
-        &_item-desc {
-            font-size: 12px;
-            line-height: 17px;
-            color: $DGBlue3;
+    &_item-body {
+        @include adaptiv-value("padding", 24, 10, 1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &_item-content {
+        flex: 1;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
         }
+    }
 
-        &_item-foot {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    &_item-name {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--fontColor);
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
         }
+    }
 
-        &_item-price {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 22px;
-            color: $DGBlue2;
-        }
+    a.products_item-name {
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
 
-        .cart-btn {
-            width: 50px;
-            height: 50px;
-            background: var(--accentColor);
-            border-radius: 18px;
-            box-shadow: 0px 8px 11px rgba(32, 28, 77, 0.2);
-            transition: $transition ease transform 0s;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    transform: translateY(3px);
-
-                    i {
-                        animation: none;
-                    }
-                }
-            }
-
-            i {
-                font-size: 20px;
-                line-height: 1;
-                color: $White;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline var(--fontColor) from-font;
             }
         }
     }
 
-    &--horizontal {
-        .products-section {
-            .products {
-                &_item {
-                    @media screen and (max-width: 1250px) {
-                        flex: 0 0 25%;
-                    }
-                    @media screen and (max-width: 991px) {
-                        flex: 0 0 33.333%;
-                    }
-                    @media screen and (max-width: 767px) {
-                        flex: 0 0 50%;
-                    }
-                    @media screen and (max-width: 450px) {
-                        flex: 0 0 100%;
-                    }
+    &_item-size {
+        font-size: 12px;
+        line-height: 17px;
+        color: $DGBlue3;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &_item-desc {
+        font-size: 12px;
+        line-height: 17px;
+        color: $DGBlue3;
+    }
+
+    &_item-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_item-price {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $DGBlue2;
+    }
+
+    .cart-btn {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        background: var(--accentColor);
+        border-radius: 18px;
+        box-shadow: 0px 8px 11px rgba(32, 28, 77, 0.2);
+        transition: $transition ease transform 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translateY(3px);
+
+                i {
+                    animation: none;
+                }
+            }
+        }
+
+        i {
+            font-size: 20px;
+            line-height: 1;
+            color: $White;
+        }
+    }
+}
+
+.home-template--horizontal {
+    .products-section {
+        .products {
+            &_item {
+                @media screen and (max-width: 1250px) {
+                    flex: 0 0 25%;
+                }
+                @media screen and (max-width: 991px) {
+                    flex: 0 0 33.333%;
+                }
+                @media screen and (max-width: 767px) {
+                    flex: 0 0 50%;
+                }
+                @media screen and (max-width: 450px) {
+                    flex: 0 0 100%;
                 }
             }
         }

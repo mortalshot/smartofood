@@ -683,7 +683,7 @@ ul.header_menu > li:last-child {
 
 .header_user,
 .header_hamburger {
-    width: 24px;
+    /* width: 24px;
     height: 24px;
     padding: 7px;
     cursor: pointer;
@@ -698,14 +698,7 @@ ul.header_menu > li:last-child {
     background-clip: content-box;
     box-sizing: content-box;
     border-radius: 20px;
-    flex-shrink: 0;
-}
-
-.header_hamburger {
-    display: none;
-    margin: 0;
-    background-image: url('/assets/images/hamburger-icon.png');
-    background-image: -webkit-image-set(url('/assets/images/hamburger-icon.png') 1x, url('/assets/images/hamburger-icon@2x.png') 2x, url('/assets/images/hamburger-icon@3x.png') 3x);
+    flex-shrink: 0; */
 }
 
 .header_user.active {
@@ -4034,10 +4027,6 @@ ol.breadcrumbs li.item:last-of-type {
 }
 
 @media (max-width: 768px) {
-
-    .header_hamburger {
-        display: block;
-    }
 
     .header_city,
     .header_phone,

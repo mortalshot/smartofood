@@ -1,103 +1,103 @@
-.home-template {
-    .body_nav {
-        @media screen and (min-width: 992px) {
-            flex: 0 0 190px;
+.body_nav {
+    overflow: hidden;
 
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
+    @media screen and (min-width: 992px) {
+        flex: 0 0 190px;
+
+        &:not(:last-child) {
+            margin-right: 20px;
         }
-        @media screen and (max-width: 991px) {
-            flex: initial;
-            width: 100%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 0;
-            padding-right: 0;
-            margin-right: 0;
-            position: fixed;
-            top: var(--size-header-height);
-            left: 0;
-            right: 0;
-            margin: 0;
-            z-index: 103;
-            background-color: $White;
-            transition: $transition ease all 0s;
-            max-width: calc($size-container + $containerPadding * 2) + px;
-            @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
-            @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
-        }
-        @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 991px) {
+        flex: initial;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        position: fixed;
+        top: var(--size-header-height);
+        left: 0;
+        right: 0;
+        margin: 0;
+        z-index: 103;
+        background-color: $White;
+        transition: $transition ease all 0s;
+        max-width: calc($size-container + $containerPadding * 2) + px;
+        @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
+        @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
+    }
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.body_nav-dilator {
+    @media screen and (max-width: 991px) {
+        height: 72px;
+        transition: $transition ease height 0s;
+    }
+    @media screen and (max-width: 767px) {
+        height: 61px;
+        display: none;
+    }
+}
+
+.home-template--horizontal {
+    .body_container {
+        min-height: auto;
+    }
+
+    .body_nav {
+        flex: initial;
+        width: 100%;
+
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        position: fixed;
+        top: var(--size-header-height);
+        left: 0;
+        right: 0;
+        margin: 0;
+        z-index: 103;
+        background-color: var(--bgColor);
+        transition: $transition ease all 0s;
+
+        @media screen and (max-width: 767px) {
+            top: $size-header-height-mobile;
+            padding-top: 15px;
+            padding-bottom: 15px;
             display: block;
         }
-        @media screen and (max-width: 767px) {
-            display: none;
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 
     .body_nav-dilator {
-        @media screen and (max-width: 991px) {
-            height: 72px;
-            transition: $transition ease height 0s;
-        }
+        height: 72px;
+        transition: $transition ease height 0s;
+
         @media screen and (max-width: 767px) {
             height: 61px;
-            display: none;
+            display: block;
         }
     }
 
-    &--horizontal {
-        .body_container {
-            min-height: auto;
-        }
+    .body_nav-controls {
+        display: flex;
+        align-items: center;
 
-        .body_nav {
-            flex: initial;
-            width: 100%;
-
-            padding-left: 0;
-            padding-right: 0;
-            margin-right: 0;
-            position: fixed;
-            top: var(--size-header-height);
-            left: 0;
-            right: 0;
-            margin: 0;
-            z-index: 103;
-            background-color: var(--bgColor);
-            transition: $transition ease all 0s;
-
-            @media screen and (max-width: 767px) {
-                top: $size-header-height-mobile;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                display: block;
-            }
-
-            .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-
-        .body_nav-dilator {
-            height: 72px;
-            transition: $transition ease height 0s;
-
-            @media screen and (max-width: 767px) {
-                height: 61px;
-                display: block;
-            }
-        }
-
-        .body_nav-controls {
-            display: flex;
-            align-items: center;
-
-            @media screen and (max-width: 767px) {
-                order: 2;
-            }
+        @media screen and (max-width: 767px) {
+            order: 2;
         }
     }
 }

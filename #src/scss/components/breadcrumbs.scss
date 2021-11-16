@@ -1,45 +1,44 @@
-.home-template {
-    ol.breadcrumbs {
-        flex-wrap: wrap;
+ol.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
 
-        li.item {
-            display: flex;
+    li.item {
+        display: flex;
 
-            & > span,
-            & > a {
-                display: inline-flex;
-                align-items: center;
-                @include adaptiv-font(14, 20, 12, 1);
-                color: $DGBlue;
-            }
+        & > span,
+        & > a {
+            display: inline-flex;
+            align-items: center;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $DGBlue;
+        }
 
-            a {
-                color: $DGBlue;
-                transition: $transition ease color 0s;
+        a {
+            color: $DGBlue;
+            transition: $transition ease color 0s;
 
-                &:hover {
-                    color: var(--accentColor);
-                }
-            }
-
-            &:last-of-type {
-                margin: 0;
-            }
-
-            &:not(:last-child) {
-                @include adaptiv-value("padding-right", 24, 16, 1);
-                @include adaptiv-value("margin-right", 24, 16, 1);
-                border-right: 1px solid $DGBlue;
-            }
-
-            i {
+            &:hover {
                 color: var(--accentColor);
-                @include adaptiv-font(20, 20, 18, 1);
+            }
+        }
 
-                @media (any-hover: hover) {
-                    &:hover {
-                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-                    }
+        &:last-of-type {
+            margin: 0;
+        }
+
+        &:not(:last-child) {
+            @include adaptiv-value("padding-right", 24, 16, 1);
+            @include adaptiv-value("margin-right", 24, 16, 1);
+            border-right: 1px solid $DGBlue;
+        }
+
+        i {
+            color: var(--accentColor);
+            @include adaptiv-font(20, 20, 18, 1);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
                 }
             }
         }

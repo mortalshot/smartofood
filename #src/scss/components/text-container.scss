@@ -1,82 +1,104 @@
-.home-template {
-    .text-container {
-        background-color: transparent;
-        padding: 0;
+.text-container {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
 
-        &:not(:last-child) {
-            @include adaptiv-value("margin-bottom", 100, 40, 1);
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 100, 40, 1);
+    }
+
+    .text {
+        padding: 0;
+        max-width: 928px;
+        margin: 0 !important;
+        color: #76818a;
+        position: relative;
+
+        & > h1 {
+            font-family: var(--fontMain);
+            font-weight: 700;
+            @include adaptiv-font(32, 38, 20, 1);
+            color: var(--fontColor);
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 48, 24, 1);
+            }
         }
 
-        .text {
-            padding: 0;
-            max-width: 928px;
-            margin: 0;
-            color: #76818a;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+            transition: $transition ease all 0s;
+        }
+    }
 
-            & > h1 {
-                font-family: var(--fontMain);
-                font-weight: 700;
-                @include adaptiv-font(32, 38, 20, 1);
-                color: var(--fontColor);
+    p {
+        margin: 16px 0;
+    }
 
-                &:not(:last-child) {
-                    @include adaptiv-value("margin-bottom", 48, 24, 1);
-                }
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    .btn {
+        margin-top: 24px !important;
+        display: inline-flex !important;
+        align-self: center;
+        transition: $transition ease all 0s;
+        padding: 10px 25px;
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: 8px;
             }
+        }
+
+        i.icon-chevron-left {
+            transform: rotate(90deg);
+            transition: $transition ease transform 0s;
+        }
+
+        span {
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
+
+    &.hidden {
+        .text {
+            height: 150px;
+            overflow: hidden;
 
             &::after {
-                pointer-events: none;
-                background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+                opacity: 1;
+                visibility: visible;
             }
-        }
-
-        p {
-            margin: 16px 0;
-        }
-
-        :first-child {
-            margin-top: 0;
-        }
-        :last-child {
-            margin-bottom: 0;
         }
 
         .btn {
-            margin-top: 24px !important;
-            display: inline-flex !important;
-            align-self: center;
-            transition: $transition ease all 0s;
-
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 8px;
-                }
+            span:nth-child(1) {
+                display: block;
+            }
+            span:nth-child(2) {
+                display: none;
             }
 
             i.icon-chevron-left {
-                transform: rotate(90deg);
-                transition: $transition ease transform 0s;
-            }
-
-            span {
-                &:nth-child(1) {
-                    display: none;
-                }
-            }
-        }
-
-        &.hidden {
-            .btn {
-                span:nth-child(1) {
-                    display: block;
-                }
-                span:nth-child(2) {
-                    display: none;
-                }
-
-                i.icon-chevron-left {
-                    transform: rotate(-90deg);
-                }
+                transform: rotate(-90deg);
             }
         }
     }

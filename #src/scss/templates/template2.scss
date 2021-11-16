@@ -1,4 +1,4 @@
-.home-template.template2 {
+.template2 {
     // base ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     .body {
         @media screen and (max-width: 991px) {
@@ -500,6 +500,7 @@
 
         &_hamburger {
             color: $White;
+            border-right: 0;
 
             &-icon {
                 &::before,
@@ -1146,6 +1147,10 @@
                     margin-bottom: 30px;
                 }
             }
+
+            img {
+                border-radius: 10px;
+            }
         }
 
         &_info {
@@ -1556,9 +1561,10 @@
     }
 
     .sp_promo {
-        align-items: stretch;
+        align-items: stretch !important;
 
         input {
+            flex: 1;
             @include adaptiv-value("padding-left", 24, 10, 1);
             padding-right: 24px !important;
 

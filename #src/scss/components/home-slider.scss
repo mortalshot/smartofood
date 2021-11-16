@@ -1,44 +1,42 @@
-.home-template {
-    .home-slider {
-        &:not(:last-child) {
-            @include adaptiv-value("margin-bottom", 40, 8, 1);
-        }
+.home-slider {
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 40, 32, 1);
+    }
 
-        .swiper {
-            &__buttons {
-                @media screen and (max-width: 767px) {
-                    display: none;
-                }
+    .swiper {
+        &__buttons {
+            @media screen and (max-width: 767px) {
+                display: none;
             }
         }
+    }
 
-        &__item {
+    &__item {
+    }
+
+    &__item-wrapper {
+        display: block;
+        position: relative;
+        padding-bottom: math.div(422px, 1280px) * 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
         }
+    }
 
-        &__item-wrapper {
-            display: block;
-            position: relative;
-            padding-bottom: math.div(422px, 1280px) * 100%;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 24px;
+    &--fixed {
+        .home-slider {
+            &__item {
             }
-        }
 
-        &--fixed {
-            .home-slider {
-                &__item {
-                }
-
-                &__item-wrapper {
-                    @include adaptiv-value("padding-bottom", 422, 220, 1);
-                }
+            &__item-wrapper {
+                @include adaptiv-value("padding-bottom", 422, 220, 1);
             }
         }
     }
